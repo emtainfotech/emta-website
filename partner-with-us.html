@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>EMTA - Elite Manpower and Training Acedemy ! partner-with-us.html</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="lib/animate/animate.min.css" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a href="https://emta.co.in/" class="navbar-brand p-0" style="margin-top:-10px;">
+                    <img src="img/logo.png" alt="EMTA">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-0 mx-lg-auto">
+                        <a href="https://emta.co.in/" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <div class="nav-item dropdown active">
+                            <a href="recruitment-solution.html" class="nav-link dropdown-toggle"
+                                id="recruitmentDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                style="text-decoration: none; white-space: nowrap;">
+                                Jobs
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="recruitmentDropdown">
+                                <li><a class="dropdown-item" href="for-employer.html">For Employers</a></li>
+                                <li><a class="dropdown-item" href="for-employee.html">For Job Seekers</a></li>
+                            </ul>
+                        </div>
+                        <a href="bfsi-training.html" class="nav-item nav-link"
+                            style="text-decoration: none; white-space: nowrap;">BFSI Training</a>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <a href="careers.html" class="nav-item nav-link">Careers</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+                <div class="nav-btn px-3"><a href="work-with-us.html"
+                        class="btn btn-primary rounded-pill py-2 px-4 ms-3 flex-shrink-0 d-none d-md-block">
+                        Apply for Job</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="d-none d-xl-flex flex-shrink-0 ps-4">
+                    <a href="tel:+ 918962540996"
+                        class="btn btn-light btn-lg-square rounded-circle position-relative wow tada"
+                        data-wow-delay=".9s">
+                        <i class="fa fa-phone-alt fa-2x"></i>
+                        <div class="position-absolute" style="top: 7px; right: 12px;">
+                            <span><i class="fa fa-comment-dots "></i></span>
+                        </div>
+                    </a>
+                    <div class="d-flex flex-column ms-3">
+                        <span>Call Us</span>
+                        <a href="tel:+ 919522257477"><span class="text-dark"> + 91 9522257477</span></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
+
+
+
+
+    <!-- Study With Us Form Start -->
+    <div class="container-fluid py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h4 class="text-primary">Partner With Us</h4>
+                <h1 class="display-5 mb-3">Become a Partner</h1>
+                <p class="text-muted">Fill out the form below to apply for our study sessions and achieve your academic
+                    goals with us.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form class="bg-white p-5 shadow rounded" id="partnershipForm"
+                        action="https://formspree.io/f/xyzyppvd" method="POST" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="companyName" class="form-label">Company Name *</label>
+                            <input type="text" class="form-control" id="companyName" name="companyName"
+                                placeholder="Enter your company name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="industry" class="form-label">Industry *</label>
+                            <input type="text" class="form-control" id="industry" name="industry"
+                                placeholder="Enter your industry" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="websiteUrl" class="form-label">Website URL *</label>
+                            <input type="url" class="form-control" id="websiteUrl" name="websiteUrl"
+                                placeholder="Enter your company website URL" required>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <label for="firstName" class="form-label">Contact Person's First Name *</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName"
+                                    placeholder="First Name" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="middleName" class="form-label">Contact Person's Middle Name</label>
+                                <input type="text" class="form-control" id="middleName" name="middleName"
+                                    placeholder="Middle Name">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="lastName" class="form-label">Contact Person's Last Name *</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName"
+                                    placeholder="Last Name" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="contactPersonTitle" class="form-label">Contact Person's Title *</label>
+                            <input type="text" class="form-control" id="contactPersonTitle" name="contactPersonTitle"
+                                placeholder="Enter title (e.g., Manager, CEO)" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number *</label>
+                            <input type="text" class="form-control" id="phone" name="phone"
+                                placeholder="Enter your phone number (10 digits)" maxlength="10" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Mailing Address (Optional)</label>
+                            <textarea class="form-control" id="address" name="address" rows="2"
+                                placeholder="Enter your mailing address"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="partnershipType" class="form-label">Please select the type of partnership you
+                                are interested in: *</label>
+                            <select class="form-select" id="partnershipType" name="partnershipType" required>
+                                <option value="referralPartnership">Referral Partnerships</option>
+                                <option value="trainingProgram">Training Program Collaborations</option>
+                                <option value="industryEvents">Industry Events and Seminars</option>
+                                <option value="resourceSharing">Resource Sharing</option>
+                                <option value="technologyPartnership">Technology Partnerships</option>
+                                <option value="strategicAlliances">Strategic Alliances</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3 d-none" id="otherPartnershipType">
+                            <label for="otherPartnershipTypeInput" class="form-label">Please specify the partnership
+                                type</label>
+                            <input type="text" class="form-control" id="otherPartnershipTypeInput"
+                                name="otherPartnershipTypeInput" placeholder="Specify partnership type">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="partnershipDescription" class="form-label">Please provide a brief description of
+                                the proposed partnership and how you envision collaborating with us: *</label>
+                            <textarea class="form-control" id="partnershipDescription" name="partnershipDescription"
+                                rows="3" placeholder="Describe the partnership" required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="partnershipBenefits" class="form-label">How do you believe this partnership will
+                                benefit both parties involved? *</label>
+                            <textarea class="form-control" id="partnershipBenefits" name="partnershipBenefits" rows="3"
+                                placeholder="Explain the benefits" required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="pastCollaborations" class="form-label">Have you collaborated with other
+                                organizations in similar partnerships before? If yes, please provide details: *</label>
+                            <textarea class="form-control" id="pastCollaborations" name="pastCollaborations" rows="3"
+                                placeholder="Provide details of past collaborations" required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="additionalInfo" class="form-label">Is there any additional information you would
+                                like to share about your company or the proposed partnership? *</label>
+                            <textarea class="form-control" id="additionalInfo" name="additionalInfo" rows="3"
+                                placeholder="Provide additional information" required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="howHeard" class="form-label">How Did You Hear About Us? *</label>
+                            <select class="form-select" id="howHeard" name="howHeard" required>
+                                <option value="referral">Referral</option>
+                                <option value="website">Website</option>
+                                <option value="socialMedia">Social Media</option>
+                                <option value="searchEngine">Search Engine</option>
+                                <option value="advertisement">Advertisement</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3 d-none" id="otherSourceField">
+                            <label for="otherSource" class="form-label">Specify Other Source</label>
+                            <input type="text" class="form-control" id="otherSource" name="otherSource"
+                                placeholder="Specify how you heard about us">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="comment" class="form-label">Comment or Message</label>
+                            <textarea class="form-control" id="comment" name="comment" rows="3"
+                                placeholder="Enter your comments or message"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">Submit Application</button>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Study With Us Form End -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const partnershipTypeSelect = document.getElementById('partnershipType');
+            const otherPartnershipTypeField = document.getElementById('otherPartnershipType');
+            const howHeardSelect = document.getElementById('howHeard');
+            const otherSourceField = document.getElementById('otherSourceField');
+
+            partnershipTypeSelect.addEventListener('change', function () {
+                if (partnershipTypeSelect.value === 'other') {
+                    otherPartnershipTypeField.classList.remove('d-none');
+                } else {
+                    otherPartnershipTypeField.classList.add('d-none');
+                }
+            });
+
+            howHeardSelect.addEventListener('change', function () {
+                if (howHeardSelect.value === 'other') {
+                    otherSourceField.classList.remove('d-none');
+                } else {
+                    otherSourceField.classList.add('d-none');
+                }
+            });
+        });
+
+
+    </script>
+
+    <!-- Toggle Button Container -->
+    <div class="cta-toggle-container" id="ctaToggleContainer">
+        <!-- Main Toggle Button -->
+        <button class="cta-toggle-button" id="toggleButton1">
+            +
+        </button>
+        <!-- CTA Buttons -->
+        <div class="cta-button-group">
+            <a href="work-with-us.html" class="cta-button">Work with Us</a>
+            <a href="partner-with-us.html" class="cta-button">Partner with Us</a>
+            <a href="study-with-us.html" class="cta-button">Study with Us</a>
+            <a href="hire-with-us.html" class="cta-button">Hire with Us</a>
+        </div>
+    </div>
+
+    <script>
+        // Toggle button functionality
+        const toggleButton1 = document.getElementById('toggleButton1');
+        const ctaToggleContainer = document.getElementById('ctaToggleContainer');
+
+        toggleButton1.addEventListener('click', () => {
+            ctaToggleContainer.classList.toggle('open');
+        });
+    </script>
+
+    <button class="icon-button" id="toggle-button">
+        <i class="fas fa-file-pdf"></i>
+    </button>
+    <div class="iframe-container" id="iframe-container">
+        <iframe src="EMTA-BFSI-Training-Program-3.pdf"></iframe>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-button');
+        const iframeContainer = document.getElementById('iframe-container');
+
+        toggleButton.addEventListener('click', () => {
+            if (iframeContainer.style.display === 'none' || iframeContainer.style.display === '') {
+                iframeContainer.style.display = 'block';
+            } else {
+                iframeContainer.style.display = 'none';
+            }
+        });
+    </script>
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-xl-9">
+                    <div class="mb-5">
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-6 col-xl-5">
+                                <div class="footer-item">
+                                    <a href="index.html" class="p-0">
+
+                                        <h3><img src="f-logo.png" style="height:60px;width:200px;" alt="Logo"> </h3>
+                                        <!-- <img src="img/logo.png" alt="Logo"> -->
+                                    </a><p class="text-white mb-4">Elite Manpower and Training Academy (EMTA), founded in
+                                    2020 by visionaries Abhijeet Raghuwanshi, is a trailblazer in BFSI
+                                    training and job placement.</p>
+                                    <div class="footer-btn d-flex">
+                                        <a class="btn btn-md-square rounded-circle me-3"
+                                            href="https://www.facebook.com/people/EMTA/100076544892050/?paipv=0&eav=AfbXq3U78y0pbd2H_FttF7WA0BS0qfYH053dyEVKd0eIm1buJ6xPKJlNyEU3GXUlZfU"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-md-square rounded-circle me-3"
+                                            href="https://x.com/EliteManpowerT1/status/1553354721330692098"><i
+                                                class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-md-square rounded-circle me-3"
+                                            href="https://www.instagram.com/emta.placements/?igsh=eXN6cXdxNHFpZzAy"><i
+                                                class="fab fa-instagram"></i></a>
+                                        <a class="btn btn-md-square rounded-circle me-0"
+                                            href="https://www.linkedin.com/company/elite-manpower-training-academy/about/"><i
+                                                class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-3">
+                                <div class="footer-item">
+                                    <h4 class="text-white mb-4">Useful Links</h4>
+                                    <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                                    <a href="blog.html"><i class="fas fa-angle-right me-2"></i> Blog</a>
+                                    <a href="job-vacancy.html"><i class="fas fa-angle-right me-2"></i> Recruitment
+                                        Solution</a>
+                                    <a href="bfsi-training.html#course-structure"><i
+                                            class="fas fa-angle-right me-2"></i> Courses & Fees</a>
+                                    <a href="careers.html"><i class="fas fa-angle-right me-2"></i> Careers</a>
+                                    <a href="bfsi-training.html"><i class="fas fa-angle-right me-2"></i> BFSI</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-4">
+                                <div class="footer-item">
+                                    <h4 class="mb-4 text-white">Instagram</h4>
+                                    <div class="row g-3">
+                                        <div class="col-4">
+                                            <div class="footer-instagram rounded">
+                                                <img src="img/insta-images/1.png" class="img-fluid w-100" alt="">
+                                                <div class="footer-search-icon">
+                                                    <a href="img/insta-images/1.png" data-lightbox="footerInstagram-1"
+                                                        class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="footer-instagram rounded">
+                                                <img src="img/insta-images/2.png" class="img-fluid w-100" alt="">
+                                                <div class="footer-search-icon">
+                                                    <a href="img/insta-images/2.png" data-lightbox="footerInstagram-2"
+                                                        class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="footer-instagram rounded">
+                                                <img src="img/insta-images/3.png" class="img-fluid w-100" alt="">
+                                                <div class="footer-search-icon">
+                                                    <a href="img/insta-images/3.png" data-lightbox="footerInstagram-3"
+                                                        class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="footer-instagram rounded">
+                                                <img src="img/insta-images/4.png" class="img-fluid w-100" alt="">
+                                                <div class="footer-search-icon">
+                                                    <a href="img/insta-images/4.png" data-lightbox="footerInstagram-4"
+                                                        class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="footer-instagram rounded">
+                                                <img src="img/insta-images/5.png" class="img-fluid w-100" alt="">
+                                                <div class="footer-search-icon">
+                                                    <a href="img/insta-images/5.png" data-lightbox="footerInstagram-5"
+                                                        class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="footer-instagram rounded">
+                                                <img src="img/insta-images/6.png" class="img-fluid w-100" alt="">
+                                                <div class="footer-search-icon">
+                                                    <a href="img/insta-images/6.png" data-lightbox="footerInstagram-6"
+                                                        class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-5" style="border-top: 1px solid rgba(255, 255, 255, 0.08);">
+                        <div class="row g-0">
+                            <div class="col-12">
+                                <div class="row g-4">
+                                    <div class="col-lg-6 col-xl-4">
+                                        <div class="d-flex">
+                                            <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                                <i class="fas fa-map-marker-alt fa-2x"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-white">Address</h4>
+                                                <p class="mb-0"><b class="text-white">New and Current Address -</b> <br>
+                                                    353-A, First Floor, Mahalaxmi Nagar Main Road, Left to Bank Of
+                                                    India, Indore-452010</p><br>
+                                                <p class="mb-0"><b class="text-white">Old Address -</b> <br>155(A),First
+                                                    Floor, Mangal City Mall,Vijay Nagar, Indore - 452010</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-4">
+                                        <div class="d-flex">
+                                            <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                                <i class="fas fa-envelope fa-2x"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-white">Mail Us</h4>
+                                                <p class="mb-0">hr@emta.co.in</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-4">
+                                        <div class="d-flex">
+                                            <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                                <i class="fa fa-phone-alt fa-2x"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-white">Telephone</h4>
+                                                <p class="mb-0">+91 8962540996</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3">
+                    <div class="footer-item">
+                        <h4 class="text-white mb-4">Newsletter</h4>
+                        <p class="text-white mb-3">Subscribe to EMTA's newsletter for the latest updates on BFSI
+                            training programs, job openings, industry insights, and career tips. Get expert advice
+                            straight to your inbox!</p>
+                        <!-- <div class="position-relative rounded-pill mb-4">
+                            <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text"
+                                placeholder="Enter your email">
+                            <button type="button"
+                                class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
+                        </div> -->
+                        <div class="d-flex flex-shrink-0">
+                            <div class="footer-btn">
+                                <a href="#" class="btn btn-lg-square rounded-circle position-relative wow tada"
+                                    data-wow-delay=".9s">
+                                    <i class="fa fa-phone-alt fa-2x"></i>
+                                    <div class="position-absolute" style="top: 2px; right: 12px;">
+                                        <span><i class="fa fa-comment-dots "></i></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column ms-3 flex-shrink-0">
+                                <span>Call Us</span>
+                                <a href="tel:+918962540996"><span class="text-white">Free: +91 8962540996</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-end mb-md-0">
+                    <span class="text-body"><a href="https://emtaco.in" class="border-bottom text-white"><i
+                                class="fas fa-copyright text-light me-2"></i>EMTA</a>, All right
+                        reserved.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-start text-body">
+                    Designed By <a class="border-bottom text-white" href="https://emtainfotech.com">EMTA INFOTECH</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+    <script>
+        document.getElementById('partnershipForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission behavior
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            // Use Fetch API to submit the form data to Formspree
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Redirect to thankyou.html after successful form submission
+                    alert('Thankyou😊!,Your form is submitted.')
+                } else {
+                    alert('There was an issue with your submission. Please try again.');
+                }
+            }).catch(error => {
+                alert('There was a problem with the form submission.');
+            });
+        });
+    </script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
