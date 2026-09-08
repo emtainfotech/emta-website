@@ -6,8 +6,8 @@
     "summary": "EMTA offers BFSI-focused training courses, recruitment & RPO services, placement support, resume & career counselling, and employer hiring solutions.",
     "contact": {
       "email": "hr@emta.co.in",
-      "phone": "+91 8962540996",
-      "address": "353-A, First Floor, Mahalaxmi Nagar Main Road, Indore - 452010",
+      "phone": "+91 9522257477",
+      "address": "Flat No. 102, Vatsalya, AF-3, Scheme No. 54, Vijay Nagar, Indore – 452010",
       "contact_page": "https://emta.co.in/contact"
     }
   },
@@ -27,50 +27,94 @@
       "description": "Mission, founders, EMTA background."
     },
     {
-      "name": "Contact",
-      "url": "https://emta.co.in/contact",
-      "description": "Primary contact details and address."
+      "name": "Careers / Job Openings",
+      "url": "https://emta.co.in/careers",
+      "description": "Fresh job vacancies and candidate application portal."
     },
     {
-      "name": "Courses & Fees",
-      "url": "https://emta.co.in/courses",
-      "description": "Catalog of BFSI training programs."
-    },
-    {
-      "name": "Course details — example",
-      "url": "https://emta.co.in/course-details?id=4",
-      "description": "Course landing / syllabus pages (use query id= to access details)."
+      "name": "BFSI Training",
+      "url": "https://emta.co.in/bfsi-training",
+      "description": "Banking & financial services certification program with guaranteed placement."
     },
     {
       "name": "Recruitment Solution",
       "url": "https://emta.co.in/recruitment-solution",
-      "description": "RPO, hiring & placement services for employers."
+      "description": "Corporate hiring, RPO, and staffing solutions."
     },
     {
-      "name": "Hire With Us",
-      "url": "https://emta.co.in/hire-with-us",
-      "description": "Employer services and engagement options."
+      "name": "For Employers",
+      "url": "https://emta.co.in/for-employer",
+      "description": "Talent acquisition, corporate partnerships, and hiring services."
+    },
+    {
+      "name": "For Job Seekers",
+      "url": "https://emta.co.in/for-employee",
+      "description": "Candidate placement guidance and career training support."
+    },
+    {
+      "name": "Blog & Career Insights",
+      "url": "https://emta.co.in/blog",
+      "description": "Long-form interview preparation guides and BFSI industry articles."
+    },
+    {
+      "name": "Contact",
+      "url": "https://emta.co.in/contact",
+      "description": "Primary contact details, maps, and inquiry forms."
+    },
+    {
+      "name": "Work With Us",
+      "url": "https://emta.co.in/work-with-us",
+      "description": "Career and employment options at EMTA."
     },
     {
       "name": "Study With Us",
       "url": "https://emta.co.in/study-with-us",
-      "description": "Learner enrollment & program info."
+      "description": "Learner registration and training admissions."
     },
     {
-      "name": "Work With Us / Partner With Us",
-      "url": "https://emta.co.in/work-with-us",
-      "alternate_url": "https://emta.co.in/partner-with-us",
-      "description": "Collaboration and partnership opportunities."
+      "name": "Partner With Us",
+      "url": "https://emta.co.in/partner-with-us",
+      "description": "Institutional collaboration and business partnerships."
     },
     {
-      "name": "Careers / Apply for Job",
-      "url": "https://emta.co.in/careers",
-      "description": "Job listings and candidate workflows."
+      "name": "Hire With Us",
+      "url": "https://emta.co.in/hire-with-us",
+      "description": "Employer talent requirements and engagement form."
     },
     {
-      "name": "Blog / Insights",
-      "url": "https://emta.co.in/blog",
-      "description": "Long-form guides and training resources."
+      "name": "Job Placement Consultancy Indore",
+      "url": "https://emta.co.in/job-placement",
+      "description": "Top job placement consultancy in Indore."
+    }
+  ],
+  "job_openings": [
+    {
+      "title": "Customer Care Executive - Vijay Nagar",
+      "url": "https://emta.co.in/jobs/customer-care-executive-vijay-nagar/"
+    },
+    {
+      "title": "Customer Care - Swiggy",
+      "url": "https://emta.co.in/jobs/customer-care-swiggy/"
+    },
+    {
+      "title": "Customer Success Associate - Vivint",
+      "url": "https://emta.co.in/jobs/customer-success-associate-vivint/"
+    },
+    {
+      "title": "Customer Support & Seller Support",
+      "url": "https://emta.co.in/jobs/customer-support-seller-support/"
+    },
+    {
+      "title": "Customer Support - Walmart",
+      "url": "https://emta.co.in/jobs/customer-support-walmart/"
+    },
+    {
+      "title": "Inside Sales Executive",
+      "url": "https://emta.co.in/jobs/inside-sales-executive/"
+    },
+    {
+      "title": "Senior Accountant",
+      "url": "https://emta.co.in/jobs/senior-accountant/"
     }
   ],
   "documentation_resources": {
@@ -84,7 +128,7 @@
   },
   "canonicalization": {
     "rule": "Prefer canonical URLs from the above list.",
-    "dynamic_content": "For URLs with query parameters (e.g., course-details?id=4), use canonical metadata provided by the site."
+    "dynamic_content": "Clean extensionless URLs are configured with automated 301 redirects."
   },
   "attribution_and_use": {
     "rules": [
@@ -110,7 +154,7 @@
     "notes": "Administrative dashboards, private user areas, and internal employee pages are not intended for public LLM ingestion."
   },
   "update_and_validation": {
-    "last_updated": "2025-10-29T00:00:00+05:30",
+    "last_updated": "2026-09-08T18:45:00+05:30",
     "maintainer": "EMTA Webmaster",
     "contact": "hr@emta.co.in"
   },

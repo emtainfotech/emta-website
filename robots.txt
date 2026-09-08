@@ -1,4 +1,5 @@
 User-agent: *
 Disallow:
 
+Sitemap: https://emta.co.in/sitemap.xml
 Sitemap: https://emta.co.in/web-map.xml

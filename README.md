@@ -80,7 +80,8 @@ EMTA Website/
 ├── job-placement.html          # 100% placement assistance & hiring tie-ups
 ├── blog.html                   # Blog archive / index page
 ├── robots.txt                  # Search engine crawling directives
-├── web-map.xml                 # XML sitemap for search engines
+├── sitemap.xml                 # Standard XML sitemap for search engines
+├── web-map.xml                 # Search engine sitemap
 ├── README.md                   # Complete documentation and developer guide
 │
 ├── jobs/                       # Dedicated SEO static landing pages per vacancy
@@ -117,6 +118,7 @@ EMTA Website/
 │   └── f.png                   # Primary EMTA logo
 │
 └── scripts/                    # Automation & generation build tools
+    ├── generate_sitemap.py      # Rebuilds sitemap.xml and web-map.xml for all pages
     ├── generate_job_pages_v2.py # Rebuilds static job pages with Google Jobs schema
     ├── update_jobs_js.py        # Synchronizes vacancies with frontend js/jobs.js
     └── generate_blog.py         # Blog generation and formatting tool
