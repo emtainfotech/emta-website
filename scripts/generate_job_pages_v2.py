@@ -1,7 +1,7 @@
 import os
 import json
 
-base_dir = os.path.dirname(os.path.abspath(__file__))
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 jobs_dir = os.path.join(base_dir, "jobs")
 os.makedirs(jobs_dir, exist_ok=True)
 

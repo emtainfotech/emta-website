@@ -116,7 +116,10 @@ EMTA Website/
 │   ├── emta-gif.gif            # Animated branding badge
 │   └── f.png                   # Primary EMTA logo
 │
-└── generate_job_pages_v2.py    # Python script to regenerate static job landing pages with Google Jobs schema
+└── scripts/                    # Automation & generation build tools
+    ├── generate_job_pages_v2.py # Rebuilds static job pages with Google Jobs schema
+    ├── update_jobs_js.py        # Synchronizes vacancies with frontend js/jobs.js
+    └── generate_blog.py         # Blog generation and formatting tool
 ```
 
 ---
@@ -172,8 +175,8 @@ All active job listings incorporate official [Schema.org `JobPosting`](https://s
 
 ### How to Add or Update a Job Vacancy:
 
-1. **Add Job Details to `generate_job_pages_v2.py`:**
-   Open `generate_job_pages_v2.py` and add the new vacancy dictionary to `jobs_data`:
+1. **Add Job Details to `scripts/generate_job_pages_v2.py`:**
+   Open `scripts/generate_job_pages_v2.py` and add the new vacancy dictionary to `jobs_data`:
    ```python
    {
        "slug": "relationship-officer-bfsi",
@@ -199,7 +202,7 @@ All active job listings incorporate official [Schema.org `JobPosting`](https://s
 2. **Regenerate Static Landing Pages:**
    Run the Python generator from the terminal:
    ```bash
-   python generate_job_pages_v2.py
+   python scripts/generate_job_pages_v2.py
    ```
    This will automatically create `jobs/relationship-officer-bfsi/index.html` with valid Google Jobs schema.
 

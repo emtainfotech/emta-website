@@ -1,6 +1,8 @@
+import os
 import re
 
-with open('e:/Projects/EMTA Website/crm-in-the-bfsi-sector.html', 'r', encoding='utf-8') as f:
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+with open(os.path.join(base_dir, 'crm-in-the-bfsi-sector.html'), 'r', encoding='utf-8') as f:
     content = f.read()
 
 # Extract parts
@@ -399,6 +401,6 @@ new_html = new_html.replace(
 # And remove the FAQ JSON-LD from the head
 new_html = re.sub(r'<script type="application/ld\+json">\s*\{.*?\}\s*</script>', '', new_html, flags=re.DOTALL)
 
-with open('e:/Projects/EMTA Website/resume-tips-for-freshers-2026.html', 'w', encoding='utf-8') as f:
+with open(os.path.join(base_dir, 'resume-tips-for-freshers-2026.html'), 'w', encoding='utf-8') as f:
     f.write(new_html)
 print('Blog HTML file generated successfully.')
