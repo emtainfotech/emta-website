@@ -44,62 +44,202 @@
     <link href="/css/style.css" rel="stylesheet">
     <style>
         .error-section {
-            background: linear-gradient(135deg, #f8faff 0%, #eef4fc 100%);
-            padding: 80px 0;
-            min-height: 70vh;
+            background: linear-gradient(180deg, #f8fafc 0%, #eef2f6 100%);
+            padding: 70px 0 90px 0;
+            min-height: 75vh;
             display: flex;
             align-items: center;
         }
-        .error-code {
-            font-size: 9rem;
-            font-weight: 900;
-            line-height: 1;
-            background: linear-gradient(135deg, #0d6efd 0%, #002b5b 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: -3px;
-            margin-bottom: 1rem;
-        }
         .error-card {
             background: #ffffff;
-            border-radius: 16px;
+            border-radius: 20px;
             padding: 50px 40px;
-            box-shadow: 0 10px 40px rgba(0, 43, 91, 0.08);
-            border: 1px solid rgba(13, 110, 253, 0.1);
+            box-shadow: 0 20px 45px -12px rgba(15, 23, 42, 0.08);
+            border: 1px solid #e2e8f0;
         }
-        .quick-link-card {
-            background: #ffffff;
-            border: 1px solid #e9ecef;
-            border-radius: 12px;
-            padding: 20px;
-            transition: all 0.3s ease;
+        .error-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #eff6ff;
+            color: #015fcc;
+            border: 1px solid #bfdbfe;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.25rem;
+        }
+        .error-code {
+            font-size: 7.5rem;
+            font-weight: 900;
+            line-height: 1;
+            background: linear-gradient(135deg, #073b8b 0%, #015fcc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -2px;
+            margin-bottom: 0.75rem;
+        }
+        .error-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 0.75rem;
+        }
+        .error-desc {
+            font-size: 1.05rem;
+            color: #64748b;
+            max-width: 620px;
+            margin: 0 auto 2.25rem auto;
+            line-height: 1.6;
+        }
+        
+        /* Custom Action Buttons (Strictly EMTA Navy & Royal Blue Brand Palette) */
+        .btn-action-primary {
+            background: linear-gradient(135deg, #015fcc 0%, #073b8b 100%);
+            color: #ffffff !important;
+            border: 1.5px solid transparent;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 14px rgba(1, 95, 204, 0.25);
             text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-action-primary:hover {
+            background: linear-gradient(135deg, #073b8b 0%, #052659 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(7, 59, 139, 0.35);
+        }
+        
+        .btn-action-outline-blue {
+            background: #ffffff;
+            color: #015fcc !important;
+            border: 1.5px solid #015fcc;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: all 0.25s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-action-outline-blue:hover {
+            background: #015fcc;
+            color: #ffffff !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(1, 95, 204, 0.2);
+        }
+
+        .btn-action-outline-navy {
+            background: #ffffff;
+            color: #073b8b !important;
+            border: 1.5px solid #073b8b;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: all 0.25s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-action-outline-navy:hover {
+            background: #073b8b;
+            color: #ffffff !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(7, 59, 139, 0.2);
+        }
+
+        .btn-action-outline-dark {
+            background: #ffffff;
+            color: #0f172a !important;
+            border: 1.5px solid #0f172a;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: all 0.25s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-action-outline-dark:hover {
+            background: #0f172a;
+            color: #ffffff !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(15, 23, 42, 0.2);
+        }
+
+        /* Destination Cards */
+        .destination-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 24px 20px;
+            transition: all 0.3s ease;
+            text-decoration: none !important;
             display: block;
             height: 100%;
+            text-align: left;
         }
-        .quick-link-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            border-color: #0d6efd;
+        .destination-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(1, 95, 204, 0.08);
+            border-color: #015fcc;
         }
-        .quick-link-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: rgba(13, 110, 253, 0.1);
-            color: #0d6efd;
+        .destination-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: #eff6ff;
+            color: #015fcc;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.25rem;
-            margin-bottom: 15px;
+            margin-bottom: 14px;
         }
+        .destination-card h6 {
+            color: #0f172a;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .destination-card p {
+            color: #64748b;
+            font-size: 0.875rem;
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+        .destination-card .card-arrow {
+            color: #015fcc;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
         @media (max-width: 768px) {
             .error-code {
-                font-size: 6rem;
+                font-size: 5rem;
+            }
+            .error-title {
+                font-size: 1.75rem;
             }
             .error-card {
-                padding: 30px 20px;
+                padding: 30px 18px;
             }
         }
     </style>
@@ -166,59 +306,66 @@
     <div class="container-fluid error-section">
         <div class="container text-center">
             <div class="row justify-content-center">
-                <div class="col-lg-10 col-xl-8">
+                <div class="col-lg-10 col-xl-9">
                     <div class="error-card">
+                        <div class="error-badge">
+                            <i class="fas fa-exclamation-circle"></i> Error 404 • Page Not Found
+                        </div>
                         <div class="error-code">404</div>
-                        <h1 class="display-6 fw-bold mb-3 text-dark">Oops! Page Not Found</h1>
-                        <p class="lead text-muted mb-4">
+                        <h1 class="error-title">Oops! Page Not Found</h1>
+                        <p class="error-desc">
                             The page you are looking for might have been moved, renamed, or is temporarily unavailable. 
-                            Don't worry, let's get you back on track!
+                            Use the quick options below to get back to what you need.
                         </p>
                         
-                        <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
-                            <a href="https://emta.co.in/" class="btn btn-primary rounded-pill py-3 px-4 shadow-sm">
+                        <!-- Actions Grid (Carefully Curated Color Palette) -->
+                        <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
+                            <a href="https://emta.co.in/" class="btn-action-primary">
                                 <i class="fas fa-home me-2"></i> Back to Home
                             </a>
-                            <a href="/careers.html" class="btn btn-outline-primary rounded-pill py-3 px-4">
+                            <a href="/careers.html" class="btn-action-outline-blue">
                                 <i class="fas fa-briefcase me-2"></i> Browse Jobs
                             </a>
-                            <a href="/bfsi-training.html" class="btn btn-outline-secondary rounded-pill py-3 px-4">
+                            <a href="/bfsi-training.html" class="btn-action-outline-navy">
                                 <i class="fas fa-graduation-cap me-2"></i> BFSI Training
                             </a>
-                            <a href="/contact.html" class="btn btn-light rounded-pill py-3 px-4">
+                            <a href="/contact.html" class="btn-action-outline-dark">
                                 <i class="fas fa-envelope me-2"></i> Contact Us
                             </a>
                         </div>
 
-                        <!-- Helpful Quick Links -->
-                        <div class="text-start mt-4 pt-4 border-top">
+                        <!-- Helpful Quick Destinations -->
+                        <div class="mt-4 pt-4 border-top">
                             <h5 class="fw-bold mb-3 text-dark text-center">Popular Destinations</h5>
                             <div class="row g-3">
                                 <div class="col-md-4">
-                                    <a href="/careers.html" class="quick-link-card">
-                                        <div class="quick-link-icon">
+                                    <a href="/careers.html" class="destination-card">
+                                        <div class="destination-icon">
                                             <i class="fas fa-search"></i>
                                         </div>
-                                        <h6 class="fw-bold text-dark mb-1">Latest Job Vacancies</h6>
-                                        <p class="text-muted small mb-0">Explore fresh openings in BPO, Sales, Banking & IT.</p>
+                                        <h6>Latest Job Vacancies</h6>
+                                        <p>Explore fresh openings in BPO, Sales, Banking, IT & Accounts.</p>
+                                        <div class="card-arrow">View Openings <i class="fas fa-arrow-right ms-1"></i></div>
                                     </a>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="/bfsi-training.html" class="quick-link-card">
-                                        <div class="quick-link-icon">
+                                    <a href="/bfsi-training.html" class="destination-card">
+                                        <div class="destination-icon">
                                             <i class="fas fa-chart-line"></i>
                                         </div>
-                                        <h6 class="fw-bold text-dark mb-1">BFSI Certification</h6>
-                                        <p class="text-muted small mb-0">Practical industry training with guaranteed placement support.</p>
+                                        <h6>BFSI Certification</h6>
+                                        <p>Comprehensive practical banking training with placement support.</p>
+                                        <div class="card-arrow">Explore Courses <i class="fas fa-arrow-right ms-1"></i></div>
                                     </a>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="/recruitment-solution.html" class="quick-link-card">
-                                        <div class="quick-link-icon">
+                                    <a href="/recruitment-solution.html" class="destination-card">
+                                        <div class="destination-icon">
                                             <i class="fas fa-user-check"></i>
                                         </div>
-                                        <h6 class="fw-bold text-dark mb-1">Recruitment Solutions</h6>
-                                        <p class="text-muted small mb-0">End-to-end talent acquisition services for companies.</p>
+                                        <h6>Recruitment Solutions</h6>
+                                        <p>End-to-end talent acquisition and hiring services for corporate clients.</p>
+                                        <div class="card-arrow">Our Services <i class="fas fa-arrow-right ms-1"></i></div>
                                     </a>
                                 </div>
                             </div>
