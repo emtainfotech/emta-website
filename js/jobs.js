@@ -1,10 +1,74 @@
 const jobs = [
+    {
+        id: "new-cce-vijay-nagar",
+        url: "jobs/customer-care-executive-vijay-nagar/",
+        title: "Customer Care Executive | Multiple Processes",
+        company: "EMTA",
+        logo: "img/emta-gif.gif",
+        location: "Vijay Nagar, Indore",
+        salary: "₹10,500 - ₹16,500 + Incentives"
+    },
+    {
+        id: "new-inside-sales",
+        url: "jobs/inside-sales-executive/",
+        title: "Inside Sales Associate / Sr. Associate",
+        company: "EMTA",
+        logo: "img/emta-gif.gif",
+        location: "Indore | On-site",
+        salary: "₹17,000 – ₹25,000/month"
+    },
+    {
+        id: "new-cce-swiggy",
+        url: "jobs/customer-care-swiggy/",
+        title: "Customer Care Executive (Swiggy)",
+        company: "EMTA",
+        logo: "img/emta-gif.gif",
+        location: "Indore",
+        salary: "₹11,000 – ₹13,500 In-hand"
+    },
+    {
+        id: "new-csa-vivint",
+        url: "jobs/customer-success-associate-vivint/",
+        title: "Customer Success Associate - Vivint",
+        company: "EMTA",
+        logo: "img/emta-gif.gif",
+        location: "Sector 30, Gurugram",
+        salary: "Up to 32.5K CTC"
+    },
+    {
+        id: "new-cse-walmart",
+        url: "jobs/customer-support-walmart/",
+        title: "Customer Support Executive (Walmart)",
+        company: "EMTA",
+        logo: "img/emta-gif.gif",
+        location: "Jaipur, Rajasthan",
+        salary: "₹30,000 - ₹34,000 CTC"
+    },
+    {
+        id: "new-cse-seller-support",
+        url: "jobs/customer-support-seller-support/",
+        title: "Customer Support Exec. (Seller Support)",
+        company: "EMTA",
+        logo: "img/emta-gif.gif",
+        location: "Kharadi, Pune",
+        salary: "Up to ₹32,000 CTC/month"
+    },
+    {
+        id: "new-senior-accountant",
+        url: "jobs/senior-accountant/",
+        title: "Senior Accountant",
+        company: "EMTA",
+        logo: "img/emta-gif.gif",
+        location: "Indore",
+        salary: "₹30,000 – ₹50,000 per month"
+    },
+
     // --- NEW SWIGGY VACANCY (TOP PRIORITY) ---
     {
         id: 1,
         title: 'Customer Support Executive (Chat & Voice Support)',
         company: 'EMTA', 
-        logo: 'img/logo.png',
+        logo: 'img/emta-gif.gif',
         location: 'Indore', // Standard EMTA location
         salary: '₹ 15,000 /Month CTC',
         description: 'We are looking for enthusiastic Customer Support Executives to join our team for the Swiggy Process. The role involves handling chat and voice-based queries of customers, ensuring quick resolution, and delivering a smooth customer experience.',
@@ -31,7 +95,7 @@ const jobs = [
         id: 2,
         title: 'Wealth Management Associate',
         company: 'EMTA',
-        logo: 'img/logo.png',
+        logo: 'img/emta-gif.gif',
         location: 'Gurugram, Sec 30',
         salary: 'Best in Industry',
         description: 'This role involves market analysis, trade processing, and supporting investment clients with high-quality financial insights. We are seeking highly skilled candidates with strong expertise in cryptocurrency, equity markets, ETFs, mutual funds, wealth management, and trade settlements.',
@@ -54,7 +118,7 @@ const jobs = [
         id: 3,
         title: 'Clearing & Settlement Associate',
         company: 'EMTA',
-        logo: 'img/logo.png',
+        logo: 'img/emta-gif.gif',
         location: 'Gurugram, Sec 30',
         salary: 'Best in Industry',
         description: 'We are looking for an associate with strong understanding of the trade lifecycle and clearing & settlement processes. The role requires attention to detail, process discipline, and the ability to handle reconciliations and exception handling efficiently.',
@@ -78,7 +142,7 @@ const jobs = [
         id: 4,
         title: 'Tax Operations Associate',
         company: 'EMTA',
-        logo: 'img/logo.png',
+        logo: 'img/emta-gif.gif',
         location: 'Gurugram, Sec 30',
         salary: 'Best in Industry',
         description: 'The Tax Operations Associate will handle tax compliance, including GST, TDS/TCS, and Income Tax filings. Ideally suited for candidates with strong knowledge of Indian taxation laws and experience in financial services or broking firms.',
@@ -101,7 +165,7 @@ const jobs = [
         id: 5,
         title: 'Asset Servicing Associate',
         company: 'EMTA',
-        logo: 'img/logo.png',
+        logo: 'img/emta-gif.gif',
         location: 'Gurugram, Sec 30',
         salary: 'Best in Industry',
         description: 'Join our team as an Asset Servicing Associate to process corporate actions and manage entitlement reconciliations. Experience in portfolio accounting or fund operations is a plus.',
@@ -124,7 +188,7 @@ const jobs = [
         id: 6,
         title: 'Corporate Actions Associate',
         company: 'EMTA',
-        logo: 'img/logo.png',
+        logo: 'img/emta-gif.gif',
         location: 'Gurugram, Sec 30',
         salary: 'Best in Industry',
         description: 'Focused on processing and validating corporate action events such as dividends, splits, bonuses, and buybacks. Requires strong reconciliation capabilities and Excel reporting skills.',
@@ -147,7 +211,7 @@ const jobs = [
         id: 7,
         title: 'Trading Operations Associate',
         company: 'EMTA',
-        logo: 'img/logo.png',
+        logo: 'img/emta-gif.gif',
         location: 'Gurugram, Sec 30',
         salary: 'Best in Industry',
         description: 'Responsible for monitoring trading platforms, market connectivity, and resolving latency issues. Ideally suited for candidates with experience in brokerage, prop trading, or fintech firms.',
@@ -172,7 +236,7 @@ const jobs = [
         id: 8,
         title: 'Inside Sales Associate',
         company: 'Elite Manpower & Training Academy',
-        logo: 'img/logo.png',
+        logo: 'img/emta-gif.gif',
         location: 'Indore',
         salary: '₹ 15,000 - ₹ 25,000 /month',
         description: 'This role involves engaging with MediBuddy app users, influencing their healthcare decisions, and converting leads into successful sales. Strong communication, negotiation, and target-driven skills are essential.',
@@ -190,7 +254,7 @@ const jobs = [
         id: 9,
         title: 'In-Clinic Operations Executive',
         company: 'Elite Manpower & Training Academy',
-        logo: 'img/logo.png',
+        logo: 'img/emta-gif.gif',
         location: 'Indore',
         salary: '₹ 15,000 - ₹ 22,000 /month',
         description: 'We are looking for a flexible and adaptable Associate to join our team, responsible for supporting the seamless execution of in-clinic doctor consultations. The role involves a range of responsibilities, including managing patient attendance, collecting prescriptions, and handling escalations. The trainee will be expected to work across multiple functions, ensuring smooth day-to-day operations. Strong communication skills and the ability to handle high call volumes are essential for this role.',
@@ -211,7 +275,7 @@ const jobs = [
         id: 10,
         title: 'Escalation Desk Executive',
         company: 'Elite Manpower & Training Academy',
-        logo: 'img/logo.png',
+        logo: 'img/emta-gif.gif',
         location: 'Indore',
         salary: '₹ 13,000 - ₹ 18,000 /month',
         description: 'This role involves handling customer escalations (voice/non-voice), ensuring timely resolutions, and maintaining customer satisfaction in a rotational day shift environment.',
@@ -229,7 +293,7 @@ const jobs = [
         id: 11,
         title: 'Graphic Designer',
         company: 'EMTA',
-        logo: 'img/logo.png',
+        logo: 'img/emta-gif.gif',
         location: 'Indore',
         salary: '₹ 18,000 - ₹ 25,000 /month',
         description: 'In this role, you will be responsible for creating visual designs and video content for a variety of projects, including social media, marketing materials, and more. This is a great opportunity for interns and entry-level candidates to gain experience and build their skills in graphic design and video editing.',
@@ -250,7 +314,7 @@ const jobs = [
         id: 12,
         title: 'Business Development Executive',
         company: 'EMTA',
-        logo: 'img/logo.png',
+        logo: 'img/emta-gif.gif',
         location: 'Sudama Nagar, Indore, Madhya Pradesh (Preferred)',
         salary: '₹ 15,000 - ₹ 35,000 /month',
         description: 'As an Inside Sales Executive, you will play a key role in expanding our customer base for enterprise SaaS-based products. You will engage with potential customers through various channels, build relationships, and contribute to lead generation and conversion efforts.',
@@ -280,7 +344,7 @@ const jobs = [
         id: 13,
         title: 'Digital Marketing Expert',
         company: 'EMTA',
-        logo: 'img/logo.png',
+        logo: 'img/emta-gif.gif',
         location: 'Indore (On-site)',
         salary: 'Competitive salary based on experience and skillset',
         description: 'At EMTA, we are committed to building a strong digital presence that reflects our brand and drives real business results. We are currently seeking a highly skilled and creative Digital Marketing Expert to join our growing team in Indore.',
@@ -317,7 +381,7 @@ const jobs = [
         id: 14,
         title: 'Business Development Executive / Manager (Real Estate)',
         company: 'EMTA',
-        logo: 'img/logo.png',
+        logo: 'img/emta-gif.gif',
         location: 'New Palasia, Indore',
         salary: 'Attractive incentives',
         description: 'We are looking for a dynamic and results-driven Business Development Executive / Manager to join our growing team at Aditya Developer. The ideal candidate should have a passion for real estate, excellent communication skills, and a proven track record in sales or client acquisition.',
@@ -357,7 +421,7 @@ const jobs = [
         id: 15,
         title: 'Site Supervisor / Installation Supervisor / Site Manager',
         company: 'EMTA', 
-        logo: 'img/logo.png',
+        logo: 'img/emta-gif.gif',
         location: ' Bhopal & other project sites (as per project requirements)', // Standard EMTA location
         salary: '₹ 15,000 - 20,000 /Month CTC',
         description: 'We are hiring Site Supervisors / Installation Supervisors / Site Managers to manage on-site installation andexecution activities. The role involves manpower management, site administration, coordination with government authorities (Nagar Nigam), and handling multiple sites efficiently.',
@@ -382,30 +446,33 @@ const jobs = [
 
 // Function to generate the HTML for a single job card
 function createJobCardHTML(job) {
+    const jobLink = job.url ? job.url : `job-details.html?id=${job.id}`;
     return `
         <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="job-card-design">
                 <div class="card-top-section">
                     <div class="hiring-status-tag">
-                        <i class="fas fa-chart-line"></i> Actively hiring
+                        <i class="fas fa-chart-line" aria-hidden="true"></i> Actively hiring
                     </div>
-                    <div class="header-content">
+                    <div class="header-content d-flex justify-content-between align-items-start gap-2">
                         <div class="job-info">
-                            <h5 class="job-info-title">${job.title}</h5>
-                            <p class="job-info-company">${job.company}</p>
+                            <h3 class="job-info-title h5 mb-1">${job.title}</h3>
+                            <p class="job-info-company text-muted mb-0">${job.company}</p>
                         </div>
-                        <img src="${job.logo}" alt="${job.company} Logo" class="company-logo-img">
+                        <div class="company-logo-box">
+                            <img src="${job.logo}" alt="${job.company} Logo" class="company-logo-img" width="40" height="40" loading="lazy">
+                        </div>
                     </div>
                 </div>
                 
                 <div class="card-middle-section">
-                    <p class="job-detail-item"><i class="fas fa-map-marker-alt"></i> ${job.location}</p>
-                    <p class="job-detail-item"><i class="fas fa-rupee-sign"></i> ${job.salary}</p>
+                    <p class="job-detail-item"><i class="fas fa-map-marker-alt text-primary" aria-hidden="true"></i> ${job.location}</p>
+                    <p class="job-detail-item"><i class="fas fa-rupee-sign text-primary" aria-hidden="true"></i> ${job.salary}</p>
                 </div>
                 
                 <div class="card-bottom-section">
                     <span class="job-category-tag">Job</span>
-                    <a href="job-details.html?id=${job.id}" class="view-details-link">View details <i class="fas fa-arrow-right"></i></a>
+                    <a href="${jobLink}" class="view-details-link" aria-label="View details for ${job.title}">View details <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>

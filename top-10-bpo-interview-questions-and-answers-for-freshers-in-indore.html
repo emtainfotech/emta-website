@@ -30,9 +30,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="lib/animate/animate.min.css" />
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link rel="preload" href="lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="lib/animate/animate.min.css"></noscript>
+    <link rel="preload" href="lib/lightbox/css/lightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="lib/lightbox/css/lightbox.min.css"></noscript>
+    <link rel="preload" href="lib/owlcarousel/assets/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css"></noscript>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -103,7 +106,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a href="https://emta.co.in/" class="navbar-brand p-0" style="margin-top:-10px;">
-                    <img src="img/logo.png" alt="EMTA">
+                    <img src="f.png" alt="EMTA" width="160" height="48">
                 </a>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-0 mx-lg-auto">
@@ -135,7 +138,7 @@
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="d-none d-xl-flex flex-shrink-0 ps-4">
-                    <a href="tel:+ 918962540996"
+                    <a href="tel:+ 919522257477"
                         class="btn btn-light btn-lg-square rounded-circle position-relative wow tada"
                         data-wow-delay=".9s">
                         <i class="fa fa-phone-alt fa-2x"></i>
@@ -159,7 +162,7 @@
                 <div class="col-lg-8">
                     <img src="img/Blog/bpo-interview-questions-and-answers-guide.png"
                         class="img-fluid rounded mb-4 w-100"
-                        alt="BPO Interview Questions and Answers: A Complete Guide">
+                        alt="BPO Interview Questions and Answers: A Complete Guide" width="2048" height="2048">
 
                     <h1 class="mb-3">BPO Interview Questions and Answers: A Complete Guide</h1>
 
@@ -315,36 +318,31 @@
                         <h3 class="mb-4">Recent Posts</h3>
                         <div class="bg-light rounded p-4">
                             <div class="d-flex mb-3">
-                                <img src="img/Blog/bfsi-jobs-gateway-to-stable-careers.png" class="img-fluid rounded"
-                                    style="width: 100px; height: 100px; object-fit: cover;" alt="Blog post thumbnail">
-                                <a href="bfsi-jobs-gateway-to-stable-careers.html"
-                                    class="h5 d-flex align-items-center bg-white rounded-end ps-3 mb-0">BFSI Jobs: A Gateway to Stable and Rewarding Careers in the Financial Sector
+                                <img src="img/Blog/how-to-crack-an-interview-complete-guide-for-freshers.png" class="img-fluid rounded"
+                                    style="width: 100px; height: 100px; object-fit: cover;" alt="Blog post thumbnail" loading="lazy">
+                                <a href="how-to-crack-an-interview-complete-guide-for-freshers.html"
+                                    class="h5 d-flex align-items-center bg-white rounded-end ps-3 mb-0">How to Crack an Interview: A Complete Guide for Freshers
                                 </a>
                             </div>
                             <div class="d-flex mb-3">
-                                <img src="img/Blog/jobs-for-freshers-in-indore-a-practical-guide.png"
-                                    class="img-fluid rounded" style="width: 100px; height: 100px; object-fit: cover;"
-                                    alt="Blog post thumbnail">
-                                <a href="jobs-for-freshers-in-Indore-a-practical-guide-to-career-opportunities.html"
-                                    class="h5 d-flex align-items-center bg-white rounded-end ps-3 mb-0">Jobs for
-                                    Freshers in Indore: A Practical Guide to Career Opportunities
-                                </a>
-                            </div>
-                            <div class="d-flex mb-3">
-                                <img src="img/Blog/What Is BFSI A Complete Guide to the Sector and Its Importance.png"
-                                    class="img-fluid rounded" style="width: 100px; height: 100px; object-fit: cover;"
-                                    alt="Blog post thumbnail">
-                                <a href="What-Is-BFSI-A-Complete-Guide-to-the-Sector-and-Its-Importance.html"
-                                    class="h5 d-flex align-items-center bg-white rounded-end ps-3 mb-0">What Is BFSI? A
-                                    Complete Guide to the Sector and Its Importance
+                                <img src="img/Blog/crm-in-the-bfsi-sector.png" class="img-fluid rounded"
+                                    style="width: 100px; height: 100px; object-fit: cover;" alt="Blog post thumbnail" loading="lazy">
+                                <a href="crm-in-the-bfsi-sector.html"
+                                    class="h5 d-flex align-items-center bg-white rounded-end ps-3 mb-0">Customer Relationship Management (CRM) in the BFSI Sector
                                 </a>
                             </div>
                             <div class="d-flex mb-3">
                                 <img src="img/Blog/how-a-jobs-consultancy-can-help.png" class="img-fluid rounded"
-                                    style="width: 100px; height: 100px; object-fit: cover;" alt="Blog post thumbnail">
+                                    style="width: 100px; height: 100px; object-fit: cover;" alt="Blog post thumbnail" loading="lazy">
                                 <a href="how-a-jobs-consultancy-can-help.html"
-                                    class="h5 d-flex align-items-center bg-white rounded-end ps-3 mb-0">How a Jobs
-                                    Consultancy Can Help You Find the Right Job
+                                    class="h5 d-flex align-items-center bg-white rounded-end ps-3 mb-0">How a Jobs Consultancy Can Help You Find the Right Job
+                                </a>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <img src="img/Blog/bfsi-jobs-gateway-to-stable-careers.png" class="img-fluid rounded"
+                                    style="width: 100px; height: 100px; object-fit: cover;" alt="Blog post thumbnail" loading="lazy">
+                                <a href="bfsi-jobs-gateway-to-stable-careers.html"
+                                    class="h5 d-flex align-items-center bg-white rounded-end ps-3 mb-0">BFSI Jobs: A Gateway to Stable and Rewarding Careers
                                 </a>
                             </div>
                         </div>
@@ -359,7 +357,7 @@
                                 <a href="careers.html" class="btn btn-light m-1">Indore Jobs</a>
                                 <a href="careers.html" class="btn btn-light m-1">Career Tips</a>
                                 <a href="recruitment-solution.html" class="btn btn-light m-1">Recruitment</a>
-                                <a href="home.html" class="btn btn-light m-1">EMTA</a>
+                                <a href="https://emta.co.in/" class="btn btn-light m-1">EMTA</a>
                             </div>
                         </div>
                     </div>
@@ -388,8 +386,7 @@
             });
         </script>
 
-        <a href="https://wa.me/9522257477" target="_blank" class="whatsapp-float" title="Chat with Us on WhatsApp">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="60">
+        <a href="https://wa.me/9522257477" target="_blank" class="whatsapp-float" title="Chat with Us on WhatsApp"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="60" height="60" loading="lazy" height="60" loading="lazy">
         </a>
 
         <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
@@ -401,7 +398,7 @@
                                 <div class="col-md-6 col-lg-6 col-xl-5">
                                     <div class="footer-item">
                                         <a href="index.html" class="p-0">
-                                            <h3><img src="f-logo.png" style="height:60px;width:200px;" alt="Logo"> </h3>
+                                            <h3><img src="f.png" width="200" height="60" loading="lazy" alt="Logo"> </h3>
                                         </a>
                                         <p class="text-white mb-4">Elite Manpower and Training Academy (EMTA), founded
                                             in
@@ -429,7 +426,7 @@
                                         <h4 class="text-white mb-4">Useful Links</h4>
                                         <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
                                         <a href="blog.html"><i class="fas fa-angle-right me-2"></i> Blog</a>
-                                        <a href="job-vacancy.html"><i class="fas fa-angle-right me-2"></i> Recruitment
+                                        <a href="recruitment-solution.html"><i class="fas fa-angle-right me-2"></i> Recruitment
                                             Solution</a>
                                         <a href="bfsi-training.html#course-structure"><i
                                                 class="fas fa-angle-right me-2"></i> Courses & Fees</a>
@@ -443,7 +440,7 @@
                                         <div class="row g-3">
                                             <div class="col-4">
                                                 <div class="footer-instagram rounded">
-                                                    <img src="img/insta-images/1.png" class="img-fluid w-100" alt="">
+                                                    <img src="img/insta-images/1.png" class="img-fluid w-100" alt="Instagram Image" width="80" height="80" loading="lazy">
                                                     <div class="footer-search-icon">
                                                         <a href="img/insta-images/1.png"
                                                             data-lightbox="footerInstagram-1" class="my-auto"><i
@@ -453,7 +450,7 @@
                                             </div>
                                             <div class="col-4">
                                                 <div class="footer-instagram rounded">
-                                                    <img src="img/insta-images/2.png" class="img-fluid w-100" alt="">
+                                                    <img src="img/insta-images/2.png" class="img-fluid w-100" alt="Instagram Image" width="80" height="80" loading="lazy">
                                                     <div class="footer-search-icon">
                                                         <a href="img/insta-images/2.png"
                                                             data-lightbox="footerInstagram-2" class="my-auto"><i
@@ -463,7 +460,7 @@
                                             </div>
                                             <div class="col-4">
                                                 <div class="footer-instagram rounded">
-                                                    <img src="img/insta-images/3.png" class="img-fluid w-100" alt="">
+                                                    <img src="img/insta-images/3.png" class="img-fluid w-100" alt="Instagram Image" width="80" height="80" loading="lazy">
                                                     <div class="footer-search-icon">
                                                         <a href="img/insta-images/3.png"
                                                             data-lightbox="footerInstagram-3" class="my-auto"><i
@@ -473,7 +470,7 @@
                                             </div>
                                             <div class="col-4">
                                                 <div class="footer-instagram rounded">
-                                                    <img src="img/insta-images/4.png" class="img-fluid w-100" alt="">
+                                                    <img src="img/insta-images/4.png" class="img-fluid w-100" alt="Instagram Image" width="80" height="80" loading="lazy">
                                                     <div class="footer-search-icon">
                                                         <a href="img/insta-images/4.png"
                                                             data-lightbox="footerInstagram-4" class="my-auto"><i
@@ -483,7 +480,7 @@
                                             </div>
                                             <div class="col-4">
                                                 <div class="footer-instagram rounded">
-                                                    <img src="img/insta-images/5.png" class="img-fluid w-100" alt="">
+                                                    <img src="img/insta-images/5.png" class="img-fluid w-100" alt="Instagram Image" width="80" height="80" loading="lazy">
                                                     <div class="footer-search-icon">
                                                         <a href="img/insta-images/5.png"
                                                             data-lightbox="footerInstagram-5" class="my-auto"><i
@@ -493,7 +490,7 @@
                                             </div>
                                             <div class="col-4">
                                                 <div class="footer-instagram rounded">
-                                                    <img src="img/insta-images/6.png" class="img-fluid w-100" alt="">
+                                                    <img src="img/insta-images/6.png" class="img-fluid w-100" alt="Instagram Image" width="80" height="80" loading="lazy">
                                                     <div class="footer-search-icon">
                                                         <a href="img/insta-images/6.png"
                                                             data-lightbox="footerInstagram-6" class="my-auto"><i
@@ -517,14 +514,12 @@
                                                 </div>
                                                 <div>
                                                     <h4 class="text-white">Address</h4>
-                                                    <p class="mb-0"><b class="text-white">New and Current Address -</b>
-                                                        <br> 353-A, First Floor, Mahalaxmi Nagar Main Road, Left to Bank
-                                                        Of India, Indore-452010
-                                                    </p><br>
-                                                    <p class="mb-0"><b class="text-white">Old Address -</b>
-                                                        <br>155(A),First Floor, Mangal City Mall,Vijay Nagar, Indore -
-                                                        452010
-                                                    </p>
+                                                    <p class="mb-0">
+                                                    Flat No. 102, Vatsalya<br>
+                                                    AF-3, Scheme No. 54, Vijay Nagar<br>
+                                                    Indore – 452010<br>
+                                                    <br>
+                                                    Landmark: Behind the lane of Golden Gate Hotel, near Satya Sai Square.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -546,7 +541,7 @@
                                                 </div>
                                                 <div>
                                                     <h4 class="text-white">Telephone</h4>
-                                                    <p class="mb-0">+91 8962540996</p>
+                                                    <p class="mb-0">+91 9522257477</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -574,7 +569,7 @@
                                 </div>
                                 <div class="d-flex flex-column ms-3 flex-shrink-0">
                                     <span>Call Us</span>
-                                    <a href="tel:+918962540996"><span class="text-white">Free: +91 8962540996</span></a>
+                                    <a href="tel:+919522257477"><span class="text-white">Free: +91 9522257477</span></a>
                                 </div>
                             </div>
                         </div>
@@ -596,16 +591,16 @@
                 </div>
             </div>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script defer src="lib/wow/wow.min.js"></script>
+        <script defer src="lib/easing/easing.min.js"></script>
+        <script defer src="lib/waypoints/waypoints.min.js"></script>
+        <script defer src="lib/counterup/counterup.min.js"></script>
+        <script defer src="lib/lightbox/js/lightbox.min.js"></script>
+        <script defer src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-        <script src="js/main.js"></script>
+        <script defer src="js/main.js"></script>
 </body>
 
 </html>

@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Best Job Consultancy & Placement Services in Indore | EMTA</title>
+    <title>Best Job Consultancy in Indore | Placement Services & Jobs for Freshers | EMTA</title>
     <meta name="description"
-        content="Looking for the best job consultancy and placement services in Indore? EMTA offers expert career guidance, jobs for freshers, and recruitment solutions." />
+                content="EMTA is a leading job consultancy in Indore offering placement services, jobs for freshers, BPO jobs, banking jobs, IT jobs, interview preparation, resume guidance, and BFSI training.">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="keywords" content="Job Consultancy in Indore, Jobs for freshers, Job Consultant in Indore, Placement Services in Indore, Recruitment Agency in Indore" />
+    <meta name="keywords" content="Job Consultancy in Indore, Placement Consultancy, Jobs in Indore, Jobs for Freshers, BPO Jobs, Banking Jobs, IT Jobs, Customer Care Jobs, EMTA">
 
     <link rel="shortcut icon" href="m.png" type="image/x-icon">
     <!-- Google Web Fonts -->
@@ -17,14 +17,25 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap"
         rel="stylesheet">
 
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://ajax.googleapis.com" crossorigin>
+
+    <!-- Preload Critical Hero Assets -->
+    <link rel="preload" href="Web Banner Boys & girls.webp" as="image" type="image/webp">
+    <link rel="preload" href="image-removebg-preview.png" as="image" type="image/png">
+
     <!-- Icon Font Stylesheet -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link rel="stylesheet" href="lib/animate/animate.min.css" />
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link rel="preload" href="lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="lib/animate/animate.min.css"></noscript>
+    <link rel="preload" href="lib/lightbox/css/lightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="lib/lightbox/css/lightbox.min.css"></noscript>
+    <link rel="preload" href="lib/owlcarousel/assets/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css"></noscript>
 
 
     <!-- Customized Bootstrap Stylesheet -->
@@ -176,7 +187,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a href="https://emta.co.in/" class="navbar-brand p-0" style="margin-top:-10px;">
-                    <img src="img/logo.png" alt="EMTA">
+                    <img src="f.png" alt="EMTA" width="160" height="48">
                 </a>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-0 mx-lg-auto">
@@ -360,6 +371,8 @@
             place-items: center;
             padding-left: 150px;
             /* Space for the sticky label */
+            mask-image: linear-gradient(to right, transparent, transparent 150px, black 200px, black 95%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, transparent 150px, black 200px, black 95%, transparent);
         }
 
         .slide-track {
@@ -463,6 +476,8 @@
                 padding-left: 0;
                 height: 80px;
                 margin: 0px;
+                mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+                -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
             }
 
             .hero-image {
@@ -480,20 +495,28 @@
                 <div class="row align-items-center">
                     <!-- Left Content -->
                     <div class="col-lg-6 hero-content">
-                        <h1 class="mb-3 highlight"><span class="text-white">India's</span> #1 Job Consultancy</h1>
+                        <h1 class="display-4 fw-bold mb-3">
+                            <span class="text-white">Trusted</span>
+                            <span class="text-white">Job Consultancy</span><br>
+                            <span class="text-white">in</span>
+                            <span class="text-warning">Indore</span>
+                        </h1>
                         <p class="text-white fw-bold mb-2">Trusted Career & Hiring Partner</p>
-                        <p class="text-white">Jobs for freshers, internships and courses</p>
+                        <p class="text-white mb-4" style="font-size:1.15rem;line-height:1.7;max-width:560px;">
+    Verified jobs, placement assistance and career guidance
+    for freshers &amp; experienced professionals.
+</p>
                         <div class="hero-image mb-4" style="margin-top: -20px;">
-                            <img src="image-removebg-preview.png" alt="Hero Image" class="img-fluid">
+                            <img src="image-removebg-preview.png" alt="Hero Image" class="img-fluid" width="518" height="345">
                         </div>
                         <div class="d-flex flex-column flex-sm-row gap-3 mb-3">
-                            <a href="study-with-us.html"
-                                class="btn btn-google d-flex align-items-center justify-content-center">
-                                Study with Us
-                            </a>
                             <a href="work-with-us.html"
-                                class="btn btn-email d-flex align-items-center justify-content-center">
-                                Apply for Jobs
+                                class="btn btn-light rounded-pill px-4 py-3 fw-bold text-primary shadow-sm d-flex align-items-center justify-content-center">
+                                <i class="fas fa-briefcase me-2" aria-hidden="true"></i> Apply for Jobs
+                            </a>
+                            <a href="study-with-us.html"
+                                class="btn btn-outline-light rounded-pill px-4 py-3 fw-bold d-flex align-items-center justify-content-center">
+                                <i class="fas fa-graduation-cap me-2" aria-hidden="true"></i> Study with Us
                             </a>
                         </div>
                         <!-- <p class="terms-text">By continuing, you agree to our <a href="#" class="terms-link">T&C</a>.</p> -->
@@ -506,76 +529,65 @@
         <div class="footer-companies">
             <div class="sticky-label">
                 <strong>100+</strong><br>
-                Openings Daily
+                Hiring Partner
             </div>
             <div class="slider">
                 <div class="slide-track">
-                    <div class="slide"><img src="/company/1-min.png" alt="industry"></div>
-                    <div class="slide"><img src="/img/colab/1.png" alt="industry"></div>
-                    <div class="slide"><img src="/company/2-min.png" alt="Nestle"></div>
-                    <!-- <div class="slide"><img src="/company/3.png" alt="HCL"></div> -->
-                    <div class="slide"><img src="/company/4-min.png" alt="BookMyShow"></div>
-                    <div class="slide"><img src="/img/colab/2.png" alt="industry"></div>
-                    <div class="slide"><img src="/company/5-min.png" alt="Nykaa"></div>
-                    <div class="slide"><img src="/company/6-min.png" alt="Decathlon"></div>
-                    <div class="slide"><img src="/img/colab/3.png" alt="industry"></div>
-                    <div class="slide"><img src="/company/7-min.png" alt="OYO"></div>
-
-                    <div class="slide"><img src="/company/8-min.png" alt="Paytm"></div>
-                    <div class="slide"><img src="/img/colab/4.png" alt="industry"></div>
-                    <div class="slide"><img src="/company/9-min.png" alt="Nestle"></div>
-                    <div class="slide"><img src="/company/10-min.png" alt="HCL"></div>
-                    <div class="slide"><img src="/img/colab/5.png" alt="industry"></div>
-                    <div class="slide"><img src="/company/11-min.png" alt="BookMyShow">
-                    </div>
-                    <div class="slide"><img src="/company/12-min.png" alt="Nykaa"></div>
-                    <div class="slide"><img src="/img/colab/6.png" alt="industry"></div>
-                    <!-- <div class="slide"><img src="/company/13.png" alt="Decathlon"></div> -->
-                    <div class="slide"><img src="/company/14-min.png" alt="OYO"></div>
-                    <div class="slide"><img src="/company/15-min.png" alt="industry"></div>
-                    <div class="slide"><img src="/img/colab/7.png" alt="industry"></div>
-                    <div class="slide"><img src="/company/16-min.png" alt="Nestle"></div>
-                    <div class="slide"><img src="/company/17-min.png" alt="HCL"></div>
-                    <div class="slide"><img src="/img/colab/8.png" alt="industry"></div>
-                    <div class="slide"><img src="/company/18-min.png" alt="BookMyShow"></div>
-                    <div class="slide"><img src="/company/19-min.png" alt="Nykaa"></div>
-                    <div class="slide"><img src="/img/colab/9.png" alt="industry"></div>
-                    <div class="slide"><img src="/company/20-min.png" alt="Decathlon"></div>
-                    <div class="slide"><img src="/company/21-min.png" alt="OYO"></div>
-                    <div class="slide"><img src="/img/colab/10.png" alt="industry"></div>
-
-                    <div class="slide"><img src="/company/22-min.png" alt="Paytm"></div>
-                    <div class="slide"><img src="/company/23-min.png" alt="Nestle"></div>
-                    <div class="slide"><img src="/img/colab/11.png" alt="industry"></div>
-                    <div class="slide"><img src="/company/24-min.png" alt="HCL"></div>
-                    <!--<div class="slide"><img src="/company/25-min.png" alt="BookMyShow">-->
-                </div>
-                <div class="slide"><img src="/company/26-min.png" alt="Nykaa"></div>
-                <div class="slide"><img src="/img/colab/12.png" alt="industry"></div>
-                <div class="slide"><img src="/company/27-min.png" alt="Decathlon"></div>
-                <div class="slide"><img src="/company/28-min.png" alt="OYO"></div>
-                <div class="slide"><img src="/img/colab/13.png" alt="industry"></div>
-                <div class="slide"><img src="/company/29-min.png" alt="OYO"></div>
-                <div class="slide"><img src="/company/30-min.png" alt="industry"></div>
-                <div class="slide"><img src="/img/colab/14.png" alt="industry"></div>
-                <div class="slide"><img src="/company/31-min.png" alt="Nestle"></div>
-                <div class="slide"><img src="/company/32-min.png" alt="HCL"></div>
-                <div class="slide"><img src="/img/colab/15.png" alt="industry"></div>
-                <div class="slide"><img src="/company/33-min.png" alt="BookMyShow"></div>
-                <div class="slide"><img src="/company/34-min.png" alt="Nykaa"></div>
-                <div class="slide"><img src="/img/colab/16.png" alt="industry"></div>
-                <!--<div class="slide"><img src="/company/35-min.png" alt="Decathlon"></div>-->
-                <div class="slide"><img src="/company/36-min.png" alt="OYO"></div>
-
-                <!--<div class="slide"><img src="/company/37-min.png" alt="Paytm"></div>-->
-                <div class="slide"><img src="/company/38-min.png" alt="Nestle"></div>
-                <div class="slide"><img src="/img/colab/17.png" alt="industry"></div>
-                <div class="slide"><img src="/company/39-min.png" alt="HCL"></div>
-                <div class="slide"><img src="/company/40-min.png" alt="BookMyShow">
-                    <div class="slide"><img src="/img/colab/18.png" alt="industry"></div>
-                </div>
-                <div class="slide"><img src="/company/41-min.png" alt="Nykaa"></div>
-                <div class="slide"><img src="/img/colab/19.png" alt="industry"></div>
+                    <div class="slide"><img src="/company/1-min.png" alt="industry" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/img/colab/1.png" alt="industry" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/2-min.png" alt="Nestle" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/4-min.png" alt="BookMyShow" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/img/colab/2.png" alt="industry" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/5-min.png" alt="Nykaa" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/6-min.png" alt="Decathlon" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/img/colab/3.png" alt="industry" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/7-min.png" alt="OYO" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/8-min.png" alt="Paytm" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/img/colab/4.png" alt="industry" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/9-min.png" alt="Nestle" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/10-min.png" alt="HCL" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/img/colab/5.png" alt="industry" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/11-min.png" alt="BookMyShow" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/12-min.png" alt="Nykaa" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/img/colab/6.png" alt="industry" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/14-min.png" alt="OYO" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/15-min.png" alt="industry" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/img/colab/7.png" alt="industry" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/16-min.png" alt="Nestle" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/17-min.png" alt="HCL" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/img/colab/8.png" alt="industry" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/18-min.png" alt="BookMyShow" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/19-min.png" alt="Nykaa" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/img/colab/9.png" alt="industry" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/20-min.png" alt="Decathlon" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/21-min.png" alt="OYO" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/img/colab/10.png" alt="industry" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/22-min.png" alt="Paytm" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/23-min.png" alt="Nestle" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/img/colab/11.png" alt="industry" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/24-min.png" alt="HCL" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/26-min.png" alt="Nykaa" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/img/colab/12.png" alt="industry" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/27-min.png" alt="Decathlon" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/28-min.png" alt="OYO" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/img/colab/13.png" alt="industry" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/29-min.png" alt="OYO" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/30-min.png" alt="industry" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/img/colab/14.png" alt="industry" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/31-min.png" alt="Nestle" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/32-min.png" alt="HCL" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/img/colab/15.png" alt="industry" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/33-min.png" alt="BookMyShow" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/34-min.png" alt="Nykaa" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/img/colab/16.png" alt="industry" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/36-min.png" alt="OYO" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/38-min.png" alt="Nestle" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/img/colab/17.png" alt="industry" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/39-min.png" alt="HCL" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/40-min.png" alt="BookMyShow" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/img/colab/18.png" alt="industry" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/company/41-min.png" alt="Nykaa" width="150" height="50" loading="lazy"></div>
+                    <div class="slide"><img src="/img/colab/19.png" alt="industry" width="150" height="50" loading="lazy"></div>
                 </div>
             </div>
         </div>
@@ -633,8 +645,8 @@
     </style>
 
     <section class="container my-5">
-        <h4 class="text-primary">Our Expertise</h4>
-        <h3 class="fw-bold mb-4">We are here to help you</h3>
+        <p class="text-primary fw-bold mb-1" style="font-size: var(--fs-sm, 0.875rem);">Our Expertise</p>
+        <h2 class="fw-bold mb-4">We are here to help you</h2>
 
         <!-- Main container for the slider -->
         <div class="position-relative">
@@ -706,7 +718,7 @@
 
                     cardWrapper.innerHTML = `
                         <a href="${imageData.linkUrl}" rel="noopener noreferrer" class="unique-slider-card h-100">
-                            <img src="${imageData.imageUrl}" alt="${imageData.imageAlt}" class="rounded" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/ccc/333?text=Error';">
+                            <img src="${imageData.imageUrl}" alt="${imageData.imageAlt}" class="rounded" loading="lazy" width="400" height="250" onerror="this.onerror=null;this.src='https://placehold.co/400x250/ccc/333?text=Error';">
                         </a>
                     `;
                     uniqueCardSliderTrack.appendChild(cardWrapper);
@@ -833,38 +845,36 @@
     <!-- candidate & clients Start -->
     <div class="container-fluid service">
         <div class="container">
-            <h4 class="text-primary">Our Business</h4>
+            <p class="text-primary fw-bold mb-1" style="font-size: var(--fs-sm, 0.875rem);">Our Business</p>
             <h2 class="display-7 mb-4">Empowering your success with specialized and equitable support.</h2>
 
             <div class="row g-4 justify-content-center">
                 <div class="col-md-6 col-lg-6 col-xl-6">
-                    <div class="service-item">
+                    <div class="service-item position-relative">
                         <div class="service-img">
-                            <img src="img/for-employee.webp" class="img-fluid rounded-top w-100" alt="">
-
+                            <img src="img/for-employee.webp" class="img-fluid rounded-top w-100" alt="For Job Seekers" width="600" height="400" loading="lazy">
                         </div>
                         <div class="service-content p-4">
-                            <div class="service-content-inner d-flex justify-content-between">
-                                <a href="for-employee.html" class="d-inline-block h4 mb-4">For Job Seekers</a>
-                                <button onclick="location.href='for-employee.html'"
-                                    class="btn btn-primary rounded-pill py-2 px-4"> <i
-                                        class="fa fa-arrow-right"></i></button>
+                            <div class="service-content-inner d-flex justify-content-between align-items-center">
+                                <a href="for-employee.html" class="d-inline-block h4 mb-0 text-decoration-none stretched-link">For Job Seekers</a>
+                                <span class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;" aria-hidden="true">
+                                    <i class="fa fa-arrow-right"></i>
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-6">
-                    <div class="service-item">
+                    <div class="service-item position-relative">
                         <div class="service-img">
-                            <img src="img/for-employer.webp" class="img-fluid rounded-top w-100" alt="">
-
+                            <img src="img/for-employer.webp" class="img-fluid rounded-top w-100" alt="For Employers" width="600" height="400" loading="lazy">
                         </div>
                         <div class="service-content p-4">
-                            <div class="service-content-inner d-flex justify-content-between">
-                                <a href="for-employer.html" class="d-inline-block h4 mb-4">For Clients</a>
-                                <button onclick="location.href='for-employer.html'"
-                                    class="btn btn-primary rounded-pill py-2 px-4"><i
-                                        class="fa fa-arrow-right"></i></button>
+                            <div class="service-content-inner d-flex justify-content-between align-items-center">
+                                <a href="for-employer.html" class="d-inline-block h4 mb-0 text-decoration-none stretched-link">For Employers</a>
+                                <span class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;" aria-hidden="true">
+                                    <i class="fa fa-arrow-right"></i>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -880,31 +890,34 @@
             <div class="row g-5">
                 <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.1s">
                     <div class="about-item-content rounded h-100">
-                        <h4 class="text-primary">About Us</h4>
-                        <h1 class="fw-bold mb-4">We are Job Consultant</h1>
-                        <p>Securing work in today’s competitive job environment can be a challenge, but a career
-                            consultant can be the most significant partner you have in your progress. Whether you are a
-                            graduate or a mature employee, having the right counsel can make securing that perfect
-                            engagement easier. There is one job consultant in Indore that provides tailored services and
-                            provides placement opportunities in Indore and throughout India. Their work serves as an
-                            unparalleled translator between skill and vocation, and they assist make the transitions of
-                            both easier and productive.</p>
-
-                        <p>For employers, working with an established job consultant uses an effective, efficient method
-                            to source good talent for your available positions. Finding good talent has the potential to
-                            take a long time, and the process can be drawn out and complicated. It is not, however, to
-                            find good talent, if you are working with, or guided by, an expert who is pre-disposed to
-                            source, vet and shortlist good candidates for your job postings. You will have more time,
-                            money, and developmental opportunities when you use a proven job consultant. A job
-                            consultant in Indore will have knowledge and understanding of various types of positions in
-                            both qualifications and culture to match candidates with proper fit for the job and the
-                            particular culture of your business that promotes future growth.</p>
-                        <!-- <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>We can save your money.</p>
-                        <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>Production or trading of good
+                        <p class="text-primary fw-bold mb-1" style="font-size: var(--fs-sm, 0.875rem);">About Us</p>
+                        <h2 class="fw-bold mb-3">We Are Your Trusted Job &amp; Career Consultant</h2>
+                        <p class="text-muted mb-4">
+                            Securing the right career opportunity in today’s competitive job market is simpler with an experienced partner. EMTA serves as a vital bridge between talent and industry, providing tailored placement services across Indore and pan-India.
                         </p>
-                        <p class="text-dark mb-4"><i class="fa fa-check text-primary me-3"></i>Our life insurance is
-                            flexible</p> -->
-                        <a class="btn btn-primary rounded-pill py-3 px-5 mt-4" href="about.html">More Information</a>
+
+                        <div class="d-flex flex-column gap-3 mb-4">
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="about-highlights-badge mt-1">
+                                    <i class="fa fa-user-graduate"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-dark d-block">Freshers &amp; Experience Launchpad</strong>
+                                    <span class="text-muted small">Specialized BFSI training, soft skills enhancement, and direct interview scheduling.</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="about-highlights-badge mt-1">
+                                    <i class="fa fa-handshake"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-dark d-block">Pre-Screened Employer Talent Matching</strong>
+                                    <span class="text-muted small">Fast, reliable candidate vetting and shortlisting for leading banks, IT, and retail enterprises.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="about.html">More Information</a>
                     </div>
                 </div>
                 <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.1s">
@@ -917,7 +930,7 @@
                                         <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">1935</span>
                                         <span class="h2 fw-bold text-primary">+</span>
                                     </div>
-                                    <h4 class="mb-0 text-dark">Student's</h4>
+                                    <p class="mb-0 text-dark fw-bold fs-6">Students Enrolled</p>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -926,7 +939,7 @@
                                         <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">3367</span>
                                         <span class="h2 fw-bold text-primary">+</span>
                                     </div>
-                                    <h4 class="mb-0 text-dark">Successful Placement's</h4>
+                                    <p class="mb-0 text-dark fw-bold fs-6">Successful Placements</p>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -935,7 +948,7 @@
                                         <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">137</span>
                                         <span class="h2 fw-bold text-primary">+</span>
                                     </div>
-                                    <h4 class="mb-0 text-dark">Connected Company's</h4>
+                                    <p class="mb-0 text-dark fw-bold fs-6">Connected Companies</p>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -944,13 +957,13 @@
                                         <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">21</span>
                                         <span class="h2 fw-bold text-primary">+</span>
                                     </div>
-                                    <h4 class="mb-0 text-dark">Team Members</h4>
+                                    <p class="mb-0 text-dark fw-bold fs-6">Team Members</p>
                                 </div>
                             </div>
 
                             <div class="col-12">
                                 <div class="rounded">
-                                    <video src="video.MOV"
+                                    <video src="video.MOV" preload="metadata"
                                         alt='A professional job consultant in Indore, India, discussing career opportunities with a promising candidate in a modern office setting.'
                                         controls autoplay muted loop
                                         style="width: 100%; height: 100%; object-fit: cover; border-radius:10px;">
@@ -968,7 +981,7 @@
 
     <div class="container py-5">
         <div class="mx-auto mb-5">
-            <h4 style="color: #015fcc;">Featured Jobs</h4>
+            <p class="text-primary fw-bold mb-1" style="font-size: var(--fs-sm, 0.875rem);">Featured Jobs</p>
             <h2>Find Your Next Career Opportunity</h2>
             <p class="lead text-muted">Browse through our curated list of job openings from top companies.</p>
         </div>
@@ -982,7 +995,7 @@
             <div class="row align-items-center">
                 <!-- Text Content -->
                 <div class="col-md-6 text-start">
-                    <h4 class="text-primary">Grow With Us</h4>
+                    <p class="text-primary fw-bold mb-1" style="font-size: var(--fs-sm, 0.875rem);">Grow With Us</p>
                     <h2 class="display-7 mb-4">Job for freshers</h2>
                     <p class="text-muted">Embarking on a career journey and searching for jobs for freshers in Indore?
                         The first step post-graduation can be daunting, but you won’t have to take this journey alone.
@@ -999,9 +1012,9 @@
 
                 <!-- Image -->
                 <div class="col-md-6 text-center d-none d-md-block">
-                    <img src="img/job-for-fresher.jpg"
-                        alt="Our services go beyond connecting candidates to a vacancy, we provide the strongest launch pad for jobs for freshers in verticals with significant growth, including IT, BPO, BFSI, and FMCG. The EMTA team will assist you from helping you create and develop your resume that first gets you noticed, to interview and ultimately to the offer stage - every step will be unique to you, but all steps are to make sure you are comfortable to present yourself with confidence. We will go beyond Indore and leverage our network to find placements across most of India and open a new level of opportunity for your new career. Partner with EMTA and let’s find the best fit for your academic start to your professional career!"
-                        style="height: 350px;" class="img-fluid rounded ">
+                    <img src="img/job-for-fresher.webp"
+                        alt="Our services go beyond connecting candidates to a vacancy, we provide the strongest launch pad for jobs for freshers in verticals with significant growth, including IT, BPO, BFSI, and FMCG."
+                        style="height: 350px; object-fit: cover;" class="img-fluid rounded" width="540" height="350" loading="lazy">
                 </div>
 
             </div>
@@ -1180,7 +1193,112 @@
         }
 
         .company-logos img {
-            height: 18px;
+            height: 26px;
+            width: auto;
+            max-width: 100px;
+            object-fit: contain;
+        }
+
+        /* Recent Blogs Section styling */
+        .blog-item {
+            background-color: #ffffff;
+            border: 1px solid #d4eaf7;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+        }
+
+        .blog-item .blog-img {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-item .blog-img img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-item:hover .blog-img img {
+            transform: scale(1.05);
+        }
+
+        .blog-item .blog-categiry {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #015fcc;
+            color: #ffffff;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-radius: 4px;
+        }
+
+        .blog-item .blog-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+
+        .blog-item .blog-comment {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+
+        .blog-item .blog-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #212529;
+            text-decoration: none;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            display: inline-block;
+            transition: color 0.2s ease;
+        }
+
+        .blog-item .blog-title:hover {
+            color: #015fcc;
+        }
+
+        .blog-item .blog-desc {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 16px;
+            flex-grow: 1;
+        }
+
+        .blog-item .read-more-btn {
+            color: #015fcc;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.2s ease;
+        }
+
+        .blog-item .read-more-btn:hover {
+            color: #073b8b;
+        }
+
+        .blog-item .read-more-btn i {
+            transition: transform 0.2s ease;
+        }
+
+        .blog-item .read-more-btn:hover i {
+            transform: translateX(4px);
         }
 
         .company-logos span {
@@ -1235,7 +1353,7 @@
 
     <section class="courses-section">
         <div class="container">
-            <h4 class="text-primary">Our Courses</h4>
+            <p class="text-primary fw-bold mb-1" style="font-size: var(--fs-sm, 0.875rem);">Our Courses</p>
             <h2 class="display-7 mb-4">Placement Guarantee Courses with Expert's</h2>
             <div class="section-header text-center">
                 <div class="guarantee-tags">
@@ -1256,7 +1374,6 @@
                             <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.5</span>
                         </div>
                         <div class="card-body-custom">
-                            <span class="ai-tag">Placement Guarantee EMTA BFSI Course✨</span>
                             <h4 class="course-title">Sales/Collections Officer <br> Training Program</h4>
                             <ul class="course-details">
                                 <li><i class="fa-regular fa-clock"></i>15 Working Days / 20 Hours (80 Minutes Per day)
@@ -1266,8 +1383,8 @@
                             <div class="expert-section">
                                 <p>Learn from industry experts of</p>
                                 <div class="company-logos">
-                                    <img src="company/1.png" alt="Microsoft">
-                                    <img src="company/4.png" alt="Netflix">
+                                    <img src="company/1.png" alt="Microsoft" width="734" height="345" loading="lazy">
+                                    <img src="company/4.png" alt="Netflix" width="225" height="225" loading="lazy">
                                     <span>& more</span>
                                 </div>
                                 <a href="course-details.html?id=1" class="know-more-link">Know more <i
@@ -1284,7 +1401,6 @@
                             <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.5</span>
                         </div>
                         <div class="card-body-custom">
-                            <span class="ai-tag">Placement Guarantee EMTA BFSI Course✨</span>
                             <h4 class="course-title">Relationship Manager <br> Training Program</h4>
                             <ul class="course-details">
                                 <li><i class="fa-regular fa-clock"></i> 30 Working Days / 45 Hours (90 Minutes Per day)
@@ -1295,8 +1411,8 @@
                             <div class="expert-section">
                                 <p>Learn from industry experts of</p>
                                 <div class="company-logos">
-                                    <img src="company/12.png" alt="PayPal">
-                                    <img src="company/10.png" alt="TCS">
+                                    <img src="company/12.png" alt="PayPal" width="520" height="280" loading="lazy">
+                                    <img src="company/10.png" alt="TCS" width="2560" height="994" loading="lazy">
                                     <span>& more</span>
                                 </div>
                                 <a href="course-details.html?id=2" class="know-more-link">Know more <i
@@ -1313,7 +1429,6 @@
                             <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.4</span>
                         </div>
                         <div class="card-body-custom">
-                            <span class="ai-tag">Placement Guarantee EMTA BFSI Course✨</span>
                             <h4 class="course-title">Credit Officer <br> Training Program</h4>
                             <ul class="course-details">
                                 <li><i class="fa-regular fa-clock"></i> 30 Working Days / 45 Hours (90 Minutes Per day)
@@ -1324,8 +1439,8 @@
                             <div class="expert-section">
                                 <p>Learn from industry experts of</p>
                                 <div class="company-logos">
-                                    <img src="company/17.png" alt="Google">
-                                    <img src="company/32.png" alt="Accenture">
+                                    <img src="company/17.png" alt="Google" width="225" height="225" loading="lazy">
+                                    <img src="company/32.png" alt="Accenture" width="360" height="140" loading="lazy">
                                     <span>& more</span>
                                 </div>
                                 <a href="course-details.html?id=3" class="know-more-link">Know more <i
@@ -1342,7 +1457,6 @@
                             <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.4</span>
                         </div>
                         <div class="card-body-custom">
-                            <span class="ai-tag">Placement Guarantee EMTA BFSI Course✨</span>
                             <h4 class="course-title">Complete BFSI Operations Training Program</h4>
                             <ul class="course-details">
                                 <li><i class="fa-regular fa-clock"></i> 60 Working Days / 90 Hours (90 Minutes Per day)
@@ -1352,8 +1466,8 @@
                             <div class="expert-section">
                                 <p>Learn from industry experts of</p>
                                 <div class="company-logos">
-                                    <img src="company/23.png" alt="Google">
-                                    <img src="company/27.png" alt="Zomato">
+                                    <img src="company/23.png" alt="Google" width="436" height="229" loading="lazy">
+                                    <img src="company/27.png" alt="Zomato" width="2000" height="1125" loading="lazy">
                                     <span>& more</span>
                                 </div>
                                 <a href="course-details.html?id=4" class="know-more-link">Know more <i
@@ -1381,7 +1495,7 @@
 
                 <!-- Text Content -->
                 <div class="col-md-6">
-                    <h4 class="text-primary">Explore Opportunities</h4>
+                    <p class="text-primary fw-bold mb-1" style="font-size: var(--fs-sm, 0.875rem);">Explore Opportunities</p>
                     <h2 class="display-6 mb-4">Off Campus Jobs</h2>
                     <p class=" text-muted">Searching for quality off campus jobs in Indore after missing out on
                         placements? There is no need to panic, as some of the best opportunities exist beyond the
@@ -1391,15 +1505,13 @@
                         avoid the on campus rush. Career paths are not all defined; EMTA strives to facilitate finding
                         entry level positions that mirror your unique potential and prepare you for your professional
                         life. </p>
-                    <a href="study-with-us.html" class="btn cta-btn btn-lg py-1 px-4 mb-5 mt-3"
-                        style=" font-weight: bold; animation: pop 1.5s infinite alternate; background-color: #015fc9;  border-radius: 15px 2px 15px 2px;">Apply
-                        Now</a>
+                    <a href="study-with-us.html" class="btn btn-primary rounded-pill py-3 px-5 mt-3 mb-4 fw-bold">Apply Now</a>
                 </div>
                 <!-- Image -->
                 <div class="col-md-6 d-none d-md-block">
-                    <img src="img/off-campus-jobs.jpg" style="height: 350px;"
-                        alt="The secret to being successful in finding quality off campus jobs lies in your access to appropriate networks, which EMTA helps you gain. With solidified connections and relationships already established with a variety or companies in India, many of which prefer hiring off campus because they find dedicated proactive individuals, we connect you with hard-to-access roles in emerging sectors in India (BPO, KPO, IT, BFSI, FMCG). We develop your portfolio from a resume workshop to interview training in order for you to promote yourself well, in a professional context, to help you obtain the job you want, whether it be here in Indore or pan India."
-                        class="img-fluid rounded">
+                    <img src="img/off-campus-jobs.webp" style="height: 350px; object-fit: cover;"
+                        alt="The secret to being successful in finding quality off campus jobs lies in your access to appropriate networks, which EMTA helps you gain."
+                        class="img-fluid rounded" width="540" height="350" loading="lazy">
                 </div>
             </div>
         </div>
@@ -1408,25 +1520,22 @@
     <!-- Testimonial Start -->
     <div class="container-fluid testimonial">
         <div class="container pb-5">
-            <h4 class="text-primary">Testimonial</h4>
-            <h2 class="display-7 mb-4">What Our Customers Are Saying</h2>
-            <p class="mb-0">Our customers’ success stories speak volumes about the quality and impact of our
-                services..
-            </p>
-            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+            <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 720px;">
+                <p class="text-primary fw-bold mb-1" style="font-size: var(--fs-sm, 0.875rem);">Testimonials</p>
+                <h2 class="display-7 mb-3">What Our Customers Are Saying</h2>
+                <p class="text-muted mb-0">Our customers’ success stories speak volumes about the quality and impact of our services.</p>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
                 <div class="testimonial-item rounded">
-                    <div class="row g-0">
-                        <div class="col-4  col-lg-4 col-xl-3">
-                            <div class="h-100">
-                                <img src="img/Heerandra pratap singh.png" class="img-fluid h-100 rounded"
-                                    style="object-fit: cover;" alt="">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-4 col-lg-4 col-xl-3 text-center p-3">
+                            <div class="testimonial-avatar-wrapper">
+                                <img src="img/Heerandra pratap singh.png" class="testimonial-avatar" alt="Heerandra pratap singh" width="90" height="90" loading="lazy">
                             </div>
                         </div>
                         <div class="col-8 col-lg-8 col-xl-9">
                             <div class="d-flex flex-column my-auto text-start p-4">
-                                <h4 class="text-dark mb-0">Heerandra pratap singh</h4>
+                                <h3 class="h5 text-dark fw-bold mb-1">Heerandra pratap singh</h3>
                                 <p class="mb-3">Sales & Service - PIRAMAL FINANCE</p>
                                 <div class="d-flex text-primary mb-3">
                                     <i class="fas fa-star"></i>
@@ -1442,16 +1551,15 @@
                     </div>
                 </div>
                 <div class="testimonial-item rounded">
-                    <div class="row g-0">
-                        <div class="col-4  col-lg-4 col-xl-3">
-                            <div class="h-100">
-                                <img src="img/Atul Kumar Pare.png" class="img-fluid h-100 rounded"
-                                    style="object-fit: cover;" alt="">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-4 col-lg-4 col-xl-3 text-center p-3">
+                            <div class="testimonial-avatar-wrapper">
+                                <img src="img/Atul Kumar Pare.png" class="testimonial-avatar" alt="Atul Kumar Pare" width="90" height="90" loading="lazy">
                             </div>
                         </div>
                         <div class="col-8 col-lg-8 col-xl-9">
                             <div class="d-flex flex-column my-auto text-start p-4">
-                                <h4 class="text-dark mb-0">Atul Kumar Pare</h4>
+                                <h3 class="h5 text-dark fw-bold mb-1">Atul Kumar Pare</h3>
                                 <p class="mb-3">YES BANK</p>
                                 <div class="d-flex text-primary mb-3">
                                     <i class="fas fa-star"></i>
@@ -1467,16 +1575,15 @@
                     </div>
                 </div>
                 <div class="testimonial-item rounded">
-                    <div class="row g-0">
-                        <div class="col-4  col-lg-4 col-xl-3">
-                            <div class="h-100">
-                                <img src="img/Sanchita Sharma.png" class="img-fluid h-100 rounded"
-                                    style="object-fit: cover;" alt="">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-4 col-lg-4 col-xl-3 text-center p-3">
+                            <div class="testimonial-avatar-wrapper">
+                                <img src="img/Sanchita Sharma.png" class="testimonial-avatar" alt="Sanchita Sharma" width="90" height="90" loading="lazy">
                             </div>
                         </div>
                         <div class="col-8 col-lg-8 col-xl-9">
                             <div class="d-flex flex-column my-auto text-start p-4">
-                                <h4 class="text-dark mb-0">Sanchita Sharma</h4>
+                                <h3 class="h5 text-dark fw-bold mb-1">Sanchita Sharma</h3>
                                 <p class="mb-3">INDUSIND BANK</p>
                                 <div class="d-flex text-primary mb-3">
                                     <i class="fas fa-star"></i>
@@ -1497,14 +1604,97 @@
     </div>
     <!-- Testimonial End -->
 
+    <!-- Recent Blogs Start -->
+    <div class="container-fluid py-5" style="background-color: #F2F5F9;">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5" style="max-width: 800px;">
+                <p class="text-primary fw-bold mb-1" style="font-size: var(--fs-sm, 0.875rem);">Recent Blogs</p>
+                <h2 class="display-7 mb-4">Latest Insights &amp; Career Guidance</h2>
+                <p class="mb-0">Stay updated with the latest trends in the job market, interview preparation tips, and professional career advice from industry experts.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <!-- Blog 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/Blog/how-to-crack-an-interview-complete-guide-for-freshers.png" alt="How to crack an interview" width="400" height="250" loading="lazy">
+                            <div class="blog-categiry py-1 px-3">
+                                <span>Career</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div>
+                                <div class="blog-comment d-flex justify-content-between mb-3">
+                                    <div class="small"><span class="fa fa-user text-primary me-2"></span>EMTA Admin</div>
+                                    <div class="small"><span class="fa fa-calendar text-primary me-2"></span>18 Jun 2026</div>
+                                </div>
+                                <a href="how-to-crack-an-interview-complete-guide-for-freshers.html" class="blog-title">How to Crack an Interview: Complete Guide for Freshers</a>
+                                <p class="blog-desc">Getting your first job can be both exciting and challenging. Good preparation helps you perform well. Follow these guidelines to stand out from other candidates...</p>
+                            </div>
+                            <a href="how-to-crack-an-interview-complete-guide-for-freshers.html" class="read-more-btn">Read More <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/Blog/crm-in-the-bfsi-sector.png" alt="CRM in BFSI Sector" width="400" height="250" loading="lazy">
+                            <div class="blog-categiry py-1 px-3">
+                                <span>Education</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div>
+                                <div class="blog-comment d-flex justify-content-between mb-3">
+                                    <div class="small"><span class="fa fa-user text-primary me-2"></span>EMTA Admin</div>
+                                    <div class="small"><span class="fa fa-calendar text-primary me-2"></span>15 Nov 2025</div>
+                                </div>
+                                <a href="crm-in-the-bfsi-sector.html" class="blog-title">Customer Relationship Management (CRM) in BFSI</a>
+                                <p class="blog-desc">Discover why the BFSI sector treats customer experience like gold and how Customer Relationship Management (CRM) tools play a key role in building banking trust...</p>
+                            </div>
+                            <a href="crm-in-the-bfsi-sector.html" class="read-more-btn">Read More <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/Blog/bfsi-jobs-gateway-to-stable-careers.png" alt="BFSI Jobs Gateway" width="400" height="250" loading="lazy">
+                            <div class="blog-categiry py-1 px-3">
+                                <span>Education</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div>
+                                <div class="blog-comment d-flex justify-content-between mb-3">
+                                    <div class="small"><span class="fa fa-user text-primary me-2"></span>Sneha Yadav</div>
+                                    <div class="small"><span class="fa fa-calendar text-primary me-2"></span>11 Oct 2025</div>
+                                </div>
+                                <a href="bfsi-jobs-gateway-to-stable-careers.html" class="blog-title">BFSI Jobs: A Gateway to Stable and Rewarding Careers</a>
+                                <p class="blog-desc">With the fast-growing economy, BFSI careers offer promising stability. Learn about the entry requirements, job opportunities, and how to get started in banking...</p>
+                            </div>
+                            <a href="bfsi-jobs-gateway-to-stable-careers.html" class="read-more-btn">Read More <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="blog.html" class="btn btn-primary rounded-pill py-3 px-5">View All Blog Posts</a>
+            </div>
+        </div>
+    </div>
+    <!-- Recent Blogs End -->
+
     <!-- Toggle Button Container -->
     <div class="cta-toggle-container" id="ctaToggleContainer">
         <!-- Main Toggle Button -->
-        <button class="cta-toggle-button" id="toggleButton1">
-            +
+        <button class="cta-toggle-button" id="toggleButton1" type="button" aria-label="Toggle Quick Navigation Menu" aria-expanded="false" aria-controls="ctaButtonGroup">
+            <i class="fa fa-plus toggle-icon" aria-hidden="true"></i>
         </button>
         <!-- CTA Buttons -->
-        <div class="cta-button-group">
+        <div class="cta-button-group" id="ctaButtonGroup" role="region" aria-label="Quick Actions">
             <a href="work-with-us.html" class="cta-button">Work with Us</a>
             <a href="partner-with-us.html" class="cta-button">Partner with Us</a>
             <a href="study-with-us.html" class="cta-button">Study with Us</a>
@@ -1513,25 +1703,28 @@
     </div>
 
     <script>
-        // Toggle button functionality
+        // Accessible toggle button functionality
         const toggleButton1 = document.getElementById('toggleButton1');
         const ctaToggleContainer = document.getElementById('ctaToggleContainer');
 
-        toggleButton1.addEventListener('click', () => {
-            ctaToggleContainer.classList.toggle('open');
-        });
+        if (toggleButton1 && ctaToggleContainer) {
+            toggleButton1.addEventListener('click', () => {
+                const isOpen = ctaToggleContainer.classList.toggle('open');
+                toggleButton1.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+        }
     </script>
 
     <!-- FAQ Section Start -->
     <div class="container-fluid py-5 bg-light">
         <div class="container py-5">
-            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="text-primary">Frequently Asked Questions</h4>
-                <h2 class="display-6 mb-4">Got Questions? We Have Answers</h2>
-                <p class="mb-0">Find quick answers to common questions about our training charges, placement assurance, and salary expectations.</p>
+            <div class="text-center mx-auto pb-4" style="max-width: 720px;">
+                <p class="text-primary fw-bold mb-1" style="font-size: var(--fs-sm, 0.875rem);">Frequently Asked Questions</p>
+                <h2 class="display-6 fw-bold mb-3">Got Questions? We Have Answers</h2>
+                <p class="text-muted mb-0">Find quick answers to common questions about our training charges, placement assurance, and salary expectations.</p>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-10">
+                <div class="col-lg-8 col-xl-7" style="max-width: 820px;">
                     <div class="accordion" id="faqAccordion">
                         <!-- FAQ 1 -->
                         <div class="accordion-item mb-3 border shadow-sm rounded">
@@ -1593,8 +1786,8 @@
     <!-- FAQ Section End -->
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/9522257477" target="_blank" class="whatsapp-float" title="Chat with Us on WhatsApp">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="60">
+    <a href="https://api.whatsapp.com/send?phone=919522257477" target="_blank" class="whatsapp-float" title="Chat with Us on WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="60" height="60" loading="lazy" height="60" loading="lazy">
     </a>
 
 
@@ -1608,8 +1801,7 @@
                             <div class="col-md-6 col-lg-6 col-xl-5">
                                 <div class="footer-item">
                                     <a href="index.html" class="p-0">
-                                        <h3><img src="f-logo.png" style="height:60px;width:200px;" alt="Logo"> </h3>
-                                        <!-- <img src="img/logo.png" alt="Logo"> -->
+                                        <h3><img src="f.png" width="200" height="60" loading="lazy" alt="EMTA Logo" class="footer-logo-img"> </h3>
                                     </a>
                                     <p class="text-white mb-4">Elite Manpower and Training Academy (EMTA), founded in
                                         2020 by visionaries Abhijeet Raghuwanshi, is a trailblazer in BFSI
@@ -1635,7 +1827,7 @@
                                     <h4 class="text-white mb-4">Useful Links</h4>
                                     <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
                                     <a href="blog.html"><i class="fas fa-angle-right me-2"></i> Blog</a>
-                                    <a href="job-vacancy.html"><i class="fas fa-angle-right me-2"></i> Recruitment
+                                    <a href="recruitment-solution.html"><i class="fas fa-angle-right me-2"></i> Recruitment
                                         Solution</a>
                                     <a href="bfsi-training.html#course-structure"><i
                                             class="fas fa-angle-right me-2"></i> Courses & Fees</a>
@@ -1649,7 +1841,7 @@
                                     <div class="row g-3">
                                         <div class="col-4">
                                             <div class="footer-instagram rounded">
-                                                <img src="img/insta-images/1.png" class="img-fluid w-100" alt="">
+                                                <img src="img/insta-images/1.png" class="img-fluid w-100" alt="Instagram Image" width="80" height="80" loading="lazy">
                                                 <div class="footer-search-icon">
                                                     <a href="img/insta-images/1.png" data-lightbox="footerInstagram-1"
                                                         class="my-auto"><i class="fas fa-link text-white"></i></a>
@@ -1658,7 +1850,7 @@
                                         </div>
                                         <div class="col-4">
                                             <div class="footer-instagram rounded">
-                                                <img src="img/insta-images/2.png" class="img-fluid w-100" alt="">
+                                                <img src="img/insta-images/2.png" class="img-fluid w-100" alt="Instagram Image" width="80" height="80" loading="lazy">
                                                 <div class="footer-search-icon">
                                                     <a href="img/insta-images/2.png" data-lightbox="footerInstagram-2"
                                                         class="my-auto"><i class="fas fa-link text-white"></i></a>
@@ -1667,7 +1859,7 @@
                                         </div>
                                         <div class="col-4">
                                             <div class="footer-instagram rounded">
-                                                <img src="img/insta-images/3.png" class="img-fluid w-100" alt="">
+                                                <img src="img/insta-images/3.png" class="img-fluid w-100" alt="Instagram Image" width="80" height="80" loading="lazy">
                                                 <div class="footer-search-icon">
                                                     <a href="img/insta-images/3.png" data-lightbox="footerInstagram-3"
                                                         class="my-auto"><i class="fas fa-link text-white"></i></a>
@@ -1676,7 +1868,7 @@
                                         </div>
                                         <div class="col-4">
                                             <div class="footer-instagram rounded">
-                                                <img src="img/insta-images/4.png" class="img-fluid w-100" alt="">
+                                                <img src="img/insta-images/4.png" class="img-fluid w-100" alt="Instagram Image" width="80" height="80" loading="lazy">
                                                 <div class="footer-search-icon">
                                                     <a href="img/insta-images/4.png" data-lightbox="footerInstagram-4"
                                                         class="my-auto"><i class="fas fa-link text-white"></i></a>
@@ -1685,7 +1877,7 @@
                                         </div>
                                         <div class="col-4">
                                             <div class="footer-instagram rounded">
-                                                <img src="img/insta-images/5.png" class="img-fluid w-100" alt="">
+                                                <img src="img/insta-images/5.png" class="img-fluid w-100" alt="Instagram Image" width="80" height="80" loading="lazy">
                                                 <div class="footer-search-icon">
                                                     <a href="img/insta-images/5.png" data-lightbox="footerInstagram-5"
                                                         class="my-auto"><i class="fas fa-link text-white"></i></a>
@@ -1694,7 +1886,7 @@
                                         </div>
                                         <div class="col-4">
                                             <div class="footer-instagram rounded">
-                                                <img src="img/insta-images/6.png" class="img-fluid w-100" alt="">
+                                                <img src="img/insta-images/6.png" class="img-fluid w-100" alt="Instagram Image" width="80" height="80" loading="lazy">
                                                 <div class="footer-search-icon">
                                                     <a href="img/insta-images/6.png" data-lightbox="footerInstagram-6"
                                                         class="my-auto"><i class="fas fa-link text-white"></i></a>
@@ -1717,11 +1909,12 @@
                                             </div>
                                             <div>
                                                 <h4 class="text-white">Address</h4>
-                                                <p class="mb-0"><b class="text-white">New and Current Address -</b> <br>
-                                                    353-A, First Floor, Mahalaxmi Nagar Main Road, Left to Bank Of
-                                                    India, Indore-452010</p><br>
-                                                <p class="mb-0"><b class="text-white">Old Address -</b> <br>155(A),First
-                                                    Floor, Mangal City Mall,Vijay Nagar, Indore - 452010</p>
+                                                <p class="mb-0">
+                                                    Flat No. 102, Vatsalya<br>
+                                                    AF-3, Scheme No. 54, Vijay Nagar<br>
+                                                    Indore – 452010<br>
+                                                    <br>
+                                                    Landmark: Behind the lane of Golden Gate Hotel, near Satya Sai Square.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1743,7 +1936,7 @@
                                             </div>
                                             <div>
                                                 <h4 class="text-white">Telephone</h4>
-                                                <p class="mb-0">+91 8962540996</p>
+                                                <p class="mb-0 text-white fw-bold"><a href="tel:+918962540996" class="text-white text-decoration-none">+91 89625 40996</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -1756,30 +1949,11 @@
                 <div class="col-xl-3">
                     <div class="footer-item">
                         <h4 class="text-white mb-4">Newsletter</h4>
-                        <p class="text-white mb-3">Subscribe to EMTA's newsletter for the latest updates on BFSI
-                            training programs, job openings, industry insights, and career tips. Get expert advice
-                            straight to your inbox!</p>
-                        <!-- <div class="position-relative rounded-pill mb-4">
-                            <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text"
-                                placeholder="Enter your email">
-                            <button type="button"
-                                class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
-                        </div> -->
-                        <div class="d-flex flex-shrink-0">
-                            <div class="footer-btn">
-                                <a href="#" class="btn btn-lg-square rounded-circle position-relative wow tada"
-                                    data-wow-delay=".9s">
-                                    <i class="fa fa-phone-alt fa-2x"></i>
-                                    <div class="position-absolute" style="top: 2px; right: 12px;">
-                                        <span><i class="fa fa-comment-dots"></i></span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="d-flex flex-column ms-3 flex-shrink-0">
-                                <span>Call to Our Team</span>
-                                <a href="tel:+918962540996"><span class="text-white">Free: +91 8962540996</span></a>
-                            </div>
-                        </div>
+                        <p class="text-white mb-3">Subscribe to EMTA's newsletter for the latest updates on BFSI training programs, job openings, and career guidance straight to your inbox!</p>
+                        <form class="position-relative rounded-pill mb-4" onsubmit="event.preventDefault(); alert('Thank you for subscribing to EMTA updates!');">
+                            <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5 text-dark" type="email" placeholder="Enter your email" required aria-label="Email address for newsletter subscription">
+                            <button type="submit" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Subscribe</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -1791,13 +1965,15 @@
     <div class="container-fluid copyright py-4">
         <div class="container">
             <div class="row g-4 align-items-center">
-                <div class="col-md-6 text-center text-md-end mb-md-0">
-                    <span class="text-body"><a href="https://emta.co.in" class="border-bottom text-white"><i
-                                class="fas fa-copyright text-light me-2"></i>EMTA</a>, All right
-                        reserved. | <span class="text-light fw-bold">MSME Registered Company</span></span>
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-light">
+                        <a href="https://emta.co.in" class="text-white text-decoration-none fw-bold"><i class="fas fa-copyright text-light me-1" aria-hidden="true"></i> EMTA</a>, All rights reserved. 
+                        <span class="mx-2 text-white-50">|</span> 
+                        <span class="text-white-50">MSME Registered</span>
+                    </span>
                 </div>
-                <div class="col-md-6 text-center text-md-start text-body">
-                    Designed By <a class="border-bottom text-white" href="https://emtainfotech.com">EMTA INFOTECH</a>
+                <div class="col-md-6 text-center text-md-end text-light">
+                    Designed By <a class="text-white fw-bold text-decoration-none border-bottom border-light" href="https://emtainfotech.com" target="_blank" rel="noopener">EMTA INFOTECH</a>
                 </div>
             </div>
         </div>
@@ -1809,32 +1985,20 @@
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="lib/wow/wow.min.js" defer></script>
+    <script src="lib/easing/easing.min.js" defer></script>
+    <script src="lib/waypoints/waypoints.min.js" defer></script>
+    <script src="lib/counterup/counterup.min.js" defer></script>
+    <script src="lib/lightbox/js/lightbox.min.js" defer></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js" defer></script>
 
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 
-    <!-- Crisp Live Chat Integration -->
-    <script type="text/javascript">
-        window.$crisp = [];
-        window.CRISP_WEBSITE_ID = "YOUR_CRISP_WEBSITE_ID"; // Replace with your actual Crisp Website ID
-        (function () {
-            var d = document;
-            var s = d.createElement("script");
-            s.src = "https://client.crisp.chat/l.js";
-            s.async = 1;
-            d.getElementsByTagName("head")[0].appendChild(s);
-        })();
-    </script>
-    <script src="js/jobs.js"></script>
+    <script src="js/jobs.js" defer></script>
 
     <script>
         // Function to get the date 4 days ago
@@ -2001,7 +2165,7 @@
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js" defer></script>
 </body>
 
 </html>
