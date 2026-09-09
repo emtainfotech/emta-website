@@ -7,7 +7,7 @@ os.makedirs(jobs_dir, exist_ok=True)
 
 jobs_data = [
     {
-        "slug": "customer-care-executive-vijay-nagar",
+        "slug": "customer-care-executive-indore",
         "title": "Customer Care Executive | Multiple Processes",
         "short_location": "Indore",
         "location": "Vijay Nagar, Indore",
@@ -75,7 +75,7 @@ jobs_data = [
         """
     },
     {
-        "slug": "inside-sales-executive",
+        "slug": "inside-sales-executive-indore",
         "title": "Inside Sales Associate / Sr. Associate",
         "short_location": "Indore",
         "location": "Indore | On-site",
@@ -131,7 +131,7 @@ jobs_data = [
         """
     },
     {
-        "slug": "customer-care-swiggy",
+        "slug": "customer-care-swiggy-indore",
         "title": "Customer Care Executive – Chat / Voice Process (Swiggy)",
         "short_location": "Indore",
         "location": "Indore, Madhya Pradesh",
@@ -203,7 +203,7 @@ jobs_data = [
         """
     },
     {
-        "slug": "customer-success-associate-vivint",
+        "slug": "customer-success-associate-vivint-gurugram",
         "title": "Customer Success Associate - Vivint Voice Process",
         "short_location": "Gurugram",
         "location": "Sector 30, Gurugram (Work From Office)",
@@ -259,7 +259,7 @@ jobs_data = [
         """
     },
     {
-        "slug": "customer-support-walmart",
+        "slug": "customer-support-walmart-pune",
         "title": "Customer Support Executive (International Voice - Walmart)",
         "short_location": "Jaipur",
         "location": "Jaipur, Rajasthan",
@@ -321,7 +321,7 @@ jobs_data = [
         """
     },
     {
-        "slug": "customer-support-seller-support",
+        "slug": "customer-support-seller-support-jaipur",
         "title": "Customer Support Executive – International Chat Process (Seller Support)",
         "short_location": "Pune",
         "location": "Kharadi, Pune (In-Office)",
@@ -374,7 +374,7 @@ jobs_data = [
         """
     },
     {
-        "slug": "senior-accountant",
+        "slug": "senior-accountant-indore",
         "title": "Senior Accountant",
         "short_location": "Indore",
         "location": "Indore, Madhya Pradesh",

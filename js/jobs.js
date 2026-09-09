@@ -1,7 +1,7 @@
 const jobs = [
     {
         id: "new-cce-vijay-nagar",
-        url: "jobs/customer-care-executive-vijay-nagar/",
+        url: "jobs/customer-care-executive-indore/",
         title: "Customer Care Executive | Multiple Processes",
         company: "EMTA",
         logo: "img/emta-gif.gif",
@@ -10,7 +10,7 @@ const jobs = [
     },
     {
         id: "new-inside-sales",
-        url: "jobs/inside-sales-executive/",
+        url: "jobs/inside-sales-executive-indore/",
         title: "Inside Sales Associate / Sr. Associate",
         company: "EMTA",
         logo: "img/emta-gif.gif",
@@ -19,7 +19,7 @@ const jobs = [
     },
     {
         id: "new-cce-swiggy",
-        url: "jobs/customer-care-swiggy/",
+        url: "jobs/customer-care-swiggy-indore/",
         title: "Customer Care Executive (Swiggy)",
         company: "EMTA",
         logo: "img/emta-gif.gif",
@@ -28,7 +28,7 @@ const jobs = [
     },
     {
         id: "new-csa-vivint",
-        url: "jobs/customer-success-associate-vivint/",
+        url: "jobs/customer-success-associate-vivint-gurugram/",
         title: "Customer Success Associate - Vivint",
         company: "EMTA",
         logo: "img/emta-gif.gif",
@@ -37,7 +37,7 @@ const jobs = [
     },
     {
         id: "new-cse-walmart",
-        url: "jobs/customer-support-walmart/",
+        url: "jobs/customer-support-walmart-pune/",
         title: "Customer Support Executive (Walmart)",
         company: "EMTA",
         logo: "img/emta-gif.gif",
@@ -46,7 +46,7 @@ const jobs = [
     },
     {
         id: "new-cse-seller-support",
-        url: "jobs/customer-support-seller-support/",
+        url: "jobs/customer-support-seller-support-jaipur/",
         title: "Customer Support Exec. (Seller Support)",
         company: "EMTA",
         logo: "img/emta-gif.gif",
@@ -55,7 +55,7 @@ const jobs = [
     },
     {
         id: "new-senior-accountant",
-        url: "jobs/senior-accountant/",
+        url: "jobs/senior-accountant-indore/",
         title: "Senior Accountant",
         company: "EMTA",
         logo: "img/emta-gif.gif",

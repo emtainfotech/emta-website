@@ -39,13 +39,13 @@ pages = [
     {"loc": "https://emta.co.in/placement-consultancy-in-indore", "priority": "0.80", "changefreq": "weekly"},
 
     # 4. Active Job Postings (Google Jobs Indexed)
-    {"loc": "https://emta.co.in/jobs/customer-care-executive-vijay-nagar/", "priority": "0.85", "changefreq": "weekly"},
-    {"loc": "https://emta.co.in/jobs/customer-care-swiggy/", "priority": "0.85", "changefreq": "weekly"},
-    {"loc": "https://emta.co.in/jobs/customer-success-associate-vivint/", "priority": "0.85", "changefreq": "weekly"},
-    {"loc": "https://emta.co.in/jobs/customer-support-seller-support/", "priority": "0.85", "changefreq": "weekly"},
-    {"loc": "https://emta.co.in/jobs/customer-support-walmart/", "priority": "0.85", "changefreq": "weekly"},
-    {"loc": "https://emta.co.in/jobs/inside-sales-executive/", "priority": "0.85", "changefreq": "weekly"},
-    {"loc": "https://emta.co.in/jobs/senior-accountant/", "priority": "0.85", "changefreq": "weekly"},
+    {"loc": "https://emta.co.in/jobs/customer-care-executive-indore/", "priority": "0.85", "changefreq": "weekly"},
+    {"loc": "https://emta.co.in/jobs/inside-sales-executive-indore/", "priority": "0.85", "changefreq": "weekly"},
+    {"loc": "https://emta.co.in/jobs/customer-care-swiggy-indore/", "priority": "0.85", "changefreq": "weekly"},
+    {"loc": "https://emta.co.in/jobs/customer-success-associate-vivint-gurugram/", "priority": "0.85", "changefreq": "weekly"},
+    {"loc": "https://emta.co.in/jobs/customer-support-walmart-pune/", "priority": "0.85", "changefreq": "weekly"},
+    {"loc": "https://emta.co.in/jobs/customer-support-seller-support-jaipur/", "priority": "0.85", "changefreq": "weekly"},
+    {"loc": "https://emta.co.in/jobs/senior-accountant-indore/", "priority": "0.85", "changefreq": "weekly"},
 
     # 5. Articles, Guides & Blog Posts
     {"loc": "https://emta.co.in/What-Is-BFSI-A-Complete-Guide-to-the-Sector-and-Its-Importance", "priority": "0.70", "changefreq": "monthly"},

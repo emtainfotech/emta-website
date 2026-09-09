@@ -25,13 +25,13 @@
 - [Course Syllabi](https://emta.co.in/course-details): Course breakdown and curriculum info.
 
 ## Job Vacancies (Google Jobs Indexed)
-- [Customer Care Executive - Vijay Nagar](https://emta.co.in/jobs/customer-care-executive-vijay-nagar/)
-- [Customer Care - Swiggy](https://emta.co.in/jobs/customer-care-swiggy/)
-- [Customer Success Associate - Vivint](https://emta.co.in/jobs/customer-success-associate-vivint/)
-- [Customer Support & Seller Support](https://emta.co.in/jobs/customer-support-seller-support/)
-- [Customer Support - Walmart](https://emta.co.in/jobs/customer-support-walmart/)
-- [Inside Sales Executive](https://emta.co.in/jobs/inside-sales-executive/)
-- [Senior Accountant](https://emta.co.in/jobs/senior-accountant/)
+- [Customer Care Executive - Indore](https://emta.co.in/jobs/customer-care-executive-indore/)
+- [Inside Sales Executive - Indore](https://emta.co.in/jobs/inside-sales-executive-indore/)
+- [Customer Care - Swiggy (Indore)](https://emta.co.in/jobs/customer-care-swiggy-indore/)
+- [Customer Success Associate - Vivint (Gurugram)](https://emta.co.in/jobs/customer-success-associate-vivint-gurugram/)
+- [Customer Support - Walmart (Pune)](https://emta.co.in/jobs/customer-support-walmart-pune/)
+- [Customer Support & Seller Support (Jaipur)](https://emta.co.in/jobs/customer-support-seller-support-jaipur/)
+- [Senior Accountant - Indore](https://emta.co.in/jobs/senior-accountant-indore/)
 
 ## Documentation & Data Resources
 - Course syllabi, placement guides, recruitment service pages, and FAQ pages are primary LLM resources.
