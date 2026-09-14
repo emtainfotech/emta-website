@@ -440,6 +440,6 @@ export const jobs = [
             'Graduation in any discipline can also apply.'
         ],
         employmentType: 'Full-Time',
-        openings: 04
+        openings: 4
     }
 ];

@@ -20,13 +20,7 @@ interface JobCardProps {
   job: Job;
 }
 
-function getJobPath(job: Job) {
-  if (job.url) {
-    return `/${job.url.replace(/^\/|\/$/g, "")}`;
-  }
-
-  return `/jobs/${job.id}`;
-}
+const getJobPath = (job: Job) => `/jobs/${job.id}`;
 
 export default function JobCard({ job }: JobCardProps) {
   const jobPath = getJobPath(job);
