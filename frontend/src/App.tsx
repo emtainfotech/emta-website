@@ -18,6 +18,7 @@ import StudyWithUs from "./pages/StudyWithUs";
 import PartnerWithUs from "./pages/PartnerWithUs";
 import JobPlacement from "./pages/JobPlacement";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 
 export default function App() {
@@ -42,6 +43,7 @@ export default function App() {
           <Route path="/partner-with-us" element={<PartnerWithUs />} />
           <Route path="/job-placement" element={<JobPlacement />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
 

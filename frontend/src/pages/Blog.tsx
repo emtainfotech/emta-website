@@ -7,21 +7,21 @@ const posts = [
     author: "EMTA Admin",
     date: "18 Jun 2026",
     image: "/img/Blog/how-to-crack-an-interview-complete-guide-for-freshers.png",
-    href: "/how-to-crack-an-interview-complete-guide-for-freshers",
+    href: "/blog/how-to-crack-an-interview-complete-guide-for-freshers",
   },
   {
     title: "Customer Relationship Management (CRM) in BFSI",
     author: "EMTA Admin",
     date: "15 Nov 2025",
     image: "/img/Blog/crm-in-the-bfsi-sector.png",
-    href: "/crm-in-the-bfsi-sector",
+    href: "/blog/crm-in-the-bfsi-sector",
   },
   {
     title: "BFSI Jobs: A Gateway to Stable and Rewarding Careers",
     author: "Sneha Yadav",
     date: "11 Oct 2025",
     image: "/img/Blog/bfsi-jobs-gateway-to-stable-careers.png",
-    href: "/bfsi-jobs-gateway-to-stable-careers",
+    href: "/blog/bfsi-jobs-gateway-to-stable-careers",
   },
 ];
 
