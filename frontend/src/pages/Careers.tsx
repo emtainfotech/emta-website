@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { BriefcaseBusiness, MapPin, Search, SlidersHorizontal, X } from "lucide-react";
+import SEO from "../components/common/SEO";
 import JobCard from "../components/common/JobCard";
 import { jobs } from "../data/jobs";
 
@@ -39,7 +40,13 @@ export default function Careers() {
   };
 
   return (
-    <main className="overflow-hidden">
+    <>
+          <SEO
+            title="Jobs in Indore & Across India | Careers | EMTA"
+            description="Explore current job openings, salaries, locations and career opportunities with EMTA."
+            canonical="https://emta.co.in/careers"
+          />
+        <main className="overflow-hidden">
       {/* Hero */}
       <section className="relative isolate border-b border-slate-200 bg-linear-to-br from-sky-50 via-white to-blue-50">
         <div className="absolute -left-20 top-10 h-64 w-64 rounded-full bg-sky-200/30 blur-3xl" />
@@ -174,6 +181,7 @@ export default function Careers() {
           </div>
         )}
       </section>
-    </main>
+        </main>
+    </>
   );
 }

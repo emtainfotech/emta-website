@@ -7,6 +7,7 @@ import {
   IndianRupee,
 } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
+import SEO from "../components/common/SEO";
 import { courses } from "../data/courses";
 
 export default function CourseDetails() {
@@ -43,6 +44,12 @@ export default function CourseDetails() {
   }
 
   return (
+    <>
+    <SEO
+        title={`${course.title} | EMTA BFSI Training`}
+        description={course.description}
+        canonical={`https://emta.co.in/course/${course.id}`}
+    />
     <main className="overflow-hidden">
       <section className="relative isolate border-b border-slate-200 bg-linear-to-br from-sky-50 via-white to-blue-50">
         <div className="section-shell relative py-12 sm:py-16 lg:py-20">
@@ -186,5 +193,6 @@ export default function CourseDetails() {
         </div>
       </section>
     </main>
+    </>
   );
 }

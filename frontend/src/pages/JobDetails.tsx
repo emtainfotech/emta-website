@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+import SEO from "../components/common/SEO";
 import ApplicationForm from "../components/common/ApplicationForm";
 import {
   ArrowLeft,
@@ -110,7 +111,16 @@ export default function JobDetails() {
   const skills = job.skills ?? job.bonusSkills ?? [];
 
   return (
-    <main className="overflow-hidden">
+    <>
+      <SEO
+        title={`${job.title} | ${job.company} | EMTA Careers`}
+        description={
+          job.description ||
+          `View details and application information for ${job.title} at EMTA.`
+        }
+        canonical={`https://emta.co.in/jobs/${job.id}`}
+      />
+      <main className="overflow-hidden">
       {/* Header */}
       <section className="relative isolate border-b border-slate-200 bg-linear-to-br from-sky-50 via-white to-blue-50">
         <div className="absolute -left-24 top-0 h-72 w-72 rounded-full bg-sky-200/30 blur-3xl" />
@@ -284,6 +294,7 @@ export default function JobDetails() {
     </div>
   </div>
 </section>
-    </main>
+        </main>
+    </>
   );
 }

@@ -1,3 +1,4 @@
+import SEO from "../components/common/SEO";
 import HeroSection from "../components/sections/HeroSection";
 import HiringPartners from "../components/sections/HiringPartners";
 import BusinessSolutions from "../components/sections/BusinessSolutions";
@@ -13,7 +14,14 @@ import FAQ from "../components/sections/FAQ";
 
 export default function Home() {
   return (
-    <main className="overflow-hidden">
+    <>
+      <SEO
+        title="Best Job Consultancy in Indore | Placement Services & Jobs for Freshers | EMTA"
+        description="EMTA is a leading job consultancy in Indore offering placement services, jobs for freshers, BPO jobs, banking jobs, IT jobs, interview preparation, resume guidance, and BFSI training."
+        canonical="https://emta.co.in/"
+      />
+
+      <main className="overflow-hidden">
       {/* Hero */}
       <HeroSection />
 
@@ -49,6 +57,7 @@ export default function Home() {
 
       {/* Frequently asked questions */}
       <FAQ />
-    </main>
+      </main>
+    </>
   );
 }

@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import type { FormEvent } from "react";
+import SEO from "../components/common/SEO";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -17,7 +18,13 @@ export default function Contact() {
   };
 
   return (
-    <main className="overflow-hidden">
+    <>
+      <SEO
+        title="Contact EMTA | Job Consultancy & Training Academy in Indore"
+        description="Contact Elite Manpower & Training Academy for recruitment, career guidance, placement and BFSI training enquiries."
+        canonical="https://emta.co.in/contact"
+      />
+      <main className="overflow-hidden">
       <section className="relative isolate border-b border-slate-200 bg-linear-to-br from-sky-50 via-white to-blue-50">
         <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-sky-200/30 blur-3xl" />
         <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-blue-200/30 blur-3xl" />
@@ -242,6 +249,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
-    </main>
+        </main>
+    </>
   );
 }

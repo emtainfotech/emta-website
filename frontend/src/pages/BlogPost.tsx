@@ -5,6 +5,7 @@ import {
   UserRound,
 } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
+import SEO from "../components/common/SEO";
 
 const posts = {
   "how-to-crack-an-interview-complete-guide-for-freshers": {
@@ -72,7 +73,13 @@ export default function BlogPost() {
   }
 
   return (
-    <main className="overflow-hidden">
+    <>
+      <SEO
+        title={`${post.title} | EMTA`}
+        description={post.excerpt}
+        canonical={`https://emta.co.in/blog/${slug}`}
+      />
+      <main className="overflow-hidden">
       {/* Header */}
       <section className="border-b border-slate-200 bg-linear-to-br from-sky-50 via-white to-blue-50">
         <div className="section-shell py-12 sm:py-16 lg:py-20">
@@ -159,6 +166,7 @@ export default function BlogPost() {
           </div>
         </div>
       </section>
-    </main>
+      </main>
+    </>
   );
 }

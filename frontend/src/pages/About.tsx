@@ -6,6 +6,7 @@ import {
   Users,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "../components/common/SEO";
 
 const stats = [
   {
@@ -39,7 +40,14 @@ const highlights = [
 
 export default function About() {
   return (
-    <main className="overflow-hidden">
+    <>
+      <SEO
+        title="About EMTA | Job Consultancy & BFSI Training in Indore"
+        description="Learn about Elite Manpower & Training Academy, our career guidance, BFSI training and placement support services."
+        canonical="https://emta.co.in/about"
+      />
+
+      <main className="overflow-hidden">
       {/* Hero */}
       <section className="relative isolate border-b border-slate-200 bg-linear-to-br from-sky-50 via-white to-blue-50">
         <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-sky-200/30 blur-3xl" />
@@ -242,5 +250,6 @@ export default function About() {
         </div>
       </section>
     </main>
+    </>
   );
 }

@@ -1,10 +1,17 @@
 import { ArrowRight, Clock3, GraduationCap, IndianRupee } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "../components/common/SEO";
 import { courses } from "../data/courses";
 
 export default function BfsiTraining() {
   return (
-    <main className="overflow-hidden">
+    <>
+          <SEO
+            title="BFSI Training Programs | Banking & Finance Courses | EMTA"
+            description="Explore EMTA BFSI training programs covering sales, relationship management, credit and BFSI operations."
+            canonical="https://emta.co.in/bfsi-training"
+          />
+        <main className="overflow-hidden">
       <section className="relative isolate border-b border-slate-200 bg-linear-to-br from-sky-50 via-white to-blue-50">
         <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-sky-200/30 blur-3xl" />
         <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-blue-200/30 blur-3xl" />
@@ -125,6 +132,7 @@ export default function BfsiTraining() {
           </div>
         </div>
       </section>
-    </main>
+        </main>
+    </>
   );
 }
