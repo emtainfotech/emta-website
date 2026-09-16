@@ -1,170 +1,299 @@
-import { Link } from "react-router-dom";
 import {
   ArrowUpRight,
+  ChevronDown,
   Mail,
   MapPin,
   Phone,
 } from "lucide-react";
 
-const usefulLinks = [
-  { label: "About Us", href: "/about" },
-  { label: "Blog", href: "/blog" },
-  { label: "Recruitment Solution", href: "/hire-with-us" },
-  { label: "Courses & Fees", href: "/bfsi-training" },
-  { label: "Careers", href: "/careers" },
-  { label: "BFSI", href: "/bfsi-training" },
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaXTwitter,
+} from "react-icons/fa6";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
+const candidateLinks = [
+  { label: "Browse Jobs", to: "/careers" },
+  { label: "For Job Seekers", to: "/for-employee" },
+  { label: "Work With Us", to: "/work-with-us" },
+  { label: "Job Placement", to: "/job-placement" },
 ];
 
-const socialLinks = [
-  {
-    label: "Facebook",
-    href: "https://www.facebook.com/people/EMTA/100076544892050/?paipv=0&eav=AfbXq3U78y0pbd2H_FttF7WA0BS0qfYH053dyEVKd0eIm1buJ6xPKJlNyEU3GXUlZfU",
-    short: "f",
-  },
-  {
-    label: "X",
-    href: "https://x.com/EliteManpowerT1/status/1553354721330692098",
-    short: "𝕏",
-  },
-  {
-    label: "Instagram",
-    href: "https://www.instagram.com/emta.placements/?igsh=eXN6cXdxNHFpZzAy",
-    short: "ig",
-  },
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/company/elite-manpower-training-academy/about/",
-    short: "in",
-  },
+const employerLinks = [
+  { label: "For Employers", to: "/for-employer" },
+  { label: "Hire With Us", to: "/hire-with-us" },
+  { label: "Partner With Us", to: "/partner-with-us" },
 ];
+
+const exploreLinks = [
+  { label: "About EMTA", to: "/about" },
+  { label: "BFSI Training", to: "/bfsi-training" },
+  { label: "Study With Us", to: "/study-with-us" },
+  { label: "Career Blog", to: "/blog" },
+  { label: "Contact", to: "/contact" },
+];
+
+function FooterLinkGroup({
+  title,
+  links,
+}: {
+  title: string;
+  links: { label: string; to: string }[];
+}) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="border-b border-white/10 py-4 lg:border-0 lg:py-0">
+      <button
+        type="button"
+        onClick={() => setOpen((value) => !value)}
+        className="flex w-full items-center justify-between text-left lg:pointer-events-none"
+        aria-expanded={open}
+      >
+        <span className="text-sm font-semibold text-white">{title}</span>
+
+        <ChevronDown
+          size={17}
+          className={`text-slate-400 transition-transform lg:hidden ${
+            open ? "rotate-180" : ""
+          }`}
+        />
+      </button>
+
+      <div
+        className={`overflow-hidden transition-all duration-300 lg:mt-5 lg:block lg:max-h-none ${
+          open ? "mt-4 max-h-80" : "max-h-0"
+        }`}
+      >
+        <div className="space-y-3">
+          {links.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              className="group flex items-center gap-2 text-sm text-slate-400 transition hover:text-white"
+            >
+              <span>{link.label}</span>
+              <ArrowUpRight
+                size={14}
+                className="opacity-0 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100"
+              />
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-slate-200 bg-slate-950 text-white">
-      <div className="absolute -left-24 top-0 h-72 w-72 rounded-full bg-sky-500/10 blur-3xl" />
-      <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-blue-600/10 blur-3xl" />
+    <footer className="relative overflow-hidden bg-slate-950 text-white">
+      {/* Ambient background */}
+      <div
+        className="pointer-events-none absolute -left-40 -top-40 h-96 w-96 rounded-full bg-sky-500/15 blur-3xl"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute -bottom-48 right-0 h-136 w-136 rounded-full bg-blue-600/10 blur-3xl"
+        aria-hidden="true"
+      />
 
-      <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
-        <div className="grid gap-12 lg:grid-cols-[1.3fr_0.8fr_1fr]">
-          {/* Brand */}
-          <div>
-            <Link to="/" className="inline-flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-sky-400 to-blue-600 font-bold shadow-lg shadow-sky-900/30">
-                E
-              </div>
+      <div className="relative">
+        {/* Closing CTA */}
+        <section className="section-shell pt-16 sm:pt-20 lg:pt-24">
+          <div className="relative overflow-hidden rounded-4xl border border-white/10 bg-white/6 px-6 py-8 shadow-2xl backdrop-blur-xl sm:px-10 sm:py-10 lg:px-12 lg:py-12">
+            <div
+              className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-sky-400/15 blur-3xl"
+              aria-hidden="true"
+            />
 
-              <div>
-                <p className="text-lg font-bold tracking-tight">EMTA</p>
-                <p className="text-xs text-slate-400">
-                  Elite Manpower & Training Academy
+            <div className="relative flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+              <div className="max-w-2xl">
+                <span className="inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-sky-300">
+                  EMTA • Your next move
+                </span>
+
+                <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                  Ready to take the next step in your career?
+                </h2>
+
+                <p className="mt-4 max-w-xl text-sm leading-7 text-slate-400 sm:text-base">
+                  Explore opportunities, build job-ready skills or connect
+                  with our recruitment team.
                 </p>
               </div>
-            </Link>
 
-            <p className="mt-6 max-w-md text-sm leading-7 text-slate-400">
-              Elite Manpower and Training Academy (EMTA), founded in 2020 by
-              visionaries Abhijeet Raghuwanshi, is a trailblazer in BFSI
-              training and job placement.
-            </p>
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Link
+                  to="/careers"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-blue-500"
+                >
+                  Explore jobs
+                  <ArrowUpRight size={17} />
+                </Link>
 
-            <div className="mt-7 flex items-center gap-3">
-              {socialLinks.map(({ label, href, short }) => (
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                  Talk to EMTA
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Main footer */}
+        <section className="section-shell py-14 sm:py-16 lg:py-20">
+          <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr_1fr_1fr]">
+            {/* Brand */}
+            <div>
+              <Link to="/" className="inline-flex items-center gap-3">
+                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-sm font-black text-blue-600 shadow-lg shadow-blue-950/30">
+                  EM
+                </span>
+
+                <span>
+                  <span className="block text-lg font-bold tracking-tight">
+                    EMTA
+                  </span>
+                  <span className="block text-[11px] font-medium uppercase tracking-[0.14em] text-slate-500">
+                    Elite Manpower & Training Academy
+                  </span>
+                </span>
+              </Link>
+
+              <p className="mt-5 max-w-sm text-sm leading-7 text-slate-400">
+                Elite Manpower and Training Academy (EMTA), founded in 2020,
+                connects job seekers, training programs and hiring partners
+                across career opportunities and BFSI-focused development.
+              </p>
+
+              <div className="mt-7 space-y-3">
                 <a
-                  key={label}
-                  href={href}
+                  href="tel:+918962540996"
+                  className="group flex items-start gap-3 text-sm text-slate-400 transition hover:text-white"
+                >
+                  <Phone
+                    size={17}
+                    className="mt-0.5 shrink-0 text-sky-400"
+                  />
+                  <span>+91 89625 40996</span>
+                  <ArrowUpRight
+                    size={14}
+                    className="mt-0.5 opacity-0 transition group-hover:opacity-100"
+                  />
+                </a>
+
+                <a
+                  href="mailto:hr@emta.co.in"
+                  className="group flex items-start gap-3 text-sm text-slate-400 transition hover:text-white"
+                >
+                  <Mail
+                    size={17}
+                    className="mt-0.5 shrink-0 text-sky-400"
+                  />
+                  <span>hr@emta.co.in</span>
+                  <ArrowUpRight
+                    size={14}
+                    className="mt-0.5 opacity-0 transition group-hover:opacity-100"
+                  />
+                </a>
+
+                <a
+                  href="https://maps.google.com/?q=Vatsalya+AF-3+Scheme+No+54+Vijay+Nagar+Indore"
                   target="_blank"
                   rel="noreferrer"
-                  aria-label={label}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-700 bg-white/5 text-slate-300 transition hover:border-sky-400 hover:bg-sky-400/10 hover:text-sky-300"
+                  className="group flex items-start gap-3 text-sm leading-6 text-slate-400 transition hover:text-white"
                 >
-                  <span className="text-xs font-bold">{short}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Useful links */}
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-300">
-              Useful Links
-            </p>
-
-            <div className="mt-6 space-y-3">
-              {usefulLinks.map((item) => (
-                <Link
-                  key={item.label}
-                  to={item.href}
-                  className="group flex items-center justify-between border-b border-slate-800 pb-3 text-sm text-slate-400 transition hover:text-white"
-                >
-                  <span>{item.label}</span>
-                  <ArrowUpRight
-                    size={15}
-                    className="opacity-0 transition group-hover:translate-x-0.5 group-hover:opacity-100"
+                  <MapPin
+                    size={17}
+                    className="mt-1 shrink-0 text-sky-400"
                   />
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-300">
-              Get in touch
-            </p>
-
-            <div className="mt-6 space-y-5">
-              <div className="flex gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 text-sky-300">
-                  <MapPin size={18} />
-                </div>
-                <p className="text-sm leading-6 text-slate-400">
-                  Flat No. 102, Vatsalya, AF-3, Scheme No. 54,
-                  <br />
-                  Vijay Nagar, Indore – 452010
-                  <br />
-                  Behind the lane of Golden Gate Hotel,
-                  <br />
-                  near Satya Sai Square
-                </p>
+                  <span>
+                    Flat No. 102, Vatsalya, AF-3, Scheme No. 54,
+                    Vijay Nagar, Indore – 452010
+                  </span>
+                  <ArrowUpRight
+                    size={14}
+                    className="mt-1 shrink-0 opacity-0 transition group-hover:opacity-100"
+                  />
+                </a>
               </div>
 
-              <a
-                href="mailto:hr@emta.co.in"
-                className="flex items-center gap-4 text-sm text-slate-400 transition hover:text-white"
-              >
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-sky-300">
-                  <Mail size={18} />
-                </span>
-                hr@emta.co.in
-              </a>
+              {/* Socials */}
+              <div className="mt-7 flex flex-wrap gap-2">
+                <a
+                  href="https://www.facebook.com/people/EMTA/100076544892050/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="EMTA Facebook"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 transition hover:-translate-y-1 hover:border-sky-400/30 hover:bg-sky-400/10 hover:text-white"
+                >
+                  <FaFacebookF size={17} />
+                </a>
 
-              <a
-                href="tel:+918962540996"
-                className="flex items-center gap-4 text-sm text-slate-400 transition hover:text-white"
-              >
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-sky-300">
-                  <Phone size={18} />
-                </span>
-                +91 89625 40996
-              </a>
+                <a
+                  href="https://www.instagram.com/emta.placements/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="EMTA Instagram"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 transition hover:-translate-y-1 hover:border-sky-400/30 hover:bg-sky-400/10 hover:text-white"
+                >
+                  <FaInstagram size={17} />
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/company/elite-manpower-training-academy/about/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="EMTA LinkedIn"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 transition hover:-translate-y-1 hover:border-sky-400/30 hover:bg-sky-400/10 hover:text-white"
+                >
+                  <FaLinkedinIn size={17} />
+                </a>
+
+                <a
+                  href="https://x.com/EliteManpowerT1"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="EMTA on X"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-sm font-semibold text-slate-300 transition hover:-translate-y-1 hover:border-sky-400/30 hover:bg-sky-400/10 hover:text-white"
+                >
+                  <FaXTwitter size={16} />
+                </a>
+              </div>
             </div>
+
+            {/* Navigation */}
+            <FooterLinkGroup title="For Job Seekers" links={candidateLinks} />
+            <FooterLinkGroup title="For Employers" links={employerLinks} />
+            <FooterLinkGroup title="Explore EMTA" links={exploreLinks} />
           </div>
-        </div>
+        </section>
 
-        <div className="mt-14 flex flex-col gap-4 border-t border-slate-800 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>EMTA, All rights reserved. | MSME Registered</p>
+        {/* Bottom bar */}
+        <div className="border-t border-white/10">
+          <div className="section-shell flex flex-col gap-3 py-5 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+              <span>© EMTA, All rights reserved.</span>
+              <span className="h-1 w-1 rounded-full bg-slate-700" />
+              <span>MSME Registered</span>
+            </div>
 
-          <p>
-            Designed By{" "}
             <a
               href="https://emtainfotech.com"
               target="_blank"
               rel="noreferrer"
-              className="text-slate-300 transition hover:text-sky-300"
+              className="inline-flex items-center gap-1 transition hover:text-white"
             >
-              EMTA INFOTECH
+              Designed by EMTA INFOTECH
+              <ArrowUpRight size={13} />
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </footer>

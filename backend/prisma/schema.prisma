@@ -1,0 +1,136 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+enum JobStatus {
+  ACTIVE
+  CLOSED
+  DRAFT
+}
+
+enum ApplicationStatus {
+  APPLIED
+  SHORTLISTED
+  INTERVIEW
+  SELECTED
+  REJECTED
+}
+
+enum CourseStatus {
+  ACTIVE
+  INACTIVE
+}
+
+model Admin {
+  id           Int      @id @default(autoincrement())
+  name         String
+  email        String   @unique
+  passwordHash String   @map("password_hash")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  @@map("admins")
+}
+
+model Job {
+  id               Int              @id @default(autoincrement())
+  title            String
+  company          String
+  location         String
+  salary           String?
+  slug             String           @unique
+  description      String           @db.Text
+  responsibilities String?          @db.Text
+  requirements     String?          @db.Text
+  employmentType   String?          @map("employment_type")
+  openings         Int?
+  status           JobStatus        @default(ACTIVE)
+  createdAt        DateTime         @default(now()) @map("created_at")
+  updatedAt        DateTime         @updatedAt @map("updated_at")
+
+  applications     Application[]
+
+  @@index([status])
+  @@index([location])
+  @@index([company])
+  @@map("jobs")
+}
+
+model Application {
+  id            Int               @id @default(autoincrement())
+  jobId         Int               @map("job_id")
+  name          String
+  email         String
+  phone         String
+  experience    String?
+  qualification String?
+  location      String?
+  resumeUrl     String?           @map("resume_url")
+  coverMessage  String?           @db.Text @map("cover_message")
+  status        ApplicationStatus @default(APPLIED)
+  createdAt     DateTime          @default(now()) @map("created_at")
+  updatedAt     DateTime          @updatedAt @map("updated_at")
+
+  job           Job               @relation(fields: [jobId], references: [id], onDelete: Cascade)
+
+  @@index([jobId])
+  @@index([status])
+  @@index([email])
+  @@index([createdAt])
+  @@map("applications")
+}
+
+model Course {
+  id               Int              @id @default(autoincrement())
+  title            String
+  duration         String
+  salaryPotential  String?          @map("salary_potential")
+  description      String           @db.Text
+  learnings        String?          @db.Text
+  skills           String?          @db.Text
+  image            String?
+  status           CourseStatus     @default(ACTIVE)
+  createdAt        DateTime         @default(now()) @map("created_at")
+  updatedAt        DateTime         @updatedAt @map("updated_at")
+
+  enquiries        CourseEnquiry[]
+
+  @@index([status])
+  @@map("courses")
+}
+
+model CourseEnquiry {
+  id           Int      @id @default(autoincrement())
+  courseId     Int      @map("course_id")
+  name         String
+  email        String
+  phone        String
+  message      String?  @db.Text
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  course       Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+
+  @@index([courseId])
+  @@index([email])
+  @@index([createdAt])
+  @@map("course_enquiries")
+}
+
+model Contact {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  phone     String?
+  subject   String?
+  message   String   @db.Text
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([email])
+  @@index([createdAt])
+  @@map("contacts")
+}

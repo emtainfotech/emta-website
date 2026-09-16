@@ -105,69 +105,85 @@ export default function HeroSection() {
           </ScrollReveal>
 
           {/* Right visual */}
-          <ScrollReveal className="lg:flex lg:justify-end">
-            <div className="relative mx-auto w-full max-w-xl">
-              {/* Glow */}
-              <div
-                className="absolute inset-8 rounded-[3rem] bg-sky-200/50 blur-3xl"
-                aria-hidden="true"
-              />
+          {/* Right visual */}
+<ScrollReveal className="lg:flex lg:justify-end">
+  <div className="relative mx-auto w-full max-w-xl">
 
-              {/* Main visual container */}
-              <div className="relative overflow-hidden rounded-4xl border border-white/80 bg-white/70 p-3 shadow-2xl shadow-blue-900/10 backdrop-blur-xl sm:p-4">
-                <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-blue-600 via-blue-500 to-sky-400">
-                  {/* Decorative shapes */}
-                  <div
-                    className="absolute -right-16 -top-16 h-48 w-48 rounded-full border border-white/20"
-                    aria-hidden="true"
-                  />
+    {/* Ambient glow */}
+    <div
+      className="pointer-events-none absolute -inset-8 rounded-[4rem] bg-sky-200/35 blur-3xl"
+      aria-hidden="true"
+    />
 
-                  <div
-                    className="absolute -bottom-20 -left-12 h-56 w-56 rounded-full bg-white/10 blur-2xl"
-                    aria-hidden="true"
-                  />
+    {/* Main visual card */}
+    <div className="relative rounded-4xl border border-white/80 bg-white/65 p-3 shadow-2xl shadow-blue-900/10 backdrop-blur-xl sm:p-4">
 
-                  <div className="relative flex min-h-97.5 items-end justify-center px-4 pt-10 sm:min-h-120 sm:px-8 lg:min-h-140">
-                    <img
-                      src="/img/image-removebg-preview.png"
-                      alt="EMTA career and job placement services"
-                      width={518}
-                      height={345}
-                      fetchPriority="high"
-                      className="relative z-10 w-full max-w-130 object-contain drop-shadow-2xl"
-                    />
-                  </div>
+      {/* Visual stage */}
+      <div className="relative overflow-hidden rounded-[1.6rem] bg-linear-to-br from-sky-100 via-blue-50 to-white">
 
-                  {/* Floating information card */}
-                  <div className="absolute left-4 top-5 z-20 rounded-2xl border border-white/30 bg-white/95 px-4 py-3 shadow-xl backdrop-blur sm:left-6 sm:top-6">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500">
-                      EMTA
-                    </p>
-                    <p className="mt-1 text-sm font-bold text-slate-900">
-                      Career &amp; Hiring Partner
-                    </p>
-                  </div>
+        {/* Decorative circles */}
+        <div
+          className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full border border-blue-200/50"
+          aria-hidden="true"
+        />
 
-                  <div className="absolute bottom-4 right-4 z-20 rounded-2xl border border-white/30 bg-white/95 px-4 py-3 shadow-xl backdrop-blur sm:bottom-6 sm:right-6">
-                    <p className="text-xs font-medium text-slate-500">
-                      Your next opportunity
-                    </p>
-                    <p className="mt-1 text-sm font-bold text-blue-700">
-                      starts here
-                    </p>
-                  </div>
-                </div>
-              </div>
+        <div
+          className="pointer-events-none absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-sky-200/30 blur-3xl"
+          aria-hidden="true"
+        />
 
-              {/* Small floating stat */}
-              <div className="absolute -bottom-4 left-3 z-30 rounded-2xl border border-sky-100 bg-white px-5 py-3 shadow-xl shadow-blue-900/10 sm:-left-5 sm:px-6 sm:py-4">
-                <p className="text-xl font-bold text-blue-600">100+</p>
-                <p className="text-xs font-medium text-slate-500">
-                  Hiring Partners
-                </p>
-              </div>
-            </div>
-          </ScrollReveal>
+        {/* Main person / illustration */}
+        <div className="relative flex min-h-105 items-center justify-center px-5 py-8 sm:min-h-125 sm:px-8 sm:py-10 lg:min-h-140">
+          <img
+            src="/img/image-removebg-preview.png"
+            alt="EMTA career and job placement services"
+            width={518}
+            height={345}
+            fetchPriority="high"
+            className="relative z-10 h-auto w-full max-w-130 object-contain drop-shadow-[0_25px_30px_rgba(15,23,42,0.16)]"
+          />
+        </div>
+
+        {/* Top floating card */}
+        <div className="absolute left-4 top-4 z-20 rounded-2xl border border-white/80 bg-white/90 px-4 py-3 shadow-lg backdrop-blur-md sm:left-5 sm:top-5">
+          <div className="flex items-center gap-2">
+            <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
+            <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-slate-500">
+              EMTA
+            </span>
+          </div>
+
+          <p className="mt-1.5 text-sm font-bold text-slate-900">
+            Career &amp; Hiring Partner
+          </p>
+        </div>
+
+        {/* Bottom floating card */}
+        <div className="absolute bottom-4 right-4 z-20 rounded-2xl border border-white/80 bg-white/90 px-4 py-3 shadow-lg backdrop-blur-md sm:bottom-5 sm:right-5">
+          <p className="text-[11px] font-medium uppercase tracking-[0.12em] text-slate-400">
+            Opportunities
+          </p>
+
+          <p className="mt-1 text-sm font-bold text-blue-700">
+            Start your next chapter
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* Floating metric */}
+    <div className="absolute -bottom-5 left-3 z-30 rounded-2xl border border-white/80 bg-white px-5 py-4 shadow-xl shadow-blue-900/10 sm:-left-6">
+      <p className="text-2xl font-bold tracking-tight text-blue-600">
+        100+
+      </p>
+
+      <p className="text-xs font-medium text-slate-500">
+        Hiring Partners
+      </p>
+    </div>
+
+  </div>
+</ScrollReveal>
         </div>
       </div>
     </section>

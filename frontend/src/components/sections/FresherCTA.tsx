@@ -67,37 +67,38 @@ export default function FresherCTA() {
           </ScrollReveal>
 
           {/* Image */}
-          <ScrollReveal>
-            <div className="relative mx-auto w-full max-w-xl">
-              <div
-                className="absolute inset-6 rounded-4xl bg-white/15 blur-3xl"
-                aria-hidden="true"
-              />
+<ScrollReveal>
+  <div className="relative mx-auto w-full max-w-xl">
+    <div
+      className="pointer-events-none absolute inset-4 rounded-[3rem] bg-sky-300/25 blur-3xl"
+      aria-hidden="true"
+    />
 
-              <div className="relative overflow-hidden rounded-4xl border border-white/20 bg-white/10 p-3 shadow-2xl backdrop-blur-sm sm:p-4">
-                <div className="overflow-hidden rounded-4xl bg-white/10">
-                  <img
-                    src="/img/job-for-fresher.webp"
-                    alt="Our services go beyond connecting candidates to a vacancy, we provide the strongest launch pad for jobs for freshers in verticals with significant growth, including IT, BPO, BFSI, and FMCG."
-                    width={540}
-                    height={350}
-                    loading="lazy"
-                    className="aspect-540/350 w-full object-cover transition duration-700 hover:scale-105"
-                  />
-                </div>
+    <div className="relative rounded-4xl border border-white/20 bg-white/10 p-3 shadow-2xl backdrop-blur-sm sm:p-4">
+      <div className="relative overflow-hidden rounded-3xl bg-white/10">
+        <img
+          src="/img/job-for-fresher.webp"
+          alt="Jobs for freshers with EMTA"
+          width={540}
+          height={350}
+          loading="lazy"
+          className="mx-auto block h-auto max-h-105 w-full object-contain transition duration-700 group-hover:scale-[1.02]"
+        />
+      </div>
 
-                <div className="absolute bottom-7 left-7 right-7 rounded-2xl border border-white/20 bg-white/95 p-4 shadow-xl backdrop-blur-md sm:p-5">
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-blue-600">
-                    Start strong
-                  </p>
+      {/* Floating info card */}
+      <div className="mt-4 rounded-2xl border border-white/20 bg-white/95 p-4 shadow-xl backdrop-blur-md sm:p-5">
+        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-blue-600">
+          Start strong
+        </p>
 
-                  <p className="mt-1 text-sm font-bold text-slate-900 sm:text-base">
-                    Your first job can be the beginning of your career.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
+        <p className="mt-1 text-sm font-bold text-slate-900 sm:text-base">
+          Your first job can be the beginning of your career.
+        </p>
+      </div>
+    </div>
+  </div>
+</ScrollReveal>
         </div>
       </div>
     </section>

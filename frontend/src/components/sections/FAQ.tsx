@@ -1,4 +1,4 @@
-import { ChevronDown, HelpCircle } from "lucide-react";
+import { CheckCircle2, ChevronDown, HelpCircle } from "lucide-react";
 import { useState } from "react";
 import ScrollReveal from "../common/ScrollReveal";
 
@@ -33,8 +33,18 @@ export default function FAQ() {
   };
 
   return (
-    <section className="bg-white py-16 sm:py-20 lg:py-24">
-      <div className="section-shell">
+    <section className="relative overflow-hidden bg-linear-to-br from-white via-sky-50/50 to-blue-50/70 py-16 sm:py-20 lg:py-24">
+      <div
+        className="pointer-events-none absolute -right-30 top-16 h-80 w-80 rounded-full bg-sky-300/15 blur-3xl"
+        aria-hidden="true"
+      />
+
+      <div
+        className="pointer-events-none absolute -bottom-35 -left-25 h-80 w-80 rounded-full bg-blue-400/10 blur-3xl"
+        aria-hidden="true"
+      />
+
+      <div className="section-shell relative">
         <ScrollReveal>
           <div className="mx-auto max-w-3xl text-center">
             <span className="eyebrow">
@@ -53,65 +63,81 @@ export default function FAQ() {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal>
-          <div className="mx-auto mt-10 max-w-3xl space-y-3">
-            {faqs.map((faq, index) => {
-              const isOpen = openIndex === index;
+        <ScrollReveal delay={100}>
+          <div className="mx-auto mt-10 max-w-4xl">
+            <div className="overflow-hidden rounded-3xl border border-white/80 bg-white/75 p-2 shadow-[0_18px_60px_rgba(15,23,42,0.07)] backdrop-blur-xl sm:p-3">
+              {faqs.map((faq, index) => {
+                const isOpen = openIndex === index;
 
-              return (
-                <div
-                  key={faq.question}
-                  className={`overflow-hidden rounded-2xl border transition-all duration-300 ${
-                    isOpen
-                      ? "border-blue-200 bg-blue-50/60 shadow-lg shadow-blue-900/5"
-                      : "border-slate-200 bg-white hover:border-blue-100 hover:shadow-sm"
-                  }`}
-                >
-                  <button
-                    type="button"
-                    onClick={() => toggle(index)}
-                    aria-expanded={isOpen}
-                    aria-controls={`faq-answer-${index}`}
-                    className="flex w-full items-center justify-between gap-6 px-5 py-5 text-left sm:px-6"
+                return (
+                  <div
+                    key={faq.question}
+                    className={`overflow-hidden rounded-2xl border transition-all duration-300 ${
+                      isOpen
+                        ? "border-blue-200 bg-blue-50/70 shadow-md shadow-blue-900/5"
+                        : "border-transparent bg-transparent hover:border-blue-100 hover:bg-slate-50/70"
+                    } ${index > 0 ? "mt-2" : ""}`}
                   >
-                    <span className="text-base font-semibold leading-6 text-slate-900 sm:text-lg">
-                      {faq.question}
-                    </span>
+                    <button
+                      type="button"
+                      onClick={() => toggle(index)}
+                      aria-expanded={isOpen}
+                      aria-controls={`faq-answer-${index}`}
+                      className="flex w-full items-center justify-between gap-5 px-4 py-5 text-left sm:px-6"
+                    >
+                      <div className="flex min-w-0 items-start gap-3.5">
+                        <span
+                          className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
+                            isOpen
+                              ? "bg-blue-600 text-white"
+                              : "bg-blue-50 text-blue-600"
+                          }`}
+                        >
+                          <CheckCircle2 size={16} aria-hidden="true" />
+                        </span>
 
-                    <span
-                      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
+                        <span className="text-base font-semibold leading-6 text-slate-900 sm:text-lg">
+                          {faq.question}
+                        </span>
+                      </div>
+
+                      <span
+                        className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
+                          isOpen
+                            ? "bg-blue-600 text-white"
+                            : "bg-slate-100 text-slate-600"
+                        }`}
+                      >
+                        <ChevronDown
+                          size={18}
+                          aria-hidden="true"
+                          className={`transition-transform duration-300 ${
+                            isOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </span>
+                    </button>
+
+                    <div
+                      id={`faq-answer-${index}`}
+                      className={`grid transition-all duration-300 ${
                         isOpen
-                          ? "bg-blue-600 text-white"
-                          : "bg-blue-50 text-blue-600"
+                          ? "grid-rows-[1fr] opacity-100"
+                          : "grid-rows-[0fr] opacity-0"
                       }`}
                     >
-                      <ChevronDown
-                        size={18}
-                        aria-hidden="true"
-                        className={`transition-transform duration-300 ${
-                          isOpen ? "rotate-180" : ""
-                        }`}
-                      />
-                    </span>
-                  </button>
-
-                  <div
-                    id={`faq-answer-${index}`}
-                    className={`grid transition-all duration-300 ${
-                      isOpen
-                        ? "grid-rows-[1fr] opacity-100"
-                        : "grid-rows-[0fr] opacity-0"
-                    }`}
-                  >
-                    <div className="overflow-hidden">
-                      <p className="border-t border-blue-100 px-5 py-5 text-sm leading-7 text-slate-600 sm:px-6 sm:text-base">
-                        {faq.answer}
-                      </p>
+                      <div className="overflow-hidden">
+                        <div className="border-t border-blue-100/80 px-5 py-5 sm:px-6">
+                          <p className="text-sm leading-7 text-slate-600 sm:text-base">
+                            {faq.answer}
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </ScrollReveal>
       </div>

@@ -38,8 +38,18 @@ const blogs = [
 
 export default function RecentBlogs() {
   return (
-    <section className="bg-sky-50/60 py-16 sm:py-20 lg:py-24">
-      <div className="section-shell">
+    <section className="relative overflow-hidden bg-linear-to-br from-sky-50/80 via-white to-blue-50/70 py-16 sm:py-20 lg:py-24">
+      {/* Background atmosphere */}
+      <div
+        className="pointer-events-none absolute -left-32 top-20 h-72 w-72 rounded-full bg-sky-300/15 blur-3xl"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-blue-400/10 blur-3xl"
+        aria-hidden="true"
+      />
+
+      <div className="section-shell relative">
         <ScrollReveal>
           <div className="mx-auto max-w-3xl text-center">
             <span className="eyebrow">Recent Blogs</span>
@@ -57,9 +67,9 @@ export default function RecentBlogs() {
         </ScrollReveal>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {blogs.map((blog) => (
-            <ScrollReveal key={blog.href}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-blue-100 bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-900/8">
+          {blogs.map((blog, index) => (
+            <ScrollReveal key={blog.href} delay={index * 80}>
+              <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-white/80 bg-white/80 shadow-[0_12px_40px_rgba(15,23,42,0.06)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-blue-200 hover:bg-white hover:shadow-[0_22px_55px_rgba(37,99,235,0.12)]">
                 <Link
                   to={blog.href}
                   className="relative block aspect-16/10 overflow-hidden"
@@ -68,24 +78,24 @@ export default function RecentBlogs() {
                   <img
                     src={blog.image}
                     alt={blog.title}
-                    width={400}
-                    height={250}
+                    width={800}
+                    height={500}
                     loading="lazy"
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
 
                   <div
-                    className="absolute inset-0 bg-linear-to-t from-slate-950/30 via-transparent to-transparent"
+                    className="absolute inset-0 bg-linear-to-t from-slate-950/40 via-transparent to-transparent"
                     aria-hidden="true"
                   />
 
-                  <span className="absolute left-4 top-4 rounded-full border border-white/30 bg-white/90 px-3 py-1.5 text-xs font-semibold text-blue-700 shadow-md backdrop-blur">
+                  <span className="absolute left-4 top-4 rounded-full border border-white/40 bg-white/90 px-3 py-1.5 text-xs font-semibold text-blue-700 shadow-lg backdrop-blur-md">
                     {blog.category}
                   </span>
                 </Link>
 
                 <div className="flex flex-1 flex-col p-5 sm:p-6">
-                  <div className="flex items-center gap-4 text-xs text-slate-500">
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-500">
                     <span className="inline-flex items-center gap-1.5">
                       <UserRound
                         size={14}
@@ -106,19 +116,19 @@ export default function RecentBlogs() {
                   </div>
 
                   <Link to={blog.href}>
-                    <h3 className="mt-4 text-xl font-bold leading-7 tracking-tight text-slate-950 transition-colors group-hover:text-blue-700">
+                    <h3 className="mt-4 text-xl font-bold leading-7 tracking-tight text-slate-950 transition-colors duration-300 group-hover:text-blue-700">
                       {blog.title}
                     </h3>
                   </Link>
 
-                  <p className="mt-3 text-sm leading-6 text-slate-600">
+                  <p className="mt-3 line-clamp-3 text-sm leading-6 text-slate-600">
                     {blog.description}
                   </p>
 
                   <Link
                     to={blog.href}
                     aria-label={`Read more about ${blog.title}`}
-                    className="group/link mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-blue-600"
+                    className="group/link mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-blue-600 transition-colors hover:text-blue-800"
                   >
                     Read More
                     <ArrowRight
@@ -133,14 +143,18 @@ export default function RecentBlogs() {
           ))}
         </div>
 
-        <ScrollReveal>
+        <ScrollReveal delay={180}>
           <div className="mt-10 flex justify-center">
             <Link
               to="/blog"
-              className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-xl"
+              className="group inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/80 px-6 py-3.5 text-sm font-semibold text-blue-700 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-300 hover:bg-blue-600 hover:text-white hover:shadow-lg hover:shadow-blue-600/20"
             >
               View All Blog Posts
-              <ArrowRight size={17} aria-hidden="true" />
+              <ArrowRight
+                size={17}
+                aria-hidden="true"
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              />
             </Link>
           </div>
         </ScrollReveal>

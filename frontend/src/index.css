@@ -19,7 +19,24 @@
     "Segoe UI", sans-serif;
 
   color: var(--color-navy);
-  background: var(--color-white);
+
+  /*
+   * Global site atmosphere.
+   * Keeps the page visually alive without making everything blue.
+   */
+  background:
+    radial-gradient(
+      circle at 8% 0%,
+      rgba(56, 189, 248, 0.12),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 92% 10%,
+      rgba(37, 99, 235, 0.08),
+      transparent 28%
+    ),
+    #f7fbff;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -28,13 +45,31 @@
 
 html {
   scroll-behavior: smooth;
+  background: #f7fbff;
 }
 
 body {
   margin: 0;
   min-width: 320px;
-  background: var(--color-white);
+
+  /*
+   * Subtle blue atmosphere throughout the site.
+   */
+  background:
+    radial-gradient(
+      circle at 0% 8%,
+      rgba(56, 189, 248, 0.10),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 100% 18%,
+      rgba(37, 99, 235, 0.07),
+      transparent 28%
+    ),
+    linear-gradient(180deg, #f8fcff 0%, #f7fbff 45%, #f3f8fd 100%);
+
   color: var(--color-navy);
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
 }
 
 * {
@@ -42,6 +77,11 @@ body {
 }
 
 img {
+  display: block;
+  max-width: 100%;
+}
+
+video {
   display: block;
   max-width: 100%;
 }
@@ -68,9 +108,11 @@ a {
 }
 
 @layer components {
+  /*
+   * Main content width
+   */
   .section-shell {
-    width: 100%;
-    max-width: 80rem;
+    width: min(100% - 2rem, 1200px);
     margin-inline: auto;
     padding-inline: 1rem;
   }
@@ -87,43 +129,150 @@ a {
     }
   }
 
+  /*
+   * Small section label
+   */
   .eyebrow {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+
+    border: 1px solid rgba(56, 189, 248, 0.16);
     border-radius: 9999px;
-    background: #e0f2fe;
+
+    background: rgba(224, 242, 254, 0.75);
+
     padding: 0.45rem 0.8rem;
+
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+
     color: #0369a1;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 
+  /*
+   * Section heading
+   */
   .section-title {
     font-size: clamp(2rem, 4vw, 3.5rem);
     line-height: 1.08;
     font-weight: 750;
     letter-spacing: -0.035em;
-    color: #0f172a;
+    color: var(--color-navy);
   }
 
+  /*
+   * Supporting text
+   */
   .section-description {
     max-width: 42rem;
-    color: #64748b;
+    color: var(--color-muted);
     font-size: 1rem;
     line-height: 1.8;
   }
 
+  /*
+   * Premium glass card
+   */
   .glass-card {
-    border: 1px solid rgba(191, 219, 254, 0.7);
-    background: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 20px 50px rgba(30, 64, 175, 0.08);
-    backdrop-filter: blur(14px);
+    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    box-shadow:
+      0 18px 50px rgba(15, 23, 42, 0.06),
+      0 4px 16px rgba(37, 99, 235, 0.025);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
+
+  /*
+   * Soft sky section
+   */
+  .bg-soft-sky {
+    background:
+      radial-gradient(
+        circle at 10% 20%,
+        rgba(56, 189, 248, 0.14),
+        transparent 28%
+      ),
+      radial-gradient(
+        circle at 90% 80%,
+        rgba(37, 99, 235, 0.06),
+        transparent 26%
+      ),
+      linear-gradient(
+        135deg,
+        #effaff 0%,
+        #f8fcff 48%,
+        #eef6ff 100%
+      );
+  }
+
+  /*
+   * Soft blue section
+   */
+  .bg-soft-blue {
+    background:
+      radial-gradient(
+        circle at 85% 15%,
+        rgba(37, 99, 235, 0.10),
+        transparent 30%
+      ),
+      radial-gradient(
+        circle at 10% 90%,
+        rgba(56, 189, 248, 0.07),
+        transparent 28%
+      ),
+      linear-gradient(
+        180deg,
+        #f1f8ff 0%,
+        #eaf4ff 100%
+      );
+  }
+
+  /*
+   * Deeper blue CTA section
+   */
+  .bg-deep-blue {
+    background:
+      radial-gradient(
+        circle at 20% 0%,
+        rgba(56, 189, 248, 0.18),
+        transparent 30%
+      ),
+      radial-gradient(
+        circle at 90% 100%,
+        rgba(37, 99, 235, 0.20),
+        transparent 32%
+      ),
+      linear-gradient(
+        135deg,
+        #0f3d74 0%,
+        #123f76 50%,
+        #0b315e 100%
+      );
+  }
+
+  /*
+   * Glass surface
+   */
+  .bg-glass {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
   }
 }
 
+/*
+ * Hiring partner marquee
+ */
 @keyframes hiring-partners-scroll {
   from {
     transform: translateX(0);
@@ -154,7 +303,14 @@ a {
   width: max-content;
 }
 
+/*
+ * Accessibility
+ */
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .hiring-partners-track,
   .hiring-partners-track-reverse {
     animation: none;
