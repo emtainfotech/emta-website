@@ -1,6 +1,8 @@
 import type { Request, Response } from "express";
 import { z } from "zod";
 import { prisma } from "../config/prisma.js";
+import { uploadResume } from "../services/cloudinary.js";
+import { sendApplicationEmails } from "../services/emailService.js";
 
 const applicationSchema = z.object({
   jobId: z.coerce.number().int().positive(),
@@ -90,6 +92,19 @@ export async function createApplication(
       return;
     }
 
+    if (!req.file) {
+      res.status(400).json({
+        success: false,
+        message: "Resume is required",
+      });
+      return;
+    }
+
+    const uploadedResume = await uploadResume(
+      req.file.buffer,
+      req.file.originalname,
+    );
+
     const application = await prisma.application.create({
       data: {
         jobId: job.id,
@@ -99,12 +114,16 @@ export async function createApplication(
         experience: data.experience || null,
         qualification: data.qualification || null,
         location: data.location || null,
+        resumeUrl: uploadedResume.url,
+        resumeName: req.file.originalname,
         coverMessage: data.coverMessage || null,
       },
+
       select: {
         id: true,
         status: true,
         createdAt: true,
+        resumeName: true,
         job: {
           select: {
             id: true,
@@ -114,6 +133,24 @@ export async function createApplication(
         },
       },
     });
+
+    try {
+  await sendApplicationEmails({
+    applicationId: application.id,
+    candidateName: data.name,
+    candidateEmail: data.email,
+    candidatePhone: data.phone,
+    jobTitle: job.title,
+    company: job.company,
+    resumeUrl: uploadedResume.url,
+    resumeName: req.file.originalname,
+  });
+} catch (emailError) {
+  console.error(
+    "Application saved but email notification failed:",
+    emailError,
+  );
+}
 
     res.status(201).json({
       success: true,
