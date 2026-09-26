@@ -23,6 +23,12 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 
+import AdminLogin from "./pages/admin/AdminLogin";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminJobs from "./pages/admin/AdminJobs";
+import AdminApplications from "./pages/admin/AdminApplications";
+import AdminRoute from "./components/admin/AdminRoute";
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -82,6 +88,17 @@ export default function App() {
           <Route path="/blog/:slug" element={<BlogPost />} />
 
           <Route path="*" element={<NotFound />} />
+
+          <Route path="/admin/login" element={<AdminLogin />} />
+
+          <Route element={<AdminRoute />}>
+            <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/admin/jobs" element={<AdminJobs />} />
+            <Route
+              path="/admin/applications"
+              element={<AdminApplications />}
+            />
+          </Route>
         </Routes>
 
         <Footer />
