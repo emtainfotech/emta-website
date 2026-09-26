@@ -25,7 +25,9 @@ export function requireAdmin(
     res.locals.admin = payload;
 
     next();
-  } catch {
+  } catch (error) {
+    console.error("JWT verification failed:", error);
+
     res.status(401).json({
       success: false,
       message: "Invalid or expired authentication",
