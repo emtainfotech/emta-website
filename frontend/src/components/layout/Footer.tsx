@@ -272,6 +272,15 @@ export default function Footer() {
             <FooterLinkGroup title="For Job Seekers" links={candidateLinks} />
             <FooterLinkGroup title="For Employers" links={employerLinks} />
             <FooterLinkGroup title="Explore EMTA" links={exploreLinks} />
+            <div>
+              <p className="text-sm font-semibold text-white">Internal</p>
+              <div className="mt-5">
+                <Link to="/admin/login" className="group flex items-center gap-2 text-sm text-slate-400 transition hover:text-white">
+                  <span>Admin Portal</span>
+                  <ArrowUpRight size={14} className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { submitApplication } from "../../services/api";
 import type { ChangeEvent, FormEvent } from "react";
 import {
   CheckCircle2,
@@ -11,6 +12,7 @@ import {
 } from "lucide-react";
 
 interface ApplicationFormProps {
+  jobId: number;
   jobTitle: string;
 }
 
@@ -19,6 +21,9 @@ interface FormState {
   email: string;
   phone: string;
   message: string;
+  experience: string;
+  qualification: string;
+  location: string;
   resume: File | null;
 }
 
@@ -27,10 +32,14 @@ const initialForm: FormState = {
   email: "",
   phone: "",
   message: "",
+  experience: "",
+  qualification: "",
+  location: "",
   resume: null,
 };
 
 export default function ApplicationForm({
+  jobId,
   jobTitle,
 }: ApplicationFormProps) {
   const [form, setForm] = useState<FormState>(initialForm);
@@ -85,10 +94,29 @@ export default function ApplicationForm({
     setSubmitting(true);
     setError("");
 
-    await new Promise((resolve) => setTimeout(resolve, 900));
+    try {
+      await submitApplication({
+        jobId,
+        name: form.name.trim(),
+        email: form.email.trim(),
+        phone: form.phone.trim(),
+        experience: form.experience.trim(),
+        qualification: form.qualification.trim(),
+        location: form.location.trim(),
+        coverMessage: form.message.trim(),
+        resume: form.resume,
+      });
 
-    setSubmitting(false);
-    setSubmitted(true);
+      setSubmitted(true);
+    } catch (error) {
+      setError(
+        error instanceof Error
+          ? error.message
+          : "Unable to submit your application.",
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -109,8 +137,7 @@ export default function ApplicationForm({
         </p>
 
         <p className="mt-4 text-xs text-slate-500">
-          Server-side submission will be connected once the EMTA application
-          endpoint is available.
+          Your application has been sent to the EMTA recruitment system.
         </p>
 
         <button
@@ -217,6 +244,48 @@ export default function ApplicationForm({
               required
             />
           </div>
+        </label>
+
+        <label className="block">
+          <span className="mb-2 block text-sm font-semibold text-slate-700">
+            Experience
+          </span>
+          <input
+            type="text"
+            name="experience"
+            value={form.experience}
+            onChange={handleChange}
+            placeholder="e.g. Fresher / 2 years"
+            className="h-13 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-400 focus:bg-white focus:ring-4 focus:ring-blue-100"
+          />
+        </label>
+
+        <label className="block">
+          <span className="mb-2 block text-sm font-semibold text-slate-700">
+            Qualification
+          </span>
+          <input
+            type="text"
+            name="qualification"
+            value={form.qualification}
+            onChange={handleChange}
+            placeholder="e.g. B.Tech / B.Com"
+            className="h-13 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-400 focus:bg-white focus:ring-4 focus:ring-blue-100"
+          />
+        </label>
+
+        <label className="block sm:col-span-2">
+          <span className="mb-2 block text-sm font-semibold text-slate-700">
+            Current location
+          </span>
+          <input
+            type="text"
+            name="location"
+            value={form.location}
+            onChange={handleChange}
+            placeholder="City / location"
+            className="h-13 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-400 focus:bg-white focus:ring-4 focus:ring-blue-100"
+          />
         </label>
 
         <label className="block sm:col-span-2">

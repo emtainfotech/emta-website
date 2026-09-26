@@ -8,13 +8,33 @@ import {
 import { useState } from "react";
 import type { FormEvent } from "react";
 import SEO from "../components/common/SEO";
+import { submitContact } from "../services/api";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+    const form = new FormData(event.currentTarget);
+    try {
+      await submitContact({
+        name: String(form.get("name") || ""),
+        email: String(form.get("email") || ""),
+        phone: String(form.get("phone") || ""),
+        subject: "Website contact enquiry",
+        message: String(form.get("message") || ""),
+      });
+      setSubmitted(true);
+      event.currentTarget.reset();
+    } catch (reason) {
+      setError(reason instanceof Error ? reason.message : "Unable to send your message");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -157,8 +177,7 @@ export default function Contact() {
                   </h3>
 
                   <p className="mt-3 max-w-md text-sm leading-7 text-slate-500">
-                    Your message has passed the frontend validation. The
-                    server-side contact endpoint will be connected separately.
+                    Your message has been submitted to the EMTA team.
                   </p>
 
                   <button
@@ -235,11 +254,13 @@ export default function Contact() {
                       />
                     </label>
 
+                    {error && <div className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">{error}</div>}
                     <button
                       type="submit"
-                      className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 px-6 py-4 text-sm font-semibold text-white transition hover:bg-blue-700"
+                      disabled={loading}
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 px-6 py-4 text-sm font-semibold text-white transition hover:bg-blue-700 disabled:opacity-60"
                     >
-                      Send message
+                      {loading ? "Sending..." : "Send message"}
                       <Send size={17} />
                     </button>
                   </form>

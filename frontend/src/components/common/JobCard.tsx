@@ -12,7 +12,7 @@ interface Job {
   company: string;
   logo?: string;
   location: string;
-  salary: string;
+  salary: string | null;
   url?: string;
 }
 

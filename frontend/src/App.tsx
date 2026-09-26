@@ -1,10 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import BackToTop from "./components/common/BackToTop";
-import ScrollToTop from "./components/common/ScrollToTop";
-import Navbar from "./components/layout/Navbar";
-import Footer from "./components/layout/Footer";
+import PublicLayout from "./components/layout/PublicLayout";
+import AdminRoute from "./components/admin/AdminRoute";
+import AdminLayout from "./components/admin/AdminLayout";
 
-import SEOJobLanding from "./pages/SEOJobLanding";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Careers from "./pages/Careers";
@@ -22,58 +20,43 @@ import JobPlacement from "./pages/JobPlacement";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
+import SEOJobLanding from "./pages/SEOJobLanding";
 
 import AdminLogin from "./pages/admin/AdminLogin";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminJobs from "./pages/admin/AdminJobs";
 import AdminApplications from "./pages/admin/AdminApplications";
-import AdminRoute from "./components/admin/AdminRoute";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <ScrollToTop />
+      <Routes>
+        <Route path="/admin/login" element={<AdminLogin />} />
 
-      <div className="min-h-screen bg-white text-slate-950">
-        <Navbar />
+        <Route element={<AdminRoute />}>
+          <Route element={<AdminLayout />}>
+            <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/admin/jobs" element={<AdminJobs />} />
+            <Route path="/admin/applications" element={<AdminApplications />} />
+          </Route>
+        </Route>
 
-        <Routes>
+        <Route element={<PublicLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/jobs" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
-
           <Route path="/bfsi-training" element={<BfsiTraining />} />
           <Route path="/course/:id" element={<CourseDetails />} />
 
-          <Route
-            path="/jobs/customer-care-executive-vijay-nagar"
-            element={<SEOJobLanding />}
-          />
-          <Route
-            path="/jobs/inside-sales-executive"
-            element={<SEOJobLanding />}
-          />
-          <Route
-            path="/jobs/customer-care-swiggy"
-            element={<SEOJobLanding />}
-          />
-          <Route
-            path="/jobs/customer-success-associate-vivint"
-            element={<SEOJobLanding />}
-          />
-          <Route
-            path="/jobs/customer-support-walmart"
-            element={<SEOJobLanding />}
-          />
-          <Route
-            path="/jobs/customer-support-seller-support"
-            element={<SEOJobLanding />}
-          />
-          <Route
-            path="/jobs/senior-accountant"
-            element={<SEOJobLanding />}
-          />
+          <Route path="/jobs/customer-care-executive-vijay-nagar" element={<SEOJobLanding />} />
+          <Route path="/jobs/inside-sales-executive" element={<SEOJobLanding />} />
+          <Route path="/jobs/customer-care-swiggy" element={<SEOJobLanding />} />
+          <Route path="/jobs/customer-success-associate-vivint" element={<SEOJobLanding />} />
+          <Route path="/jobs/customer-support-walmart" element={<SEOJobLanding />} />
+          <Route path="/jobs/customer-support-seller-support" element={<SEOJobLanding />} />
+          <Route path="/jobs/senior-accountant" element={<SEOJobLanding />} />
           <Route path="/jobs/:id" element={<JobDetails />} />
 
           <Route path="/for-employee" element={<ForEmployee />} />
@@ -83,27 +66,11 @@ export default function App() {
           <Route path="/study-with-us" element={<StudyWithUs />} />
           <Route path="/partner-with-us" element={<PartnerWithUs />} />
           <Route path="/job-placement" element={<JobPlacement />} />
-
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
-
           <Route path="*" element={<NotFound />} />
-
-          <Route path="/admin/login" element={<AdminLogin />} />
-
-          <Route element={<AdminRoute />}>
-            <Route path="/admin" element={<AdminDashboard />} />
-            <Route path="/admin/jobs" element={<AdminJobs />} />
-            <Route
-              path="/admin/applications"
-              element={<AdminApplications />}
-            />
-          </Route>
-        </Routes>
-
-        <Footer />
-        <BackToTop />
-      </div>
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }

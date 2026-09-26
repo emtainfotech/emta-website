@@ -6,6 +6,10 @@ import cookieParser from "cookie-parser";
 import rateLimit from "express-rate-limit";
 
 import jobRoutes from "./routes/jobRoutes.js";
+import applicationRoutes from "./routes/applicationRoutes.js";
+import courseRoutes from "./routes/courseRoutes.js";
+import contactRoutes from "./routes/contactRoutes.js";
+import adminDashboardRoutes from "./routes/adminDashboardRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
 import adminJobRoutes from "./routes/adminJobRoutes.js";
@@ -49,11 +53,15 @@ app.get("/api/health", (_req, res) => {
 });
 
 app.use("/api/jobs", jobRoutes);
+app.use("/api/applications", applicationRoutes);
+app.use("/api/courses", courseRoutes);
+app.use("/api/contact", contactRoutes);
 
 app.use("/api/auth/login", authLimiter);
 app.use("/api/auth", authRoutes);
 
 app.use("/api/admin", adminRoutes);
+app.use("/api/admin/dashboard", adminDashboardRoutes);
 
 app.use(
   "/api/admin/applications",

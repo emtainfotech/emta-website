@@ -8,6 +8,9 @@ import {
   Users,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import type { FormEvent } from "react";
+import { submitContact } from "../services/api";
 
 const partnershipOptions = [
   {
@@ -35,6 +38,35 @@ const benefits = [
 ];
 
 export default function PartnerWithUs() {
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setLoading(true);
+    setError("");
+    const form = new FormData(event.currentTarget);
+    try {
+      const message = [
+        `Partnership type: ${String(form.get("partnershipType") || "")}`,
+        String(form.get("message") || ""),
+      ].filter(Boolean).join("\n");
+      await submitContact({
+        name: String(form.get("contactPerson") || ""),
+        email: String(form.get("email") || ""),
+        phone: String(form.get("phone") || ""),
+        subject: `Partnership enquiry - ${String(form.get("organization") || "")}`,
+        message,
+      });
+      setSubmitted(true);
+      event.currentTarget.reset();
+    } catch (reason) {
+      setError(reason instanceof Error ? reason.message : "Unable to submit the enquiry");
+    } finally {
+      setLoading(false);
+    }
+  }
   return (
     <main className="overflow-hidden">
       {/* Hero */}
@@ -186,8 +218,15 @@ export default function PartnerWithUs() {
             </div>
           </div>
 
+          {submitted ? (
+            <div className="rounded-4xl border border-emerald-200 bg-emerald-50 p-8 text-center sm:p-10">
+              <h3 className="text-2xl font-bold text-slate-950">Enquiry submitted</h3>
+              <p className="mt-3 text-sm leading-7 text-slate-600">Your partnership enquiry has been sent to the EMTA team.</p>
+              <button type="button" onClick={() => setSubmitted(false)} className="mt-6 rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700">Send another enquiry</button>
+            </div>
+          ) : (
           <form
-            onSubmit={(event) => event.preventDefault()}
+            onSubmit={handleSubmit}
             className="rounded-4xl border border-slate-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)] sm:p-8"
           >
             <div className="grid gap-5 sm:grid-cols-2">
@@ -282,19 +321,21 @@ export default function PartnerWithUs() {
               </label>
             </div>
 
+            {error && <div className="mt-6 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">{error}</div>}
             <button
               type="submit"
-              className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 px-6 py-4 text-sm font-semibold text-white transition hover:bg-blue-700"
+              disabled={loading}
+              className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 px-6 py-4 text-sm font-semibold text-white transition hover:bg-blue-700 disabled:opacity-60"
             >
-              Send partnership enquiry
+              {loading ? "Submitting..." : "Send partnership enquiry"}
               <Send size={17} />
             </button>
 
             <p className="mt-4 text-center text-xs leading-5 text-slate-400">
-              Backend submission will be connected once the partnership
-              endpoint is available.
+              Your enquiry will be stored in the EMTA contact system.
             </p>
           </form>
+          )}
         </div>
       </section>
 

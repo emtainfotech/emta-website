@@ -137,7 +137,7 @@ export default function Navbar() {
 
           {/* CTA */}
           <Link
-            to="/work-with-us"
+            to="/careers"
             className="ml-3 inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-blue-600/30"
           >
             Apply for Job
@@ -266,7 +266,7 @@ export default function Navbar() {
 
             {/* CTA */}
             <Link
-              to="/work-with-us"
+              to="/careers"
               onClick={closeMobileMenu}
               className="mt-2 rounded-xl bg-blue-600 px-4 py-3.5 text-center text-sm font-semibold text-white shadow-md shadow-blue-600/20 transition hover:bg-blue-700"
             >

@@ -1,9 +1,23 @@
 import { ArrowRight, Clock3, GraduationCap, IndianRupee } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "../components/common/SEO";
-import { courses } from "../data/courses";
+import { useEffect, useState } from "react";
+import { getCourses, type CourseView } from "../services/api";
 
 export default function BfsiTraining() {
+  const [courses, setCourses] = useState<CourseView[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    let mounted = true;
+    getCourses()
+      .then((response) => { if (mounted) setCourses(response.data); })
+      .catch((reason) => { if (mounted) setError(reason instanceof Error ? reason.message : "Unable to load courses"); })
+      .finally(() => { if (mounted) setLoading(false); });
+    return () => { mounted = false; };
+  }, []);
+
   return (
     <>
           <SEO
@@ -45,6 +59,13 @@ export default function BfsiTraining() {
           </p>
         </div>
 
+        {loading ? (
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {Array.from({ length: 4 }).map((_, index) => <div key={index} className="h-72 animate-pulse rounded-3xl bg-slate-100" />)}
+          </div>
+        ) : error ? (
+          <div className="mt-10 rounded-3xl border border-red-100 bg-red-50 px-6 py-10 text-sm text-red-700">{error}</div>
+        ) : (
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {courses.map((course) => (
             <article
@@ -54,7 +75,7 @@ export default function BfsiTraining() {
               <div className="grid sm:grid-cols-[200px_1fr]">
                 <div className="relative h-52 overflow-hidden bg-sky-50 sm:h-full">
                   <img
-                    src={course.image}
+                    src={course.image || "/img/services/BFSI TRAING.jpg"}
                     alt={course.title}
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                     loading="lazy"
@@ -69,12 +90,12 @@ export default function BfsiTraining() {
                   <div className="mt-5 space-y-3">
                     <div className="flex items-center gap-3 text-sm text-slate-600">
                       <Clock3 size={17} className="text-blue-600" />
-                      {course.details.duration}
+                      {course.duration}
                     </div>
 
                     <div className="flex items-center gap-3 text-sm text-slate-600">
                       <IndianRupee size={17} className="text-blue-600" />
-                      {course.details.salary}
+                      {course.salaryPotential || "Best in Industry"}
                     </div>
 
                     <div className="flex items-center gap-3 text-sm text-slate-600">
@@ -102,6 +123,7 @@ export default function BfsiTraining() {
             </article>
           ))}
         </div>
+        )}
       </section>
 
       <section className="bg-slate-50">

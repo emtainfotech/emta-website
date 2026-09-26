@@ -10,6 +10,7 @@ import {
 import { useState } from "react";
 import type { FormEvent } from "react";
 import { Link } from "react-router-dom";
+import { submitContact } from "../services/api";
 
 const supportPoints = [
   "Candidate sourcing for open positions",
@@ -20,10 +21,34 @@ const supportPoints = [
 
 export default function HireWithUs() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+    const form = new FormData(event.currentTarget);
+    const message = [
+      `Role: ${String(form.get("role") || "")}`,
+      `Openings: ${String(form.get("openings") || "")}`,
+      `Hiring requirement: ${String(form.get("requirement") || "")}`,
+    ].join("\n");
+    try {
+      await submitContact({
+        name: String(form.get("contactPerson") || ""),
+        email: String(form.get("email") || ""),
+        phone: String(form.get("phone") || ""),
+        subject: `Hiring requirement - ${String(form.get("companyName") || "")}`,
+        message,
+      });
+      setSubmitted(true);
+      event.currentTarget.reset();
+    } catch (reason) {
+      setError(reason instanceof Error ? reason.message : "Unable to submit the requirement");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -119,8 +144,7 @@ export default function HireWithUs() {
                 </h3>
 
                 <p className="mt-3 max-w-md text-sm leading-7 text-slate-500">
-                  Your hiring requirement has passed frontend validation. The
-                  backend submission endpoint will be connected separately.
+                  Your hiring requirement has been submitted to the EMTA team.
                 </p>
 
                 <button
@@ -263,12 +287,13 @@ export default function HireWithUs() {
                     type="submit"
                     className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 px-6 py-4 text-sm font-semibold text-white transition hover:bg-blue-700"
                   >
-                    Send hiring requirement
+                    {loading ? "Submitting..." : "Send hiring requirement"}
                     <Send size={17} />
                   </button>
 
+                  {error && <div className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">{error}</div>}
                   <p className="text-center text-xs leading-5 text-slate-400">
-                    This form currently validates the request in the frontend.
+                    Your requirement will be stored in the EMTA enquiry system.
                   </p>
                 </form>
               </>
