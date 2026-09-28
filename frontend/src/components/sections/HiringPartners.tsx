@@ -73,7 +73,7 @@ export default function HiringPartners() {
           </div>
 
           <div className="flex shrink-0 items-center gap-3 rounded-2xl border border-blue-100 bg-white/70 px-4 py-3 shadow-sm backdrop-blur">
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/20">
+            <div className="float-slower flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-600 via-violet-600 to-cyan-500 text-white shadow-[0_14px_28px_rgba(79,70,229,.22)]">
               <span className="text-lg font-bold">100+</span>
             </div>
 
@@ -95,7 +95,7 @@ export default function HiringPartners() {
         </div>
 
         {/* First marquee */}
-        <div className="relative mt-10 overflow-hidden rounded-4xl border border-white/80 bg-white/45 py-5 shadow-[0_20px_60px_rgba(37,99,235,0.06)] backdrop-blur-xl">
+        <div className="hiring-partner-window float-slow relative mt-10 overflow-hidden rounded-[2rem] border border-white/80 bg-white/48 py-5 shadow-[0_26px_70px_rgba(30,64,175,0.10)] backdrop-blur-xl">
           <div
             className="pointer-events-none absolute inset-y-0 left-0 z-20 w-20 bg-linear-to-r from-sky-50 via-sky-50/70 to-transparent"
             aria-hidden="true"
@@ -107,11 +107,11 @@ export default function HiringPartners() {
           />
 
           <div className="overflow-hidden">
-            <div className="hiring-partners-track flex w-max items-center">
+            <div className="hiring-partner-rail hiring-partners-track flex w-max items-center">
               {[...firstRow, ...firstRow].map((company, index) => (
                 <div
                   key={`row1-${index}`}
-                  className="mx-2.5 flex h-20 w-36 shrink-0 items-center justify-center rounded-2xl border border-slate-200/70 bg-white/85 px-5 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg sm:mx-3 sm:w-40"
+                  className="hiring-partner-card edge-hover mx-2.5 flex h-20 w-36 shrink-0 items-center justify-center rounded-2xl border border-white/80 bg-white/88 px-5 shadow-[0_10px_30px_rgba(15,23,42,.06)] backdrop-blur sm:mx-3 sm:w-40"
                 >
                   <img
                     src={company.src}
@@ -128,7 +128,7 @@ export default function HiringPartners() {
         </div>
 
         {/* Second marquee */}
-        <div className="relative mt-4 overflow-hidden rounded-4xl border border-white/80 bg-sky-100/30 py-5 shadow-[0_20px_60px_rgba(14,165,233,0.05)] backdrop-blur-xl">
+        <div className="hiring-partner-window float-slower relative mt-4 overflow-hidden rounded-[2rem] border border-white/80 bg-gradient-to-r from-cyan-50/55 via-white/42 to-violet-50/55 py-5 shadow-[0_26px_70px_rgba(14,165,233,0.09)] backdrop-blur-xl">
           <div
             className="pointer-events-none absolute inset-y-0 left-0 z-20 w-20 bg-linear-to-r from-sky-50 via-sky-50/70 to-transparent"
             aria-hidden="true"
@@ -140,11 +140,11 @@ export default function HiringPartners() {
           />
 
           <div className="overflow-hidden">
-            <div className="hiring-partners-track-reverse flex w-max items-center">
+            <div className="hiring-partner-rail hiring-partners-track-reverse flex w-max items-center">
               {[...secondRow, ...secondRow].map((company, index) => (
                 <div
                   key={`row2-${index}`}
-                  className="mx-2.5 flex h-20 w-36 shrink-0 items-center justify-center rounded-2xl border border-sky-100/90 bg-white/85 px-5 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-sky-200 hover:shadow-lg sm:mx-3 sm:w-40"
+                  className="hiring-partner-card edge-hover mx-2.5 flex h-20 w-36 shrink-0 items-center justify-center rounded-2xl border border-cyan-100/90 bg-white/88 px-5 shadow-[0_10px_30px_rgba(8,47,73,.06)] backdrop-blur sm:mx-3 sm:w-40"
                 >
                   <img
                     src={company.src}

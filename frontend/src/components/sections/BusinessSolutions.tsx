@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "../common/ScrollReveal";
+import { Card } from "../ui/Card";
 
 const solutions = [
   {
@@ -83,7 +84,7 @@ export default function BusinessSolutions() {
             return (
               <ScrollReveal key={solution.href}>
                 <Link to={solution.href} className="group block h-full">
-                  <article className="relative flex h-full flex-col overflow-hidden rounded-4xl border border-white/80 bg-white/70 shadow-[0_20px_60px_rgba(15,23,42,0.07)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-blue-200/80 hover:shadow-[0_28px_80px_rgba(37,99,235,0.12)]">
+                  <Card className="edge-hover relative flex h-full flex-col overflow-hidden rounded-4xl bg-white/70 transition-all duration-500 hover:-translate-y-2 hover:border-indigo-200/80 hover:shadow-[0_28px_80px_rgba(79,70,229,0.14)]">
                     {/* Image */}
                     <div className="relative overflow-hidden border-b border-white/70 bg-linear-to-br from-sky-50 via-white to-blue-50 px-5 pt-5 sm:px-6 sm:pt-6">
                       <div className="relative flex min-h-70 items-center justify-center overflow-hidden rounded-3xl bg-white/50 sm:min-h-80">
@@ -182,7 +183,7 @@ export default function BusinessSolutions() {
                         </div>
                       </div>
                     </div>
-                  </article>
+                  </Card>
                 </Link>
               </ScrollReveal>
             );

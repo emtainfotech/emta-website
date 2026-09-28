@@ -20,6 +20,7 @@ import JobPlacement from "./pages/JobPlacement";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/common/ScrollToTop";
 import SEOJobLanding from "./pages/SEOJobLanding";
 
 import AdminLogin from "./pages/admin/AdminLogin";
@@ -30,6 +31,7 @@ import AdminApplications from "./pages/admin/AdminApplications";
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/admin/login" element={<AdminLogin />} />
 
@@ -46,9 +48,12 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/jobs" element={<Careers />} />
+          <Route path="/apply" element={<Careers />} />
+          <Route path="/apply-for-job" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/bfsi-training" element={<BfsiTraining />} />
           <Route path="/course/:id" element={<CourseDetails />} />
+          <Route path="/courses/:id" element={<CourseDetails />} />
 
           <Route path="/jobs/customer-care-executive-vijay-nagar" element={<SEOJobLanding />} />
           <Route path="/jobs/inside-sales-executive" element={<SEOJobLanding />} />
@@ -60,7 +65,9 @@ export default function App() {
           <Route path="/jobs/:id" element={<JobDetails />} />
 
           <Route path="/for-employee" element={<ForEmployee />} />
+          <Route path="/for-job-seekers" element={<ForEmployee />} />
           <Route path="/for-employer" element={<ForEmployer />} />
+          <Route path="/for-employers" element={<ForEmployer />} />
           <Route path="/work-with-us" element={<WorkWithUs />} />
           <Route path="/hire-with-us" element={<HireWithUs />} />
           <Route path="/study-with-us" element={<StudyWithUs />} />

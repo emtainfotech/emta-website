@@ -1,189 +1,78 @@
-import { ArrowRight, BriefcaseBusiness, GraduationCap } from "lucide-react";
+import { ArrowRight, BriefcaseBusiness, CheckCircle2, GraduationCap, MapPin, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "../common/ScrollReveal";
 
 export default function HeroSection() {
   return (
-    <section className="relative isolate overflow-hidden bg-linear-to-br from-sky-50 via-white to-blue-50">
-      {/* Decorative background */}
-      <div
-        className="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-sky-200/40 blur-3xl"
-        aria-hidden="true"
-      />
-
-      <div
-        className="pointer-events-none absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-blue-200/40 blur-3xl"
-        aria-hidden="true"
-      />
-
-      <div
-        className="pointer-events-none absolute right-[18%] top-20 h-32 w-32 rounded-full border border-sky-200/70"
-        aria-hidden="true"
-      />
+    <section className="relative isolate overflow-hidden pb-14 pt-8 sm:pb-20 sm:pt-10 lg:pb-24 lg:pt-12">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_5%,rgba(56,189,248,.13),transparent_26%),radial-gradient(circle_at_90%_15%,rgba(22,119,255,.11),transparent_30%),linear-gradient(180deg,#fbfdff_0%,#f4faff_55%,#f7fbff_100%)]" />
+      <div className="soft-grid pointer-events-none absolute inset-x-0 top-0 h-[80%] opacity-70" aria-hidden="true" />
+      <div className="pointer-events-none absolute -left-20 top-28 h-72 w-72 rounded-full bg-sky-300/20 blur-3xl" aria-hidden="true" />
+      <div className="pointer-events-none absolute -right-20 top-24 h-80 w-80 rounded-full bg-blue-300/18 blur-3xl" aria-hidden="true" />
 
       <div className="section-shell relative">
-        <div className="grid min-h-170 items-center gap-12 py-12 sm:py-16 lg:grid-cols-[1fr_0.9fr] lg:gap-10 lg:py-20 xl:min-h-180">
-          {/* Left content */}
+        <div className="grid items-center gap-10 pt-8 lg:grid-cols-[1.04fr_.96fr] lg:gap-12 lg:pt-12">
           <ScrollReveal>
-            <div className="w-full max-w-130">
-              <div className="eyebrow">
-                <span
-                  className="h-2 w-2 rounded-full bg-sky-500"
-                  aria-hidden="true"
-                />
-                Trusted Career & Hiring Partner
-              </div>
+            <div className="max-w-2xl">
+              <div className="eyebrow"><span className="h-2 w-2 rounded-full bg-emerald-500" /> Trusted Career & Hiring Partner</div>
 
-              <h1 className="mt-6 text-4xl font-bold leading-[1.05] tracking-[-0.045em] text-slate-950 sm:text-5xl lg:text-6xl xl:text-7xl">
-                Trusted Job Consultancy
-                <span className="mt-2 block">
-                  in{" "}
-                  <span className="relative inline-block text-blue-600">
-                    Indore
-                    <span
-                      className="absolute -bottom-1 left-0 h-1 w-full rounded-full bg-sky-300/80"
-                      aria-hidden="true"
-                    />
-                  </span>
-                </span>
+              <h1 className="mt-6 text-4xl font-black leading-[1.02] tracking-[-0.055em] text-slate-950 sm:text-5xl lg:text-[4.65rem]">
+                Find the right opportunity.
+                <span className="mt-2 block bg-gradient-to-r from-blue-700 via-blue-600 to-sky-500 bg-clip-text text-transparent">Build the right career.</span>
               </h1>
 
-              <p className="mt-7 max-w-xl text-base font-semibold leading-7 text-slate-700 sm:text-lg">
-                Trusted Career & Hiring Partner
-              </p>
-
-              <p className="mt-3 max-w-xl text-base leading-8 text-slate-600 sm:text-lg">
-                Verified jobs, placement assistance and career guidance for
-                freshers &amp; experienced professionals.
+              <p className="mt-6 max-w-xl text-base font-medium leading-8 text-slate-600 sm:text-lg">
+                Verified jobs, placement assistance and career guidance for freshers and experienced professionals — with EMTA supporting you from search to selection.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link
-                  to="/work-with-us"
-                  className="group inline-flex min-h-13 items-center justify-center gap-2 rounded-full bg-blue-600 px-7 py-3.5 text-sm font-semibold text-white shadow-xl shadow-blue-600/20 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-700 hover:shadow-2xl hover:shadow-blue-600/25"
-                >
-                  <BriefcaseBusiness
-                    size={18}
-                    aria-hidden="true"
-                  />
-                  Apply for Jobs
-                  <ArrowRight
-                    size={17}
-                    aria-hidden="true"
-                    className="transition-transform duration-300 group-hover:translate-x-1"
-                  />
+                <Link to="/careers" className="btn-primary group">
+                  <BriefcaseBusiness size={18} /> Explore Jobs
+                  <ArrowRight size={17} className="transition group-hover:translate-x-1" />
                 </Link>
-
-                <Link
-                  to="/study-with-us"
-                  className="inline-flex min-h-13 items-center justify-center gap-2 rounded-full border border-blue-200 bg-white/80 px-7 py-3.5 text-sm font-semibold text-slate-700 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
-                >
-                  <GraduationCap
-                    size={18}
-                    aria-hidden="true"
-                  />
-                  Study with Us
+                <Link to="/study-with-us" className="btn-secondary">
+                  <GraduationCap size={18} /> Explore Training
                 </Link>
               </div>
 
-              <div className="mt-10 flex flex-wrap gap-x-7 gap-y-4 border-t border-slate-200/80 pt-6">
-                <div className="flex items-center gap-2.5 text-sm font-medium text-slate-600">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-sky-100 text-sky-700">
-                    <BriefcaseBusiness size={15} aria-hidden="true" />
-                  </span>
-                  Verified Job Opportunities
-                </div>
-
-                <div className="flex items-center gap-2.5 text-sm font-medium text-slate-600">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-blue-700">
-                    <GraduationCap size={15} aria-hidden="true" />
-                  </span>
-                  Career-Focused Training
-                </div>
+              <div className="mt-9 grid max-w-xl gap-3 sm:grid-cols-3">
+                {['Verified opportunities','Career guidance','BFSI-focused training'].map((item) => (
+                  <div key={item} className="flex items-center gap-2.5 rounded-2xl border border-white/80 bg-white/65 px-3.5 py-3 text-xs font-semibold text-slate-600 shadow-sm backdrop-blur-xl">
+                    <CheckCircle2 size={15} className="shrink-0 text-blue-600" /> {item}
+                  </div>
+                ))}
               </div>
             </div>
           </ScrollReveal>
 
-          {/* Right visual */}
-          {/* Right visual */}
-<ScrollReveal className="lg:flex lg:justify-end">
-  <div className="relative mx-auto w-full max-w-xl">
+          <ScrollReveal className="lg:flex lg:justify-end">
+            <div className="relative w-full max-w-[37rem]">
+              <div className="pointer-events-none absolute -inset-10 rounded-[4rem] bg-gradient-to-br from-sky-300/25 via-white/10 to-blue-400/20 blur-3xl" aria-hidden="true" />
+              <div className="relative overflow-hidden rounded-[2rem] border border-white/80 bg-white/68 p-3 shadow-[0_28px_80px_rgba(22,76,128,.14)] backdrop-blur-2xl sm:p-4">
+                <div className="relative overflow-hidden rounded-[1.6rem] border border-blue-100/70 bg-gradient-to-br from-sky-100/85 via-white to-blue-100/80">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(255,255,255,.95),transparent_26%),radial-gradient(circle_at_80%_75%,rgba(56,189,248,.22),transparent_35%)]" />
+                  <div className="relative flex min-h-[25rem] items-center justify-center px-5 py-8 sm:min-h-[31rem] lg:min-h-[34rem]">
+                    <img src="/img/image-removebg-preview.png" alt="EMTA career and job placement services" width={518} height={345} fetchPriority="high" className="relative z-10 h-auto w-full max-w-[31rem] object-contain drop-shadow-[0_28px_34px_rgba(15,23,42,.18)]" />
+                  </div>
 
-    {/* Ambient glow */}
-    <div
-      className="pointer-events-none absolute -inset-8 rounded-[4rem] bg-sky-200/35 blur-3xl"
-      aria-hidden="true"
-    />
+                  <div className="absolute left-4 top-4 z-20 rounded-2xl border border-white/80 bg-white/92 px-4 py-3 shadow-lg backdrop-blur-xl sm:left-5 sm:top-5">
+                    <div className="flex items-center gap-2"><Sparkles size={14} className="text-blue-600" /><span className="text-[11px] font-bold uppercase tracking-[.14em] text-slate-500">EMTA</span></div>
+                    <p className="mt-1.5 text-sm font-bold text-slate-950">Career & Hiring Partner</p>
+                  </div>
 
-    {/* Main visual card */}
-    <div className="relative rounded-4xl border border-white/80 bg-white/65 p-3 shadow-2xl shadow-blue-900/10 backdrop-blur-xl sm:p-4">
+                  <div className="absolute bottom-4 right-4 z-20 max-w-[11rem] rounded-2xl border border-white/80 bg-white/92 px-4 py-3 shadow-lg backdrop-blur-xl sm:bottom-5 sm:right-5">
+                    <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[.12em] text-slate-400"><MapPin size={13} className="text-sky-500" /> Indore</div>
+                    <p className="mt-1.5 text-sm font-bold text-blue-700">Start your next chapter</p>
+                  </div>
+                </div>
+              </div>
 
-      {/* Visual stage */}
-      <div className="relative overflow-hidden rounded-[1.6rem] bg-linear-to-br from-sky-100 via-blue-50 to-white">
-
-        {/* Decorative circles */}
-        <div
-          className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full border border-blue-200/50"
-          aria-hidden="true"
-        />
-
-        <div
-          className="pointer-events-none absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-sky-200/30 blur-3xl"
-          aria-hidden="true"
-        />
-
-        {/* Main person / illustration */}
-        <div className="relative flex min-h-105 items-center justify-center px-5 py-8 sm:min-h-125 sm:px-8 sm:py-10 lg:min-h-140">
-          <img
-            src="/img/image-removebg-preview.png"
-            alt="EMTA career and job placement services"
-            width={518}
-            height={345}
-            fetchPriority="high"
-            className="relative z-10 h-auto w-full max-w-130 object-contain drop-shadow-[0_25px_30px_rgba(15,23,42,0.16)]"
-          />
-        </div>
-
-        {/* Top floating card */}
-        <div className="absolute left-4 top-4 z-20 rounded-2xl border border-white/80 bg-white/90 px-4 py-3 shadow-lg backdrop-blur-md sm:left-5 sm:top-5">
-          <div className="flex items-center gap-2">
-            <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
-            <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-slate-500">
-              EMTA
-            </span>
-          </div>
-
-          <p className="mt-1.5 text-sm font-bold text-slate-900">
-            Career &amp; Hiring Partner
-          </p>
-        </div>
-
-        {/* Bottom floating card */}
-        <div className="absolute bottom-4 right-4 z-20 rounded-2xl border border-white/80 bg-white/90 px-4 py-3 shadow-lg backdrop-blur-md sm:bottom-5 sm:right-5">
-          <p className="text-[11px] font-medium uppercase tracking-[0.12em] text-slate-400">
-            Opportunities
-          </p>
-
-          <p className="mt-1 text-sm font-bold text-blue-700">
-            Start your next chapter
-          </p>
-        </div>
-      </div>
-    </div>
-
-    {/* Floating metric */}
-    <div className="absolute -bottom-5 left-3 z-30 rounded-2xl border border-white/80 bg-white px-5 py-4 shadow-xl shadow-blue-900/10 sm:-left-6">
-      <p className="text-2xl font-bold tracking-tight text-blue-600">
-        100+
-      </p>
-
-      <p className="text-xs font-medium text-slate-500">
-        Hiring Partners
-      </p>
-    </div>
-
-  </div>
-</ScrollReveal>
+              <div className="absolute -bottom-5 left-4 z-30 rounded-2xl border border-white/90 bg-slate-950 px-5 py-4 text-white shadow-xl shadow-slate-900/15 sm:-left-5">
+                <p className="text-2xl font-black tracking-tight">3367+</p>
+                <p className="mt-0.5 text-xs font-medium text-slate-300">Successful placements</p>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>
