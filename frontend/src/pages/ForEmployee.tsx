@@ -1,212 +1,37 @@
-import {
-  ArrowRight,
-  BriefcaseBusiness,
-  CheckCircle2,
-  FileText,
-  GraduationCap,
-  Search,
-} from "lucide-react";
+import { ArrowRight, BriefcaseBusiness, CheckCircle2, FileText, GraduationCap, Search, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
-  {
-    icon: Search,
-    title: "Find the right opportunities",
-    text: "Explore job openings that match your skills, experience and career goals.",
-  },
-  {
-    icon: FileText,
-    title: "Resume guidance",
-    text: "Prepare your profile and present your skills effectively during the hiring process.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Career-focused training",
-    text: "Build relevant knowledge and professional skills through EMTA training programs.",
-  },
-  {
-    icon: BriefcaseBusiness,
-    title: "Placement assistance",
-    text: "Get support throughout your journey towards relevant employment opportunities.",
-  },
+  { icon: Search, title: "Find the right opportunities", text: "Explore job openings that match your skills, experience and career goals." },
+  { icon: FileText, title: "Resume guidance", text: "Prepare your profile and present your skills effectively during the hiring process." },
+  { icon: GraduationCap, title: "Career-focused training", text: "Build relevant knowledge and professional skills through EMTA training programs." },
+  { icon: BriefcaseBusiness, title: "Placement assistance", text: "Get support throughout your journey towards relevant employment opportunities." },
 ];
 
-const steps = [
-  "Explore suitable job opportunities",
-  "Build and prepare your professional profile",
-  "Improve job-ready skills",
-  "Participate in the hiring process",
-];
+const steps = ["Explore suitable job opportunities", "Build and prepare your professional profile", "Improve job-ready skills", "Participate in the hiring process"];
 
 export default function ForEmployee() {
   return (
-    <main className="overflow-hidden">
-      {/* Hero */}
-      <section className="relative isolate border-b border-slate-200 bg-linear-to-br from-sky-50 via-white to-blue-50">
-        <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-sky-200/30 blur-3xl" />
-        <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-blue-200/30 blur-3xl" />
-
-        <div className="section-shell relative grid gap-10 py-16 sm:py-20 lg:grid-cols-[1fr_0.75fr] lg:items-center lg:py-24">
-          <div>
-            <span className="eyebrow">FOR JOB SEEKERS</span>
-
-            <h1 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
-              Move closer to your{" "}
-              <span className="text-blue-600">next opportunity</span>
-            </h1>
-
-            <p className="mt-5 max-w-2xl text-base leading-8 text-slate-600">
-              Explore opportunities, improve your professional profile and
-              access career-oriented support from EMTA.
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/careers"
-                className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-blue-700"
-              >
-                Browse jobs
-                <ArrowRight size={17} />
-              </Link>
-
-              <Link
-                to="/bfsi-training"
-                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3.5 text-sm font-semibold text-slate-700 transition hover:border-blue-200 hover:text-blue-600"
-              >
-                Explore training
-                <ArrowRight size={17} />
-              </Link>
-            </div>
+    <main className="overflow-hidden bg-[#faf7ff] text-slate-950">
+      <section className="relative isolate overflow-hidden bg-[#18112b] text-white">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_28%,rgba(168,85,247,0.25),transparent_31%),radial-gradient(circle_at_82%_16%,rgba(59,130,246,0.2),transparent_28%),linear-gradient(130deg,#18112b,#24123f_48%,#111a32)]" />
+        <div className="absolute left-[-8rem] bottom-[-10rem] h-[28rem] w-[28rem] rounded-full border border-violet-200/10 bg-violet-200/5 blur-3xl" />
+        <div className="section-shell relative grid min-h-[75vh] items-center gap-12 py-20 lg:grid-cols-[0.96fr_1.04fr] lg:py-24">
+          <div className="order-2 lg:order-1">
+            <div className="inline-flex items-center gap-2 rounded-full border border-violet-200/15 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-violet-200 backdrop-blur"><Sparkles size={14} /> For job seekers</div>
+            <h1 className="mt-6 text-5xl font-bold tracking-[-0.04em] sm:text-6xl lg:text-7xl">Your next opportunity starts with <span className="bg-linear-to-r from-violet-300 via-fuchsia-300 to-cyan-300 bg-clip-text text-transparent">being ready.</span></h1>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">Explore opportunities, improve your professional profile and access career-oriented support from EMTA.</p>
+            <div className="mt-8 flex flex-wrap gap-3"><Link to="/careers" className="group inline-flex items-center gap-2 rounded-full bg-violet-300 px-6 py-3.5 text-sm font-bold text-slate-950 transition hover:-translate-y-1 hover:bg-violet-200">Browse jobs <ArrowRight size={17} className="transition-transform group-hover:translate-x-1" /></Link><Link to="/bfsi-training" className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold transition hover:border-violet-200/40 hover:bg-white/10">Explore training</Link></div>
           </div>
-
-          <div className="relative">
-            <div className="absolute -inset-5 rounded-4xl bg-sky-200/40 blur-3xl" />
-
-            <div className="relative overflow-hidden rounded-4xl border border-white bg-white shadow-[0_25px_70px_rgba(15,23,42,0.10)]">
-              <img
-                src="/img/for-job-seekers.webp"
-                alt="For job seekers"
-                className="h-full min-h-80 w-full object-cover"
-              />
-            </div>
-          </div>
+          <div className="order-1 lg:order-2 relative mx-auto w-full max-w-xl"><div className="absolute -inset-7 rounded-[2rem] bg-linear-to-br from-violet-300/15 via-fuchsia-300/10 to-cyan-300/15 blur-3xl" /><div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-2 shadow-2xl backdrop-blur-xl"><img src="/img/for-job-seekers.webp" alt="For job seekers" className="h-[25rem] w-full rounded-[1.7rem] object-cover sm:h-[30rem]" /><div className="absolute bottom-5 left-5 right-5 flex gap-3"><div className="rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 backdrop-blur"><p className="text-xs text-slate-400">Discover</p><p className="font-semibold">Roles that fit</p></div><div className="rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 backdrop-blur"><p className="text-xs text-slate-400">Prepare</p><p className="font-semibold">Profiles that stand out</p></div></div></div></div>
         </div>
       </section>
 
-      {/* Support */}
-      <section className="section-shell py-16 sm:py-20 lg:py-24">
-        <div className="max-w-2xl">
-          <span className="eyebrow">HOW EMTA CAN HELP</span>
+      <section className="section-shell py-20 sm:py-24"><div className="max-w-3xl"><p className="text-xs font-bold uppercase tracking-[0.18em] text-violet-700">How EMTA can help</p><h2 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">Support built around your career journey.</h2><p className="mt-5 text-base leading-8 text-slate-600">From discovering opportunities to preparing for the workplace, explore the support available through EMTA.</p></div><div className="mt-10 grid gap-5 sm:grid-cols-2">{services.map(({ icon: Icon, title, text }, index) => <div key={title} className="group relative overflow-hidden rounded-[1.8rem] border border-slate-200 bg-white p-7 shadow-[0_16px_50px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(124,58,237,0.12)]"><div className={`absolute -right-14 -top-14 h-32 w-32 rounded-full blur-2xl ${index % 2 ? "bg-fuchsia-100" : "bg-violet-100"} transition group-hover:scale-150`} /><div className="relative flex h-12 w-12 items-center justify-center rounded-2xl bg-linear-to-br from-violet-100 to-fuchsia-100 text-violet-700"><Icon size={21} /></div><h3 className="relative mt-5 text-xl font-bold">{title}</h3><p className="relative mt-3 text-sm leading-7 text-slate-500">{text}</p><Link to={title.includes("opportunities") ? "/careers" : title.includes("training") ? "/bfsi-training" : "/contact"} className="relative mt-6 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-[0.14em] text-violet-700">Continue <ArrowRight size={13} /></Link></div>)}</div></section>
 
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
-            Support built around your career journey
-          </h2>
+      <section className="bg-[#151021] py-20 text-white sm:py-24"><div className="section-shell grid gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-center"><div><p className="text-xs font-bold uppercase tracking-[0.18em] text-violet-300">Your journey</p><h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">A clearer path from search to opportunity.</h2><p className="mt-5 max-w-xl text-sm leading-7 text-slate-400">Start with the right opportunities and prepare yourself for the hiring journey.</p><Link to="/careers" className="mt-7 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-bold text-slate-950 transition hover:-translate-y-1 hover:bg-violet-100">View current openings <ArrowRight size={17} /></Link></div><div className="space-y-4">{steps.map((step,index)=><div key={step} className="group flex gap-4 rounded-[1.6rem] border border-white/10 bg-white/5 p-5 backdrop-blur transition hover:-translate-y-1 hover:bg-white/8"><div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-violet-300 to-fuchsia-300 text-sm font-black text-slate-950">{index+1}</div><div className="flex items-center gap-3"><CheckCircle2 size={18} className="shrink-0 text-violet-300" /><p className="text-sm font-semibold text-slate-200">{step}</p></div></div>)}</div></div></section>
 
-          <p className="mt-4 text-sm leading-7 text-slate-500">
-            From discovering opportunities to preparing for the workplace,
-            explore the support available through EMTA.
-          </p>
-        </div>
-
-        <div className="mt-10 grid gap-5 sm:grid-cols-2">
-          {services.map(({ icon: Icon, title, text }) => (
-            <div
-              key={title}
-              className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-7"
-            >
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-50 text-blue-600">
-                <Icon size={21} />
-              </div>
-
-              <h3 className="mt-5 text-lg font-bold text-slate-950">
-                {title}
-              </h3>
-
-              <p className="mt-3 text-sm leading-7 text-slate-500">{text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Process */}
-      <section className="bg-slate-50">
-        <div className="section-shell py-16 sm:py-20 lg:py-24">
-          <div className="grid gap-12 lg:grid-cols-[0.8fr_1fr] lg:items-center">
-            <div>
-              <span className="eyebrow">YOUR JOURNEY</span>
-
-              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
-                A clearer path from search to opportunity
-              </h2>
-
-              <p className="mt-4 text-sm leading-7 text-slate-500">
-                Start with the right opportunities and prepare yourself for the
-                hiring journey.
-              </p>
-
-              <Link
-                to="/careers"
-                className="mt-7 inline-flex items-center gap-2 rounded-full bg-slate-950 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-blue-700"
-              >
-                View current openings
-                <ArrowRight size={17} />
-              </Link>
-            </div>
-
-            <div className="space-y-4">
-              {steps.map((step, index) => (
-                <div
-                  key={step}
-                  className="flex gap-4 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm"
-                >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-sm font-bold text-white">
-                    {index + 1}
-                  </div>
-
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2
-                      size={18}
-                      className="shrink-0 text-blue-600"
-                    />
-
-                    <p className="text-sm font-semibold text-slate-800">
-                      {step}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="section-shell py-14 sm:py-18">
-        <div className="rounded-4xl bg-linear-to-r from-blue-600 to-sky-500 p-7 text-white shadow-xl shadow-blue-200 sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-blue-100">
-              READY TO START?
-            </p>
-
-            <h2 className="mt-3 text-2xl font-bold sm:text-3xl">
-              Your next opportunity could be one search away.
-            </h2>
-
-            <p className="mt-3 max-w-2xl text-sm leading-7 text-blue-50">
-              Browse the current EMTA openings and find an opportunity that
-              fits your profile.
-            </p>
-          </div>
-
-          <Link
-            to="/careers"
-            className="mt-6 inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-blue-700 transition hover:bg-slate-100 lg:mt-0"
-          >
-            Find a job
-            <ArrowRight size={17} />
-          </Link>
-        </div>
-      </section>
+      <section className="bg-linear-to-r from-violet-100 via-fuchsia-100 to-cyan-100 py-14 sm:py-16"><div className="section-shell flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between"><div><p className="text-xs font-bold uppercase tracking-[0.18em] text-violet-800">Ready to start?</p><h2 className="mt-2 text-3xl font-black tracking-tight">Your next opportunity could be one search away.</h2><p className="mt-3 max-w-2xl text-sm leading-7 text-slate-700/75">Browse the current EMTA openings and find an opportunity that fits your profile.</p></div><Link to="/careers" className="inline-flex shrink-0 items-center gap-2 rounded-full bg-slate-950 px-6 py-3.5 text-sm font-bold text-white transition hover:-translate-y-1">Find a job <ArrowRight size={17} /></Link></div></section>
     </main>
   );
 }

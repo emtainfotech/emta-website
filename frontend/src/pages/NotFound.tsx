@@ -11,7 +11,7 @@ export default function NotFound() {
         noindex
       />
 
-      <main className="section-shell flex min-h-[70vh] items-center justify-center py-20">
+      <main className="page-not-found section-shell flex min-h-[70vh] items-center justify-center py-20">
         <div className="max-w-lg text-center">
           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-sky-50 text-blue-600">
             <SearchX size={28} />

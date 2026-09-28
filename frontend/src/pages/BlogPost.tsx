@@ -50,7 +50,7 @@ export default function BlogPost() {
 
   if (!post) {
     return (
-      <main className="section-shell flex min-h-[70vh] items-center justify-center py-20">
+      <main className="page-not-found section-shell flex min-h-[70vh] items-center justify-center py-20">
         <div className="max-w-lg text-center">
           <h1 className="text-3xl font-bold text-slate-950">
             Article not found
@@ -79,7 +79,7 @@ export default function BlogPost() {
         description={post.excerpt}
         canonical={`https://emta.co.in/blog/${slug}`}
       />
-      <main className="overflow-hidden">
+      <main className="page-blog-post overflow-hidden">
       {/* Header */}
       <section className="border-b border-slate-200 bg-linear-to-br from-sky-50 via-white to-blue-50">
         <div className="section-shell py-12 sm:py-16 lg:py-20">

@@ -40,7 +40,7 @@ const steps = [
 
 export default function JobPlacement() {
   return (
-    <main className="overflow-hidden">
+    <main className="page-job-placement overflow-hidden">
       {/* Hero */}
       <section className="relative isolate border-b border-slate-200 bg-linear-to-br from-sky-50 via-white to-blue-50">
         <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-sky-200/30 blur-3xl" />

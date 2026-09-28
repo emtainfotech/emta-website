@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import BackToTop from "../common/BackToTop";
+import ScrollToTop from "../common/ScrollToTop";
 
 export default function PublicLayout() {
   const { pathname } = useLocation();
@@ -14,6 +15,7 @@ export default function PublicLayout() {
         <span className="route-aura__orb route-aura__orb--two" />
         <span className="route-aura__orb route-aura__orb--three" />
       </div>
+      <ScrollToTop />
       <Navbar />
       <Outlet />
       <Footer />

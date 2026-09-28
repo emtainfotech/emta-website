@@ -20,7 +20,6 @@ import JobPlacement from "./pages/JobPlacement";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
-import ScrollToTop from "./components/common/ScrollToTop";
 import SEOJobLanding from "./pages/SEOJobLanding";
 
 import AdminLogin from "./pages/admin/AdminLogin";
@@ -31,7 +30,6 @@ import AdminApplications from "./pages/admin/AdminApplications";
 export default function App() {
   return (
     <BrowserRouter>
-      <ScrollToTop />
       <Routes>
         <Route path="/admin/login" element={<AdminLogin />} />
 
@@ -47,9 +45,9 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/careers" element={<Careers />} />
-          <Route path="/jobs" element={<Careers />} />
           <Route path="/apply" element={<Careers />} />
           <Route path="/apply-for-job" element={<Careers />} />
+          <Route path="/jobs" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/bfsi-training" element={<BfsiTraining />} />
           <Route path="/course/:id" element={<CourseDetails />} />
